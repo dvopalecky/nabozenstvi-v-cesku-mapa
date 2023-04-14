@@ -120,26 +120,6 @@ function mapRegionIdToName (id) {
   return map[id];
 }
 
-function createColorScaleLegend(colorScale) {
-    const legendDiv = d3.select("#color-scale-legend");
-    const numColors = 5;
-    const step = 1 / numColors;
-
-    for (let i = 0; i < numColors; i++) {
-        const minValue = step * i;
-        const maxValue = step * (i + 1);
-
-        const colorBox = legendDiv.append("div")
-            .style("display", "inline-block")
-            .style("width", "20px")
-            .style("height", "20px")
-            .style("background-color", colorScale(minValue));
-
-        legendDiv.append("span")
-            .text(` ${minValue.toFixed(2)} - ${maxValue.toFixed(2)} `);
-    }
-}
-
 </script>
 
 
