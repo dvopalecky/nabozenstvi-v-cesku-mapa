@@ -157,6 +157,7 @@ function createColorScaleLegend(colorScale) {
 
 <main>
   <h2>Náboženství v Česku</h2>
+  <p>data ze sčítání lidu 2021</p>
   <div id="color-scale-legend">
     {#each [0, 1, 2, 3, 4] as step, idx}
       <div style="display: inline-block; width: 20px; height: 20px; background-color: {colorScale ? colorScale((step / 5 + 0.1) * max) : 'white'};"></div>
