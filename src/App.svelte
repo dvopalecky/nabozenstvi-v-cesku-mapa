@@ -1,11 +1,15 @@
 <script>
   import Checkboxes from './Checkboxes.svelte';
-  let checkedChurches = ['Církev bratrská'];
+  import * as d3 from 'd3';
+  import * as topojson from "topojson-client";
+  import {onMount} from 'svelte';
 
-import * as d3 from 'd3';
-import * as topojson from "topojson-client";
+let checkedChurches = ["Českobratrská církev evangelická","protestantská/evangelická víra (protestant, evangelík)","Církev bratrská","Slezská církev evangelická augsburského vyznání","Apoštolská církev","Bratrská jednota baptistů","Církev Křesťanská společenství","Jednota bratrská","Křesťanské sbory","Evangelická církev metodistická","Církev víry","Církev Slovo života","Církev živého Boha","Církev Nová naděje","Církev Oáza"];
+
 let data;
 let obyvatelstvoCelkem;
+let svg, path, colorScale;
+let max = 0;
 
 async function processCensusData () {
   const response = await fetch('census-2021.json');
@@ -18,45 +22,15 @@ async function init() {
   obyvatelstvoCelkem = data[0];
 }
 
-$: if (checkedChurches && data) main(checkedChurches);
+function drawMap(geojson) {
+  max = d3.max(geojson.features, d => d.properties.percentage);
+  const median = d3.median(geojson.features, d => d.properties.percentage);
+  const scale = 1; //max / median / 2;
+  colorScale = d3.scaleSequential()
+    .domain([0, max])
+    .interpolator(d3.interpolateGreens);
 
-init();
-
-async function main (checkedChurches) {
-  console.log('main');
-  let dataSmall = data.filter(r => checkedChurches.includes(r.Field));
-  console.log(dataSmall);
-  dataSmall = dataSmall[0];
-
-  // Define the projection and path
-  const projection = d3.geoMercator()
-    .center([15.3, 49.8])
-    .scale(7000)
-    .translate([480, 300]);
-
-  const path = d3.geoPath()
-    .projection(projection);
-
-  // Define the color scale for the choropleth map
-  const colorScale = d3.scaleSequential()
-    .domain([0, 1]) // Random number range
-    .interpolator(d3.interpolateBlues);
-
-  // Select the SVG element
-  const svg = d3.select('svg');
-
-  // Load the TopoJSON data
-  d3.json('kraje.json').then(topology => {
-    // Convert TopoJSON to GeoJSON
-    const geojson = topojson.feature(topology, topology.objects.kraje);
-
-    geojson.features.forEach(feature => {
-      const regionName = mapRegionIdToName(feature.properties.id);
-      feature.properties.value = Number(dataSmall[regionName]);
-      feature.properties.percentage = Number(dataSmall[regionName]) / Number(obyvatelstvoCelkem[regionName]) * 100;
-    });
-
-    const scale = 5;
+    svg.selectAll("path").remove();
     svg.selectAll('path')
       .data(geojson.features)
       .enter()
@@ -90,8 +64,53 @@ async function main (checkedChurches) {
         // Reset the region color
         d3.select(event.currentTarget).attr('fill', () => colorScale(d.properties.percentage * scale));
       });
+}
+
+async function main (checkedChurches) {
+  let dataFiltered = data.filter(r => checkedChurches.includes(r.Field));
+  const sums = {};
+  dataFiltered.forEach(row => {
+    Object.keys(row).forEach(key => {
+      if (key === 'Field') return;
+      let number = Number(row[key]);
+      if (number === undefined || Number.isNaN(number)) number = 0;
+      sums[key] = (sums[key] || 0) + number;
+    });
+  });
+
+  // Load the TopoJSON data
+  d3.json('kraje.json').then(topology => {
+    // Convert TopoJSON to GeoJSON
+    const geojson = topojson.feature(topology, topology.objects.kraje);
+
+    geojson.features.forEach(feature => {
+      const regionName = mapRegionIdToName(feature.properties.id);
+      feature.properties.value = sums[regionName]
+      feature.properties.percentage = sums[regionName] / Number(obyvatelstvoCelkem[regionName]) * 100;
+    });
+
+    drawMap(geojson);
   });
 }
+
+
+$: if (checkedChurches && data) main(checkedChurches);
+
+onMount(async () => {
+  await init();
+  // Define the projection and path
+  const projection = d3.geoMercator()
+    .center([15.3, 49.8])
+    .scale(7000)
+    .translate([480, 300]);
+
+  path = d3.geoPath()
+    .projection(projection);
+
+  // Select the SVG element
+  svg = d3.select('svg');
+});
+
 
 function mapRegionIdToName (id) {
   const map = {
@@ -113,16 +132,41 @@ function mapRegionIdToName (id) {
   return map[id];
 }
 
+function createColorScaleLegend(colorScale) {
+    const legendDiv = d3.select("#color-scale-legend");
+    const numColors = 5;
+    const step = 1 / numColors;
+
+    for (let i = 0; i < numColors; i++) {
+        const minValue = step * i;
+        const maxValue = step * (i + 1);
+
+        const colorBox = legendDiv.append("div")
+            .style("display", "inline-block")
+            .style("width", "20px")
+            .style("height", "20px")
+            .style("background-color", colorScale(minValue));
+
+        legendDiv.append("span")
+            .text(` ${minValue.toFixed(2)} - ${maxValue.toFixed(2)} `);
+    }
+}
+
 </script>
 
 
 <main>
   <h2>Náboženství v Česku</h2>
-
+  <div id="color-scale-legend">
+    {#each [0, 1, 2, 3, 4] as step, idx}
+      <div style="display: inline-block; width: 20px; height: 20px; background-color: {colorScale ? colorScale((step / 5 + 0.1) * max) : 'white'};"></div>
+      <span style="padding-right:10px"> {(step / 5 * max).toFixed(1)} - {((step / 5 + 0.2) * max).toFixed(1)}%</span>
+    {/each}
+  </div>
   <svg width="960" height="600"></svg>
   <div style="text-align:left">
     {#if data}
-      <Checkboxes labels={data.map(r => r.Field)} bind:value={checkedChurches}/>
+      <Checkboxes labels={data.map(r => r.Field).slice(3)} counts={data.map(r => r['Česká republika']).slice(3)} bind:value={checkedChurches}/>
       {#each data as row, id}
       {/each}
     {/if}
