@@ -23,7 +23,6 @@ d3.json('kraje.json').then(topology => {
   // Generate random numbers for each region
   geojson.features.forEach(feature => {
     feature.properties.randomValue = Math.random();
-    console.log(feature);
   });
 
   // Calculate the total sum of random values for all regions
@@ -64,3 +63,30 @@ d3.json('kraje.json').then(topology => {
       d3.select(event.currentTarget).attr('fill', () => colorScale(d.properties.randomValue));
     });
 });
+
+function mapRegionNameToId (name) {
+  const map = {
+    Středočeský: 'CZ020',
+    Jihočeský: 'CZ031',
+    Plzeňský: 'CZ032',
+    Karlovarský: 'CZ041',
+    Ústecký: 'CZ042',
+    Liberecký: 'CZ051',
+    Královéhradecký: 'CZ052',
+    Pardubický: 'CZ053',
+    Vysočina: 'CZ063',
+    Jihomoravský: 'CZ064',
+    Olomoucký: 'CZ071',
+    Zlínský: 'CZ072',
+    Moravskoslezský: 'CZ080',
+    'Hlavní město Praha': 'CZ010',
+  };
+}
+
+
+async function processCensusData () {
+  const response = await fetch('census-2021.json');
+  const data = await response.json();
+}
+
+processCensusData();
