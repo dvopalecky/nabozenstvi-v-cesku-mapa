@@ -3,24 +3,13 @@
   import * as d3 from 'd3';
   import * as topojson from "topojson-client";
   import {onMount} from 'svelte';
+  import censusData from './census-2021.json';
 
 let checkedChurches = ["Českobratrská církev evangelická","protestantská/evangelická víra (protestant, evangelík)","Církev bratrská","Slezská církev evangelická augsburského vyznání","Apoštolská církev","Bratrská jednota baptistů","Církev Křesťanská společenství","Jednota bratrská","Křesťanské sbory","Evangelická církev metodistická","Církev víry","Církev Slovo života","Církev živého Boha","Církev Nová naděje","Církev Oáza"];
 
-let data;
-let obyvatelstvoCelkem;
+let obyvatelstvoCelkem = censusData[0];
 let svg, path, colorScale;
 let max = 0;
-
-async function processCensusData () {
-  const response = await fetch('census-2021.json');
-  const data = await response.json();
-  return data;
-}
-
-async function init() {
-  data = await processCensusData();
-  obyvatelstvoCelkem = data[0];
-}
 
 function drawMap(geojson) {
   max = d3.max(geojson.features, d => d.properties.percentage);
@@ -67,7 +56,7 @@ function drawMap(geojson) {
 }
 
 async function main (checkedChurches) {
-  let dataFiltered = data.filter(r => checkedChurches.includes(r.Field));
+  let dataFiltered = censusData.filter(r => checkedChurches.includes(r.Field));
   const sums = {};
   dataFiltered.forEach(row => {
     Object.keys(row).forEach(key => {
@@ -94,10 +83,9 @@ async function main (checkedChurches) {
 }
 
 
-$: if (checkedChurches && data) main(checkedChurches);
+$: if (checkedChurches && censusData) main(checkedChurches);
 
 onMount(async () => {
-  await init();
   // Define the projection and path
   const projection = d3.geoMercator()
     .center([15.3, 49.8])
@@ -166,9 +154,9 @@ function createColorScaleLegend(colorScale) {
   </div>
   <svg width="960" height="600"></svg>
   <div style="text-align:left">
-    {#if data}
-      <Checkboxes labels={data.map(r => r.Field).slice(3)} counts={data.map(r => r['Česká republika']).slice(3)} bind:value={checkedChurches}/>
-      {#each data as row, id}
+    {#if censusData}
+      <Checkboxes labels={censusData.map(r => r.Field).slice(3)} counts={censusData.map(r => r['Česká republika']).slice(3)} bind:value={checkedChurches}/>
+      {#each censusData as row, id}
       {/each}
     {/if}
   </div>
