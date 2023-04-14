@@ -1,10 +1,11 @@
 <script>
   import Checkboxes from './Checkboxes.svelte';
-  let checkedChurches = [];
+  let checkedChurches = ['Církev bratrská'];
 
 import * as d3 from 'd3';
 import * as topojson from "topojson-client";
 let data;
+let obyvatelstvoCelkem;
 
 async function processCensusData () {
   const response = await fetch('census-2021.json');
@@ -14,15 +15,18 @@ async function processCensusData () {
 
 async function init() {
   data = await processCensusData();
-  main();
+  obyvatelstvoCelkem = data[0];
 }
+
+$: if (checkedChurches && data) main(checkedChurches);
 
 init();
 
-async function main () {
-
-  const obyvatelstvoCelkem = data[0];
-  const dataSmall = data[12];
+async function main (checkedChurches) {
+  console.log('main');
+  let dataSmall = data.filter(r => checkedChurches.includes(r.Field));
+  console.log(dataSmall);
+  dataSmall = dataSmall[0];
 
   // Define the projection and path
   const projection = d3.geoMercator()
@@ -50,7 +54,6 @@ async function main () {
       const regionName = mapRegionIdToName(feature.properties.id);
       feature.properties.value = Number(dataSmall[regionName]);
       feature.properties.percentage = Number(dataSmall[regionName]) / Number(obyvatelstvoCelkem[regionName]) * 100;
-      console.log(feature.properties);
     });
 
     const scale = 5;
@@ -66,7 +69,7 @@ async function main () {
           .style('display', 'block')
           .html(`
                   Kraj: ${d.properties.NAZ_CZNUTS3.replace(' kraj', '')}<br>
-                  Počet: ${d.properties.value.toFixed(2)}<br>
+                  Počet: ${d.properties.value.toFixed(0)}<br>
                   Procent: ${d.properties.percentage.toFixed(2)}%`);
 
         // Highlight the region
@@ -124,37 +127,5 @@ function mapRegionIdToName (id) {
       {/each}
     {/if}
   </div>
-  <div id="tooltip" style="position: absolute; display: none; background-color: rgba(255, 255, 255, 0.8); padding: 5px; border-radius: 5px; pointer-events: none;"></div>
+  <div id="tooltip" style="position: absolute; display: none; background-color: rgba(0, 0, 0, 0.7); padding: 5px; border-radius: 5px; pointer-events: none;"></div>
 </main>
-
-<style>
-  body {
-      font-family: Arial, sans-serif;
-      margin: 2rem;
-  }
-
-  #checkbox-list {
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-  }
-
-  input[type="checkbox"] {
-      margin-right: 0.5rem;
-  }
-
-  #submit-button {
-      font-size: 1rem;
-      padding: 0.5rem 1rem;
-      border: none;
-      border-radius: 0.25rem;
-      background-color: #007bff;
-      color: white;
-      cursor: pointer;
-      margin-top: 1rem;
-  }
-
-  #submit-button:hover {
-      background-color: #0056b3;
-  }
-</style>
