@@ -4,12 +4,14 @@
   import * as topojson from "topojson-client";
   import {onMount} from 'svelte';
   import censusData from './census-2021.json';
+  import kraje from './kraje.json';
 
 let checkedChurches = ["Českobratrská církev evangelická","protestantská/evangelická víra (protestant, evangelík)","Církev bratrská","Slezská církev evangelická augsburského vyznání","Apoštolská církev","Bratrská jednota baptistů","Církev Křesťanská společenství","Jednota bratrská","Křesťanské sbory","Evangelická církev metodistická","Církev víry","Církev Slovo života","Církev živého Boha","Církev Nová naděje","Církev Oáza"];
 
 let obyvatelstvoCelkem = censusData[0];
 let svg, path, colorScale;
 let max = 0;
+let isMounted;
 
 function drawMap(geojson) {
   max = d3.max(geojson.features, d => d.properties.percentage);
@@ -67,23 +69,20 @@ async function main (checkedChurches) {
     });
   });
 
-  // Load the TopoJSON data
-  d3.json('kraje.json').then(topology => {
-    // Convert TopoJSON to GeoJSON
-    const geojson = topojson.feature(topology, topology.objects.kraje);
+  // Convert TopoJSON to GeoJSON
+  const geojson = topojson.feature(kraje, kraje.objects.kraje);
 
-    geojson.features.forEach(feature => {
-      const regionName = mapRegionIdToName(feature.properties.id);
-      feature.properties.value = sums[regionName]
-      feature.properties.percentage = sums[regionName] / Number(obyvatelstvoCelkem[regionName]) * 100;
-    });
-
-    drawMap(geojson);
+  geojson.features.forEach(feature => {
+    const regionName = mapRegionIdToName(feature.properties.id);
+    feature.properties.value = sums[regionName]
+    feature.properties.percentage = sums[regionName] / Number(obyvatelstvoCelkem[regionName]) * 100;
   });
+
+  drawMap(geojson);
 }
 
 
-$: if (checkedChurches && censusData) main(checkedChurches);
+$: if (checkedChurches && isMounted) main(checkedChurches);
 
 onMount(async () => {
   // Define the projection and path
@@ -97,6 +96,7 @@ onMount(async () => {
 
   // Select the SVG element
   svg = d3.select('svg');
+  isMounted = true;
 });
 
 
