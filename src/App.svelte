@@ -7,8 +7,8 @@
   import kraje from './kraje.json';
 
 let checkedChurches = ["Českobratrská církev evangelická","protestantská/evangelická víra (protestant, evangelík)","Církev bratrská","Slezská církev evangelická augsburského vyznání","Apoštolská církev","Bratrská jednota baptistů","Církev Křesťanská společenství","Jednota bratrská","Křesťanské sbory","Evangelická církev metodistická","Církev víry","Církev Slovo života","Církev živého Boha","Církev Nová naděje","Církev Oáza"];
-
 let obyvatelstvoCelkem = censusData[0];
+let ceskoCount = '';
 let svg, path, colorScale;
 let max = 0;
 let isMounted;
@@ -33,9 +33,9 @@ function drawMap(geojson) {
         d3.select('#tooltip')
           .style('display', 'block')
           .html(`
-                  Kraj: ${d.properties.NAZ_CZNUTS3.replace(' kraj', '')}<br>
-                  Počet: ${d.properties.value.toFixed(0)}<br>
-                  Procent: ${d.properties.percentage.toFixed(2)}%`);
+            Kraj: ${d.properties.NAZ_CZNUTS3.replace(' kraj', '')}<br>
+            Počet: ${d.properties.value.toFixed(0)}<br>
+            Procent: ${d.properties.percentage.toFixed(2)}%`);
 
         // Highlight the region
         const currentColor = d3.color(colorScale(d.properties.percentage * scale));
@@ -51,7 +51,6 @@ function drawMap(geojson) {
       .on('mouseout', (event, d) => {
         // Hide the tooltip
         d3.select('#tooltip').style('display', 'none');
-
         // Reset the region color
         d3.select(event.currentTarget).attr('fill', () => colorScale(d.properties.percentage * scale));
       });
@@ -68,6 +67,9 @@ async function main (checkedChurches) {
       sums[key] = (sums[key] || 0) + number;
     });
   });
+
+  ceskoCount = `${sums['Česká republika']} ` +
+    `(${(sums['Česká republika'] / Number(obyvatelstvoCelkem['Česká republika']) * 100).toFixed(2)}%)`
 
   // Convert TopoJSON to GeoJSON
   const geojson = topojson.feature(kraje, kraje.objects.kraje);
@@ -132,6 +134,7 @@ function mapRegionIdToName (id) {
       <span style="padding-right:10px"> {(step / 5 * max).toFixed(1)} - {((step / 5 + 0.2) * max).toFixed(1)}%</span>
     {/each}
   </div>
+  <p>Celé Česko: {ceskoCount} (pro zaškrnuté náboženství / církve)</p>
   <svg width="960" height="600"></svg>
   <div style="text-align:left">
     {#if censusData}
