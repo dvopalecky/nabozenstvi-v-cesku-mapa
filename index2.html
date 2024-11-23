@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Czech Population Map</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <style>
+        #map {
+            height: 100vh;
+            width: 100%;
+        }
+        .legend {
+            background: white;
+            padding: 10px;
+            border-radius: 3px;
+        }
+        .legend-circle {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+    <script>
+        // Initialize map centered on Czech Republic
+        const map = L.map('map').setView([49.8, 15.5], 8);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+
+        // Scale factor for circle radius
+        const SCALE_FACTOR = 0.0001;
+
+        // Load and process data
+        async function init() {
+            try {
+                // Load population data
+                const popResponse = await fetch('pivoted_religion_with_totals.csv');
+                const popCsv = await popResponse.text();
+                const popData = Papa.parse(popCsv, { header: true }).data
+                    .filter(row => row.uzemi_kod?.length === 6)
+                    .reduce((acc, row) => {
+                        acc[row.uzemi_kod] = {
+                            population: parseInt(row.Total) || 0,
+                            name: row.uzemi_txt
+                        };
+                        return acc;
+                    }, {});
+
+                // Load coordinates
+                const coordResponse = await fetch('obce.json');
+                const rawCoordData = await coordResponse.json();
+                const coordData = Array.isArray(rawCoordData) ? rawCoordData : Object.values(rawCoordData);
+
+                // Create markers
+                coordData.forEach(obec => {
+                    const popInfo = popData[obec.adresaUradu?.obecKod];
+                    if (!popInfo || !obec.souradnice) return;
+
+                    const radius = Math.sqrt(popInfo.population * SCALE_FACTOR);
+                    L.circleMarker(obec.souradnice, {
+                        radius,
+                        fillColor: '#ff7800',
+                        color: '#000',
+                        weight: 1,
+                        opacity: 1,
+                        fillOpacity: 0.6
+                    })
+                    .bindPopup(`
+                        <b>${obec.hezkyNazev}</b><br>
+                        Population: ${popInfo.population.toLocaleString()}
+                    `)
+                    .addTo(map);
+                });
+
+                // Add legend
+                const legend = L.control({ position: 'bottomright' });
+                legend.onAdd = function() {
+                    const div = L.DomUtil.create('div', 'legend');
+                    const populations = [1000, 10000, 100000];
+
+                    div.innerHTML = '<h4>Population</h4>';
+                    populations.forEach(pop => {
+                        const radius = Math.sqrt(pop * SCALE_FACTOR);
+                        div.innerHTML += `
+                            <div>
+                                <span class="legend-circle" style="width:${radius*2}px;height:${radius*2}px;background:#ff7800"></span>
+                                ${pop.toLocaleString()}
+                            </div>`;
+                    });
+                    return div;
+                };
+                legend.addTo(map);
+
+            } catch (error) {
+                console.error('Error loading data:', error);
+                alert('Error loading data. Please check console.');
+            }
+        }
+
+        init();
+    </script>
+</body>
+</html>
