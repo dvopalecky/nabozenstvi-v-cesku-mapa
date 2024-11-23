@@ -32,30 +32,30 @@
     <script>
         const religionMap = {
             1: "Bez náboženské víry",
-            2: "Apoštolská církev",
-            3: "Bratrská jednota baptistů",
-            4: "Církev adventistů sedmého dne",
-            5: "Církev bratrská",
-            6: "Církev československá husitská",
+            2: "AC",
+            3: "BJB",
+            4: "CASD",
+            5: "CB",
+            6: "CČH",
             7: "Církev Ježíše Krista Svatých posledních dnů v České republice",
             8: "Církev řeckokatolická",
             9: "Církev římskokatolická",
-            10: "Českobratrská církev evangelická",
-            11: "Evangelická církev augsburského vyznání v České republice",
-            12: "Evangelická církev metodistická",
+            10: "ČCE",
+            11: "ECAV",
+            12: "ECM",
             13: "Federace židovských obcí v České republice",
-            14: "Jednota bratrská",
-            15: "Křesťanské sbory",
+            14: "JB",
+            15: "KřSb",
             16: "Luterská evangelická církev a. v. v České republice",
             17: "Náboženská společnost českých unitářů",
             18: "Náboženská společnost Svědkové Jehovovi",
             19: "Novoapoštolská církev v ČR",
             20: "Pravoslavná církev v českých zemích",
-            21: "Slezská církev evangelická augsburského vyznání",
+            21: "SCEAV",
             22: "Starokatolická církev v ČR",
             23: "Církev sjednocení (moonisté)",
             24: "Scientologická církev",
-            25: "Církev Křesťanská společenství",
+            25: "KS",
             26: "Anglikánská církev",
             27: "islám",
             28: "buddhismus",
@@ -72,12 +72,12 @@
             39: "Hnutí Grálu",
             40: "Hnutí Nového věku (New Age)",
             41: "katolická víra (katolík)",
-            42: "protestantská/evangelická víra (protestant, evangelík)",
+            42: "protestant/evangelík",
             43: "křesťanství",
             44: "judaismus",
             45: "esoterismus",
             46: "věřící - nehlásící se k žádné církvi ani náboženské společnosti",
-            47: "Církev Nová naděje",
+            47: "CNN",
             48: "Církev Slovo života",
             49: "Jedi",
             50: "ateismus",
@@ -168,11 +168,26 @@
                         opacity: 1,
                         fillOpacity: 0.6
                     })
-                    .bindPopup(`
-                        <b>${row.hezkyNazev}</b><br>
-                        Population: ${row.Total.toLocaleString()}<br>
-                        Protestant: ${(percentage * 100).toFixed(1)}%
-                    `)
+                    .bindPopup(() => {
+                        // Get counts for each church
+                        const churchCounts = checkedChurches.map(id => ({
+                            name: religionMap[id],
+                            count: row[`${id}.0`] || 0,
+                            percentage: ((row[`${id}.0`] || 0) / row.Total * 100)
+                        }))
+                        .filter(c => c.count > 0)
+                        .sort((a, b) => b.count - a.count);
+
+                        return `
+                            <b>${row.hezkyNazev}</b><br>
+                            Population: ${row.Total.toLocaleString()}<br>
+                            Total Protestant: ${protestantCount.toLocaleString()} (${(percentage * 100).toFixed(1)}%)<br>
+                            <br>
+                            ${churchCounts.map(c =>
+                                `${c.name}: ${c.count.toLocaleString()} (${c.percentage.toFixed(1)}%)`
+                            ).join('<br>')}
+                        `;
+                    })
                     .addTo(map);
 
                     circles.push({circle, baseRadius});
