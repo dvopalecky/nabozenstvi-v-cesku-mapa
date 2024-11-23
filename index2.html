@@ -30,68 +30,173 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
     <script>
-        // Initialize map centered on Czech Republic
+        const religionMap = {
+            1: "Bez náboženské víry",
+            2: "Apoštolská církev",
+            3: "Bratrská jednota baptistů",
+            4: "Církev adventistů sedmého dne",
+            5: "Církev bratrská",
+            6: "Církev československá husitská",
+            7: "Církev Ježíše Krista Svatých posledních dnů v České republice",
+            8: "Církev řeckokatolická",
+            9: "Církev římskokatolická",
+            10: "Českobratrská církev evangelická",
+            11: "Evangelická církev augsburského vyznání v České republice",
+            12: "Evangelická církev metodistická",
+            13: "Federace židovských obcí v České republice",
+            14: "Jednota bratrská",
+            15: "Křesťanské sbory",
+            16: "Luterská evangelická církev a. v. v České republice",
+            17: "Náboženská společnost českých unitářů",
+            18: "Náboženská společnost Svědkové Jehovovi",
+            19: "Novoapoštolská církev v ČR",
+            20: "Pravoslavná církev v českých zemích",
+            21: "Slezská církev evangelická augsburského vyznání",
+            22: "Starokatolická církev v ČR",
+            23: "Církev sjednocení (moonisté)",
+            24: "Scientologická církev",
+            25: "Církev Křesťanská společenství",
+            26: "Anglikánská církev",
+            27: "islám",
+            28: "buddhismus",
+            29: "hinduismus",
+            30: "Mezinárodní společnost pro vědomí Krišny, Hnutí Hare Krišna",
+            31: "Jiné",
+            32: "Buddhismus Diamantové cesty linie Karma Kagjü",
+            33: "Církev živého Boha",
+            34: "Česká hinduistická náboženská společnost",
+            35: "Obec křesťanů v České republice",
+            36: "Ruská pravoslavná církev, podvorje patriarchy moskevského a celé Rusi v České republice",
+            37: "Ústředí muslimských obcí",
+            38: "Višva Nirmala Dharma",
+            39: "Hnutí Grálu",
+            40: "Hnutí Nového věku (New Age)",
+            41: "katolická víra (katolík)",
+            42: "protestantská/evangelická víra (protestant, evangelík)",
+            43: "křesťanství",
+            44: "judaismus",
+            45: "esoterismus",
+            46: "věřící - nehlásící se k žádné církvi ani náboženské společnosti",
+            47: "Církev Nová naděje",
+            48: "Církev Slovo života",
+            49: "Jedi",
+            50: "ateismus",
+            51: "pohanství",
+            52: "Sith",
+            53: "Církev víry",
+            54: "Církev Svatého Řehoře Osvětitele",
+            55: "Armáda spásy - církev",
+            56: "Církev Nový Život",
+            57: "Církev Oáza",
+            58: "Společenství Josefa Zezulky",
+            59: "Kněžské bratrstvo svatého Pia X.",
+            60: "Théravádový buddhismus",
+            61: "Společenství baptistických sborů",
+            62: "Společenství buddhismu v České republice",
+            63: "Křesťanská církev essejská",
+            64: "pastafariánství",
+            66: "satanismus",
+            67: "agnosticismus",
+            68: "animismus",
+            69: "baháismus",
+            70: "deismus",
+            71: "konfucianismus",
+            72: "sikhismus",
+            73: "šintoismus",
+            74: "taoismus",
+            75: "zoroastrismus",
+            76: "druidismus",
+            77: "rastafariánství",
+            78: "věřící - hlásící se k církvi - název neuveden",
+            99: "Neuvedeno"
+        };
+        checkedChurches = [10,42,5,21,2,3,25,12,14,15,47,48,53,57];
+
+        const colorScale = [
+            [0.001, '#fee5d9'],
+            [0.01, '#fcae91'],
+            [0.02, '#fb6a4a'],
+            [0.05, '#de2d26'],
+            [0.1, '#a50f15']
+        ];
+
+        function getColor(percentage) {
+            for (let [thresh, color] of colorScale) {
+                if (percentage <= thresh) return color;
+            }
+            return colorScale[colorScale.length - 1][1];
+        }
+
         const map = L.map('map').setView([49.8, 15.5], 8);
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
 
-        // Scale factor for circle radius
-        const SCALE_FACTOR = 0.0001;
+        const SCALE_FACTOR = 0.002;
+        let circles = []; // Store circle references
 
-        // Load and process data
         async function init() {
             try {
-                // Load population data
-                const popResponse = await fetch('pivoted_religion_with_totals.csv');
-                const popCsv = await popResponse.text();
-                const popData = Papa.parse(popCsv, { header: true }).data
-                    .filter(row => row.uzemi_kod?.length === 6)
-                    .reduce((acc, row) => {
-                        acc[row.uzemi_kod] = {
-                            population: parseInt(row.Total) || 0,
-                            name: row.uzemi_txt
-                        };
-                        return acc;
-                    }, {});
+                const response = await fetch('merged_religion_municipalities.csv');
+                const csvData = await response.text();
 
-                // Load coordinates
-                const coordResponse = await fetch('obce.json');
-                const rawCoordData = await coordResponse.json();
-                const coordData = Array.isArray(rawCoordData) ? rawCoordData : Object.values(rawCoordData);
+                const data = Papa.parse(csvData, {
+                    header: true,
+                    skipEmptyLines: true,
+                    dynamicTyping: true
+                }).data;
 
                 // Create markers
-                coordData.forEach(obec => {
-                    const popInfo = popData[obec.adresaUradu?.obecKod];
-                    if (!popInfo || !obec.souradnice) return;
+                data.forEach(row => {
+                    console.log(row);
+                    if (!row.souradnice_0 || !row.souradnice_1) return;
 
-                    const radius = Math.sqrt(popInfo.population * SCALE_FACTOR);
-                    L.circleMarker(obec.souradnice, {
-                        radius,
-                        fillColor: '#ff7800',
+                    // Calculate protestant percentage
+                    let protestantCount = 0;
+                    for (let id of checkedChurches) {
+                        protestantCount += row[`${id}.0`] || 0;
+                    }
+                    const percentage = protestantCount / row.Total;
+
+                    const coords = [row.souradnice_0, row.souradnice_1];
+                    const baseRadius = Math.sqrt(row.Total * SCALE_FACTOR);
+                    const zoomFactor = Math.pow(2, map.getZoom() - 8);
+
+                    const circle = L.circleMarker(coords, {
+                        radius: baseRadius * zoomFactor,
+                        fillColor: getColor(percentage),
                         color: '#000',
                         weight: 1,
                         opacity: 1,
                         fillOpacity: 0.6
                     })
                     .bindPopup(`
-                        <b>${obec.hezkyNazev}</b><br>
-                        Population: ${popInfo.population.toLocaleString()}
+                        <b>${row.hezkyNazev}</b><br>
+                        Population: ${row.Total.toLocaleString()}<br>
+                        Protestant: ${(percentage * 100).toFixed(1)}%
                     `)
                     .addTo(map);
+
+                    circles.push({circle, baseRadius});
                 });
 
-                // Add legend
+                // Update circles on zoom
+                map.on('zoomend', () => {
+                    const zoomFactor = Math.pow(2, map.getZoom() - 8);
+                    circles.forEach(({circle, baseRadius}) => {
+                        circle.setRadius(baseRadius * zoomFactor);
+                    });
+                });
+
+                // Update legend to show percentages instead of population
                 const legend = L.control({ position: 'bottomright' });
                 legend.onAdd = function() {
                     const div = L.DomUtil.create('div', 'legend');
-                    const populations = [1000, 10000, 100000];
+                    div.innerHTML = '<h4>Protestant %</h4>';
 
-                    div.innerHTML = '<h4>Population</h4>';
-                    populations.forEach(pop => {
-                        const radius = Math.sqrt(pop * SCALE_FACTOR);
+                    colorScale.forEach(([value, color]) => {
                         div.innerHTML += `
                             <div>
-                                <span class="legend-circle" style="width:${radius*2}px;height:${radius*2}px;background:#ff7800"></span>
-                                ${pop.toLocaleString()}
+                                <span class="legend-circle" style="background:${color}"></span>
+                                ${(value * 100).toFixed(1)}%
                             </div>`;
                     });
                     return div;
@@ -99,8 +204,8 @@
                 legend.addTo(map);
 
             } catch (error) {
-                console.error('Error loading data:', error);
-                alert('Error loading data. Please check console.');
+                console.error('Error:', error);
+                alert('Error loading data. Check console.');
             }
         }
 
