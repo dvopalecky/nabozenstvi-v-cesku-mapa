@@ -3,7 +3,7 @@ let circles = []; // Store circle references
 let religionMap = {
     1: "Bez náboženské víry",
     2: "AC",
-    3: "BJB", 
+    3: "BJB",
     4: "CASD",
     5: "CB",
     6: "CČH",
@@ -84,13 +84,20 @@ let religionMap = {
 const colorScale = [
     [0, '#fff'],  // white
     [0.001, '#fff'],  // white
-    [0.0025, '#f7e8b0'],  // light yellow
+    [0.002, '#f7e8b0'],  // light yellow
     [0.005, '#f4b87d'],  // peach/orange
     [0.01, '#f18d6c'],   // salmon
     [0.02, '#e66a82'],   // pink-red
-    [0.04, '#d55099'],   // dark pink
-    [0.06, '#b840ab'],   // magenta
-    [0.1, '#8b2eb8']     // purple
+    [0.05, '#d55099'],   // dark pink
+    [0.1, '#b840ab'],    // magenta
+    [0.2, '#8b2eb8'],    // purple
+    [0.3, '#6b1ec5'],    // deeper purple
+    [0.4, '#3449eb'],    // bright blue
+    [0.5, '#348feb'],    // brighter blue
+    [0.6, '#34dceb'],    // brightest blue
+    [0.7, '#2a9c5b'],    // bright green
+    [0.8, '#405745'],    // medium bright green
+    [0.9, '#000']     // green
 ];
 
 function getColor(percentage) {
@@ -299,23 +306,23 @@ async function init() {
 document.getElementById('settingsBtn').addEventListener('click', () => {
     const modal = document.getElementById('settingsModal');
     const container = document.getElementById('checkboxContainer');
-    
+
     // Clear existing checkboxes
     container.innerHTML = '';
-    
+
     // Create checkboxes for each religion
     Object.entries(religionMap).forEach(([id, name]) => {
         const div = document.createElement('div');
         div.className = 'flex items-center';
         div.innerHTML = `
-            <input type="checkbox" id="religion${id}" value="${id}" 
+            <input type="checkbox" id="religion${id}" value="${id}"
                    class="w-4 h-4 text-blue-600 rounded border-gray-300 focus:ring-blue-500"
                    ${checkedChurches.includes(Number(id)) ? 'checked' : ''}>
             <label for="religion${id}" class="ml-2 text-sm text-gray-700">${name}</label>
         `;
         container.appendChild(div);
     });
-    
+
     modal.classList.remove('hidden');
 });
 
@@ -349,10 +356,10 @@ document.getElementById('applySettings').addEventListener('click', async () => {
     // Update checkedChurches based on selected checkboxes
     checkedChurches = Array.from(document.querySelectorAll('#checkboxContainer input[type="checkbox"]:checked'))
         .map(checkbox => Number(checkbox.value));
-    
+
     // Close modal
     document.getElementById('settingsModal').classList.add('hidden');
-    
+
     // Update the map
     await updateMap();
 });
