@@ -138,14 +138,14 @@ async function updateMap() {
             const municipality = municipalityMap[row.uzemi_kod];
             if (!municipality || !municipality.lat || !municipality.lon) return;
 
-            let protestantCount = 0;
+            let selectedCount = 0;
             for (let id of checkedChurches) {
-                protestantCount += row[id] || 0;
+                selectedCount += row[id] || 0;
             }
             const total = Object.keys(row)
                 .filter(k => !isNaN(k) && k !== "0")
                 .reduce((sum, k) => sum + (row[k] || 0), 0);
-            const percentage = protestantCount / total;
+            const percentage = selectedCount / total;
 
             const circle = L.circleMarker([municipality.lat, municipality.lon], {
                 radius: Math.sqrt(total * SCALE_FACTOR) * Math.pow(2, map.getZoom() - 8),
@@ -168,7 +168,7 @@ async function updateMap() {
                 return `
                     <b>${municipality.name}</b><br>
                     Population: ${total.toLocaleString()}<br>
-                    Total Protestant: ${protestantCount.toLocaleString()} (${(percentage * 100).toFixed(2)}%)<br>
+                    Total Selected: ${selectedCount.toLocaleString()} (${(percentage * 100).toFixed(2)}%)<br>
                     <br>
                     ${churchCounts.map(c =>
                         `${c.name}: ${c.count.toLocaleString()} (${c.percentage.toFixed(2)}%)`
@@ -226,15 +226,15 @@ async function init() {
                 return;
             }
 
-            // Calculate protestant percentage
-            let protestantCount = 0;
+            // Calculate selected percentage
+            let selectedCount = 0;
             for (let id of checkedChurches) {
-                protestantCount += row[id] || 0;
+                selectedCount += row[id] || 0;
             }
             const total = Object.keys(row)
                 .filter(k => !isNaN(k) && k !== "0")
                 .reduce((sum, k) => sum + (row[k] || 0), 0);
-            const percentage = protestantCount / total;
+            const percentage = selectedCount / total;
 
             const circle = L.circleMarker([municipality.lat, municipality.lon], {
                 radius: Math.sqrt(total * SCALE_FACTOR) * Math.pow(2, map.getZoom() - 8),
@@ -257,7 +257,7 @@ async function init() {
                 return `
                     <b>${municipality.name}</b><br>
                     Population: ${total.toLocaleString()}<br>
-                    Total Protestant: ${protestantCount.toLocaleString()} (${(percentage * 100).toFixed(2)}%)<br>
+                    Total Selected: ${selectedCount.toLocaleString()} (${(percentage * 100).toFixed(2)}%)<br>
                     <br>
                     ${churchCounts.map(c =>
                         `${c.name}: ${c.count.toLocaleString()} (${c.percentage.toFixed(2)}%)`
@@ -283,7 +283,7 @@ async function init() {
         const legend = L.control({ position: 'bottomright' });
         legend.onAdd = function() {
             const div = L.DomUtil.create('div', 'legend');
-            div.innerHTML = '<h4>Protestant %</h4>';
+            div.innerHTML = '<h4>Selected %</h4>';
 
             colorScale.forEach(([value, color]) => {
                 div.innerHTML += `
