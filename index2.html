@@ -32,7 +32,7 @@
     <script>
         const colorScale = [
             [0, '#fff'],  // white
-            [0.001, '#ddd'],  // light gray
+            [0.001, '#fff'],  // white
             [0.0025, '#f7e8b0'],  // light yellow
             [0.005, '#f4b87d'],  // peach/orange
             [0.01, '#f18d6c'],   // salmon
@@ -176,7 +176,7 @@
                         protestantCount += row[id] || 0;
                     }
                     const total = Object.keys(row)
-                        .filter(k => !isNaN(k))
+                        .filter(k => !isNaN(k) && k !== "0")
                         .reduce((sum, k) => sum + (row[k] || 0), 0);
                     const percentage = protestantCount / total;
 
