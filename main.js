@@ -1,5 +1,6 @@
 let checkedChurches = [10,42,5,21,2,3,25,12,14,15,47,48,53,57];
 let circles = []; // Store circle references
+let percentageFilter = 0; // Store current filter value
 let religionMap = {
     1: "Bez náboženské víry",
     2: "AC",
@@ -114,10 +115,12 @@ const map = L.map('map').setView([49.8, 15.5], 8);
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
 
 const SCALE_FACTOR = 0.002;
-async function updateMap() {
-    // Clear existing circles
-    circles.forEach(({circle}) => circle.remove());
-    circles = [];
+async function updateMap(filterOnly = false) {
+    if (!filterOnly) {
+        // Clear existing circles
+        circles.forEach(({circle}) => circle.remove());
+        circles = [];
+    }
 
     try {
         // Re-process the data with new checkedChurches
@@ -177,10 +180,17 @@ async function updateMap() {
             })
             .addTo(map);
 
+            // Store percentage with circle data
             circles.push({
                 circle,
-                baseRadius: Math.sqrt(total * SCALE_FACTOR)
+                baseRadius: Math.sqrt(total * SCALE_FACTOR),
+                percentage: percentage
             });
+
+            // Apply initial filter
+            if (percentage * 100 < percentageFilter) {
+                circle.setStyle({ opacity: 0, fillOpacity: 0 });
+            }
         });
 
         // Update circles on zoom
@@ -357,11 +367,25 @@ document.getElementById('applySettings').addEventListener('click', async () => {
     checkedChurches = Array.from(document.querySelectorAll('#checkboxContainer input[type="checkbox"]:checked'))
         .map(checkbox => Number(checkbox.value));
 
+    // Update percentage filters
+    const minPercentage = parseFloat(document.getElementById('minPercentage').value);
+    const maxPercentage = parseFloat(document.getElementById('maxPercentage').value);
+
     // Close modal
     document.getElementById('settingsModal').classList.add('hidden');
 
     // Update the map
     await updateMap();
+
+    // Apply filter
+    circles.forEach(({circle, percentage}) => {
+        const percentageValue = percentage * 100;
+        if (percentageValue >= minPercentage && percentageValue <= maxPercentage) {
+            circle.setStyle({ opacity: 1, fillOpacity: 0.8 });
+        } else {
+            circle.setStyle({ opacity: 0, fillOpacity: 0 });
+        }
+    });
 });
 
 // Initialize the map
