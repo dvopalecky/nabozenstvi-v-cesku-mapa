@@ -293,7 +293,7 @@ async function init() {
         const legend = L.control({ position: 'bottomright' });
         legend.onAdd = function() {
             const div = L.DomUtil.create('div', 'legend');
-            div.innerHTML = '<h4>Selected %</h4>';
+            div.innerHTML = '<h4>Vybrané %</h4>';
 
             colorScale.forEach(([value, color]) => {
                 div.innerHTML += `

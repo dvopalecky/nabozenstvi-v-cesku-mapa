@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Czech Population Map</title>
+    <title>Náboženská víra v obcích ČR (2021)</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -31,20 +31,21 @@
 
         <!-- Settings Button -->
         <button id="settingsBtn" class="absolute top-4 right-4 bg-white px-4 py-2 rounded-lg shadow-lg z-[1000] hover:bg-gray-100">
-            ⚙️ Settings
+            ⚙️ Nastavení
         </button>
 
         <!-- Modal -->
         <div id="settingsModal" class="hidden fixed inset-0 bg-black bg-opacity-50 z-[2000] flex items-center justify-center">
             <div class="bg-white rounded-lg p-6 max-w-2xl w-full mx-4 max-h-[80vh] overflow-y-auto">
                 <div class="flex justify-between items-center mb-4">
-                    <h2 class="text-xl font-bold">Select Religions</h2>
+                    <h2 class="text-xl font-bold">Vyber příslušnost k náboženské víře</h2>
                     <button id="closeModal" class="text-gray-500 hover:text-gray-700">✕</button>
                 </div>
+                <p class="text-sm text-gray-500">Data jsou ze sčítání lidu z roku 2021.</p>
 
                 <div class="mb-4">
                     <label class="block text-sm font-medium text-gray-700 mb-2">
-                        Filter by percentage range (%)
+                        Filtrovat podle rozsahu procent (%)
                     </label>
                     <div class="flex gap-4 items-center">
                         <div class="flex-1">
@@ -62,11 +63,11 @@
                     </div>
                 </div>
                 <div class="flex gap-2">
-                    <button id="selectAll" class="bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600">Select All</button>
-                    <button id="selectNone" class="bg-gray-500 text-white px-3 py-1 rounded hover:bg-gray-600">Select None</button>
+                    <button id="selectAll" class="bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600">Vybrat vše</button>
+                    <button id="selectNone" class="bg-gray-500 text-white px-3 py-1 rounded hover:bg-gray-600">Zrušit vše</button>
                     <button id="resetButton" class="bg-orange-500 text-white px-3 py-1 rounded hover:bg-orange-600">Reset</button>
                     <button id="applySettings" class="bg-green-500 text-white px-3 py-1 rounded hover:bg-green-600 ml-auto">
-                        Apply Changes
+                        Aplikovat změny
                     </button>
                 </div>
 
