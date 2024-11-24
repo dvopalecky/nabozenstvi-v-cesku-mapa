@@ -354,12 +354,16 @@ document.getElementById('selectNone').addEventListener('click', () => {
     checkboxes.forEach(checkbox => checkbox.checked = false);
 });
 
-document.getElementById('selectEvangelical').addEventListener('click', () => {
+document.getElementById('resetButton').addEventListener('click', () => {
     const defaultChurches = [10,42,5,21,2,3,25,12,14,15,47,48,53,57];
     const checkboxes = document.querySelectorAll('#checkboxContainer input[type="checkbox"]');
     checkboxes.forEach(checkbox => {
         checkbox.checked = defaultChurches.includes(Number(checkbox.value));
     });
+    
+    // Reset the percentage filters to default values
+    document.getElementById('minPercentage').value = '0';
+    document.getElementById('maxPercentage').value = '100';
 });
 
 document.getElementById('applySettings').addEventListener('click', async () => {
