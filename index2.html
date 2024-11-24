@@ -31,7 +31,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
     <script>
         const colorScale = [
-            [0.001, '#f7e8b0'],  // light yellow
+            [0, '#fff'],  // white
+            [0.001, '#ddd'],  // light gray
+            [0.0025, '#f7e8b0'],  // light yellow
             [0.005, '#f4b87d'],  // peach/orange
             [0.01, '#f18d6c'],   // salmon
             [0.02, '#e66a82'],   // pink-red
@@ -41,27 +43,13 @@
         ];
 
         function getColor(percentage) {
-            // Handle edge cases
-            if (percentage <= colorScale[0][0]) return colorScale[0][1];
-            if (percentage >= colorScale[colorScale.length - 1][0]) return colorScale[colorScale.length - 1][1];
-
-            // Find the two colors to interpolate between
-            let i = 0;
-            while (i < colorScale.length - 1 && percentage > colorScale[i + 1][0]) i++;
-
-            const [p1, c1] = colorScale[i];
-            const [p2, c2] = colorScale[i + 1];
-
-            // Calculate interpolation factor
-            const factor = (percentage - p1) / (p2 - p1);
-
-            // Interpolate RGB components
-            const rgb1 = c1.match(/[0-9a-f]{2}/g).map(x => parseInt(x, 16));
-            const rgb2 = c2.match(/[0-9a-f]{2}/g).map(x => parseInt(x, 16));
-
-            const rgb = rgb1.map((c, i) => Math.round(c + factor * (rgb2[i] - c)));
-
-            return `#${rgb.map(x => x.toString(16).padStart(2, '0')).join('')}`;
+            // Return color for the matching threshold
+            for (let i = colorScale.length - 1; i >= 0; i--) {
+                if (percentage >= colorScale[i][0]) {
+                    return colorScale[i][1];
+                }
+            }
+            return colorScale[0][1]; // Default to lowest color
         }
 
         const map = L.map('map').setView([49.8, 15.5], 8);
