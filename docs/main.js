@@ -170,8 +170,8 @@ async function updateMap(filterOnly = false) {
 
                 return `
                     <b>${municipality.name}</b><br>
-                    Population: ${total.toLocaleString()}<br>
-                    Total Selected: ${selectedCount.toLocaleString()} (${(percentage * 100).toFixed(2)}%)<br>
+                    Obyvatelstvo celkem: ${total.toLocaleString()}<br>
+                    Vybraných: ${selectedCount.toLocaleString()} (${(percentage * 100).toFixed(2)}%)<br>
                     <br>
                     ${churchCounts.map(c =>
                         `${c.name}: ${c.count.toLocaleString()} (${c.percentage.toFixed(2)}%)`
@@ -228,8 +228,12 @@ async function init() {
 
         // Initialize the religionMap
         viraRows.forEach(row => {
+            if (String(row.uzemi_kod).length < 6) return;
             const municipality = municipalityMap[row.uzemi_kod];
-            if (!municipality) return;
+            if (!municipality) {
+                // console.log(`Missing municipality for: ${row.uzemi_kod}`);
+                return;
+            }
 
             if (!municipality.lat || !municipality.lon) {
                 console.log(`Missing coordinates for: ${municipality.name} (${row.uzemi_kod})`);
@@ -360,7 +364,7 @@ document.getElementById('resetButton').addEventListener('click', () => {
     checkboxes.forEach(checkbox => {
         checkbox.checked = defaultChurches.includes(Number(checkbox.value));
     });
-    
+
     // Reset the percentage filters to default values
     document.getElementById('minPercentage').value = '0';
     document.getElementById('maxPercentage').value = '100';
