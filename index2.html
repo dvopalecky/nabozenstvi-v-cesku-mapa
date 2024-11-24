@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Czech Population Map</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
         #map {
             height: 100vh;
@@ -25,7 +26,39 @@
     </style>
 </head>
 <body>
-    <div id="map"></div>
+    <div class="relative">
+        <div id="map"></div>
+        
+        <!-- Settings Button -->
+        <button id="settingsBtn" class="absolute top-4 right-4 bg-white px-4 py-2 rounded-lg shadow-lg z-[1000] hover:bg-gray-100">
+            ⚙️ Settings
+        </button>
+
+        <!-- Modal -->
+        <div id="settingsModal" class="hidden fixed inset-0 bg-black bg-opacity-50 z-[2000] flex items-center justify-center">
+            <div class="bg-white rounded-lg p-6 max-w-2xl w-full mx-4 max-h-[80vh] overflow-y-auto">
+                <div class="flex justify-between items-center mb-4">
+                    <h2 class="text-xl font-bold">Select Religions</h2>
+                    <button id="closeModal" class="text-gray-500 hover:text-gray-700">✕</button>
+                </div>
+                
+                <div class="mb-4">
+                    <button id="selectAll" class="bg-blue-500 text-white px-3 py-1 rounded mr-2 hover:bg-blue-600">Select All</button>
+                    <button id="selectNone" class="bg-gray-500 text-white px-3 py-1 rounded hover:bg-gray-600">Select None</button>
+                </div>
+
+                <div id="checkboxContainer" class="grid grid-cols-1 md:grid-cols-2 gap-2">
+                    <!-- Checkboxes will be inserted here -->
+                </div>
+
+                <div class="mt-6 flex justify-end">
+                    <button id="applySettings" class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">
+                        Apply Changes
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
