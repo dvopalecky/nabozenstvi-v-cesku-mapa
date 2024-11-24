@@ -154,33 +154,46 @@
 
         async function init() {
             try {
-                const response = await fetch('merged_religion_municipalities.csv');
-                const csvData = await response.text();
+                // Load all CSV files
+                const [viraData, viraIndex, uzemiIndex, municipalities] = await Promise.all([
+                    fetch('vira_by_uzemi.csv').then(r => r.text()),
+                    fetch('vira_index.csv').then(r => r.text()),
+                    fetch('uzemi_index.csv').then(r => r.text()),
+                    fetch('municipalities.csv').then(r => r.text())
+                ]);
 
-                const data = Papa.parse(csvData, {
-                    header: true,
-                    skipEmptyLines: true,
-                    dynamicTyping: true
-                }).data;
+                // Parse all files
+                const viraRows = Papa.parse(viraData, {header: true, dynamicTyping: true}).data;
+                const viraMap = Papa.parse(viraIndex, {header: true}).data;
+                const uzemiMap = Papa.parse(uzemiIndex, {header: true}).data;
+                const municipalityMap = Papa.parse(municipalities, {header: true}).data
+                    .reduce((acc, row) => {
+                        acc[row.uzemi_kod] = row;
+                        return acc;
+                    }, {});
 
-                // Create markers
-                data.forEach(row => {
-                    console.log(row);
-                    if (!row.souradnice_0 || !row.souradnice_1) return;
+                // Process only municipalities with coordinates
+                viraRows.forEach(row => {
+                    const municipality = municipalityMap[row.uzemi_kod];
+                    if (!municipality) return;
+
+                    if (!municipality.lat || !municipality.lon) {
+                        console.log(`Missing coordinates for: ${municipality.name} (${row.uzemi_kod})`);
+                        return;
+                    }
 
                     // Calculate protestant percentage
                     let protestantCount = 0;
                     for (let id of checkedChurches) {
-                        protestantCount += row[`${id}.0`] || 0;
+                        protestantCount += row[id] || 0;
                     }
-                    const percentage = protestantCount / row.Total;
+                    const total = Object.keys(row)
+                        .filter(k => !isNaN(k))
+                        .reduce((sum, k) => sum + (row[k] || 0), 0);
+                    const percentage = protestantCount / total;
 
-                    const coords = [row.souradnice_0, row.souradnice_1];
-                    const baseRadius = Math.sqrt(row.Total * SCALE_FACTOR);
-                    const zoomFactor = Math.pow(2, map.getZoom() - 8);
-
-                    const circle = L.circleMarker(coords, {
-                        radius: baseRadius * zoomFactor,
+                    const circle = L.circleMarker([municipality.lat, municipality.lon], {
+                        radius: Math.sqrt(total * SCALE_FACTOR) * Math.pow(2, map.getZoom() - 8),
                         fillColor: getColor(percentage),
                         color: '#000',
                         weight: 1,
@@ -188,18 +201,18 @@
                         fillOpacity: 0.8
                     })
                     .bindPopup(() => {
-                        // Get counts for each church
-                        const churchCounts = checkedChurches.map(id => ({
-                            name: religionMap[id],
-                            count: row[`${id}.0`] || 0,
-                            percentage: ((row[`${id}.0`] || 0) / row.Total * 100)
-                        }))
-                        .filter(c => c.count > 0)
-                        .sort((a, b) => b.count - a.count);
+                        const churchCounts = checkedChurches
+                            .map(id => ({
+                                name: religionMap[id],
+                                count: row[id] || 0,
+                                percentage: ((row[id] || 0) / total * 100)
+                            }))
+                            .filter(c => c.count > 0)
+                            .sort((a, b) => b.count - a.count);
 
                         return `
-                            <b>${row.hezkyNazev}</b><br>
-                            Population: ${row.Total.toLocaleString()}<br>
+                            <b>${municipality.name}</b><br>
+                            Population: ${total.toLocaleString()}<br>
                             Total Protestant: ${protestantCount.toLocaleString()} (${(percentage * 100).toFixed(2)}%)<br>
                             <br>
                             ${churchCounts.map(c =>
@@ -209,14 +222,16 @@
                     })
                     .addTo(map);
 
-                    circles.push({circle, baseRadius});
+                    circles.push({
+                        circle,
+                        baseRadius: Math.sqrt(total * SCALE_FACTOR)
+                    });
                 });
 
                 // Update circles on zoom
                 map.on('zoomend', () => {
-                    const zoomFactor = Math.pow(2, map.getZoom() - 8);
                     circles.forEach(({circle, baseRadius}) => {
-                        circle.setRadius(baseRadius * zoomFactor);
+                        circle.setRadius(baseRadius * Math.pow(2, map.getZoom() - 8));
                     });
                 });
 
