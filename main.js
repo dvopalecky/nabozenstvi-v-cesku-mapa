@@ -337,6 +337,14 @@ document.getElementById('selectNone').addEventListener('click', () => {
     checkboxes.forEach(checkbox => checkbox.checked = false);
 });
 
+document.getElementById('selectEvangelical').addEventListener('click', () => {
+    const defaultChurches = [10,42,5,21,2,3,25,12,14,15,47,48,53,57];
+    const checkboxes = document.querySelectorAll('#checkboxContainer input[type="checkbox"]');
+    checkboxes.forEach(checkbox => {
+        checkbox.checked = defaultChurches.includes(Number(checkbox.value));
+    });
+});
+
 document.getElementById('applySettings').addEventListener('click', async () => {
     // Update checkedChurches based on selected checkboxes
     checkedChurches = Array.from(document.querySelectorAll('#checkboxContainer input[type="checkbox"]:checked'))
