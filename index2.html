@@ -113,18 +113,37 @@
         checkedChurches = [10,42,5,21,2,3,25,12,14,15,47,48,53,57];
 
         const colorScale = [
-            [0.001, '#fee5d9'],
-            [0.01, '#fcae91'],
-            [0.02, '#fb6a4a'],
-            [0.05, '#de2d26'],
-            [0.1, '#a50f15']
+            [0.001, '#f7e8b0'],  // light yellow
+            [0.005, '#f4b87d'],  // peach/orange
+            [0.01, '#f18d6c'],   // salmon
+            [0.02, '#e66a82'],   // pink-red
+            [0.04, '#d55099'],   // dark pink
+            [0.06, '#b840ab'],   // magenta
+            [0.1, '#8b2eb8']     // purple
         ];
 
         function getColor(percentage) {
-            for (let [thresh, color] of colorScale) {
-                if (percentage <= thresh) return color;
-            }
-            return colorScale[colorScale.length - 1][1];
+            // Handle edge cases
+            if (percentage <= colorScale[0][0]) return colorScale[0][1];
+            if (percentage >= colorScale[colorScale.length - 1][0]) return colorScale[colorScale.length - 1][1];
+
+            // Find the two colors to interpolate between
+            let i = 0;
+            while (i < colorScale.length - 1 && percentage > colorScale[i + 1][0]) i++;
+
+            const [p1, c1] = colorScale[i];
+            const [p2, c2] = colorScale[i + 1];
+
+            // Calculate interpolation factor
+            const factor = (percentage - p1) / (p2 - p1);
+
+            // Interpolate RGB components
+            const rgb1 = c1.match(/[0-9a-f]{2}/g).map(x => parseInt(x, 16));
+            const rgb2 = c2.match(/[0-9a-f]{2}/g).map(x => parseInt(x, 16));
+
+            const rgb = rgb1.map((c, i) => Math.round(c + factor * (rgb2[i] - c)));
+
+            return `#${rgb.map(x => x.toString(16).padStart(2, '0')).join('')}`;
         }
 
         const map = L.map('map').setView([49.8, 15.5], 8);
@@ -166,7 +185,7 @@
                         color: '#000',
                         weight: 1,
                         opacity: 1,
-                        fillOpacity: 0.6
+                        fillOpacity: 0.8
                     })
                     .bindPopup(() => {
                         // Get counts for each church
@@ -181,10 +200,10 @@
                         return `
                             <b>${row.hezkyNazev}</b><br>
                             Population: ${row.Total.toLocaleString()}<br>
-                            Total Protestant: ${protestantCount.toLocaleString()} (${(percentage * 100).toFixed(1)}%)<br>
+                            Total Protestant: ${protestantCount.toLocaleString()} (${(percentage * 100).toFixed(2)}%)<br>
                             <br>
                             ${churchCounts.map(c =>
-                                `${c.name}: ${c.count.toLocaleString()} (${c.percentage.toFixed(1)}%)`
+                                `${c.name}: ${c.count.toLocaleString()} (${c.percentage.toFixed(2)}%)`
                             ).join('<br>')}
                         `;
                     })
@@ -211,7 +230,7 @@
                         div.innerHTML += `
                             <div>
                                 <span class="legend-circle" style="background:${color}"></span>
-                                ${(value * 100).toFixed(1)}%
+                                ${(value * 100).toFixed(2)}%
                             </div>`;
                     });
                     return div;
