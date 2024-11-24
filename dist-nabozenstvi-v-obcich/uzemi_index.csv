@@ -1,0 +1,6725 @@
+uzemi_kod,uzemi_txt,nb_digits
+19,Česká republika,2
+221,Střední Čechy,3
+213,Praha,3
+256,Severovýchod,3
+264,Jihovýchod,3
+272,Střední Morava,3
+281,Moravskoslezsko,3
+248,Severozápad,3
+230,Jihozápad,3
+6216,Šlapanice,4
+6208,Ivančice,4
+6209,Kuřim,4
+6210,Kyjov,4
+6211,Mikulov,4
+6212,Moravský Krumlov,4
+6213,Pohořelice,4
+7110,Šternberk,4
+7109,Přerov,4
+7108,Prostějov,4
+7107,Olomouc,4
+7106,Mohelnice,4
+7105,Litovel,4
+7104,Lipník nad Bečvou,4
+7103,Konice,4
+6214,Rosice,4
+7101,Hranice,4
+6221,Židlochovice,4
+6220,Znojmo,4
+6219,Vyškov,4
+6218,Veselí nad Moravou,4
+6217,Tišnov,4
+6215,Slavkov u Brna,4
+7102,Jeseník,4
+8119,Ostrava,4
+7111,Šumperk,4
+8112,Kopřivnice,4
+8111,Karviná,4
+8110,Jablunkov,4
+8109,Hlučín,4
+8108,Havířov,4
+8107,Frýdlant nad Ostravicí,4
+8106,Frýdek-Místek,4
+8105,Frenštát pod Radhoštěm,4
+8104,Český Těšín,4
+8103,Bruntál,4
+8102,Bohumín,4
+8101,Bílovec,4
+7213,Zlín,4
+7212,Vsetín,4
+7211,Vizovice,4
+7210,Valašské Meziříčí,4
+7209,Valašské Klobouky,4
+7208,Uherský Brod,4
+7207,Uherské Hradiště,4
+7206,Rožnov pod Radhoštěm,4
+7205,Otrokovice,4
+7204,Luhačovice,4
+7203,Kroměříž,4
+7202,Holešov,4
+7201,Bystřice pod Hostýnem,4
+7113,Zábřeh,4
+7112,Uničov,4
+6207,Hustopeče,4
+8113,Kravaře,4
+6206,Hodonín,4
+6204,Břeclav,4
+5215,Vrchlabí,4
+5214,Trutnov,4
+5213,Rychnov nad Kněžnou,4
+5212,Nový Bydžov,4
+5211,Nové Město nad Metují,4
+5210,Nová Paka,4
+5209,Náchod,4
+5208,Kostelec nad Orlicí,4
+5207,Jičín,4
+5206,Jaroměř,4
+5205,Hradec Králové,4
+5204,Hořice,4
+5203,Dvůr Králové nad Labem,4
+5301,Česká Třebová,4
+5202,Dobruška,4
+5110,Železný Brod,4
+5109,Turnov,4
+5108,Tanvald,4
+5107,Semily,4
+5106,Nový Bor,4
+5105,Liberec,4
+5104,Jilemnice,4
+5103,Jablonec nad Nisou,4
+5102,Frýdlant,4
+5101,Česká Lípa,4
+4216,Žatec,4
+4215,Varnsdorf,4
+4214,Ústí nad Labem,4
+5201,Broumov,4
+5302,Hlinsko,4
+5303,Holice,4
+5304,Chrudim,4
+6203,Brno,4
+6202,Boskovice,4
+6201,Blansko,4
+6115,Žďár nad Sázavou,4
+6114,Velké Meziříčí,4
+6113,Třebíč,4
+6112,Telč,4
+6111,Světlá nad Sázavou,4
+6110,Pelhřimov,4
+6109,Pacov,4
+6108,Nové Město na Moravě,4
+6107,Náměšť nad Oslavou,4
+6106,Moravské Budějovice,4
+6105,Jihlava,4
+6104,Chotěboř,4
+6103,Humpolec,4
+6102,Havlíčkův Brod,4
+6101,Bystřice nad Pernštejnem,4
+5315,Žamberk,4
+5314,Vysoké Mýto,4
+5313,Ústí nad Orlicí,4
+5312,Svitavy,4
+5311,Přelouč,4
+5310,Polička,4
+5309,Pardubice,4
+5308,Moravská Třebová,4
+5307,Litomyšl,4
+5306,Lanškroun,4
+5305,Králíky,4
+6205,Bučovice,4
+8114,Krnov,4
+4212,Rumburk,4
+8116,Odry,4
+3104,Dačice,4
+3105,Jindřichův Hradec,4
+3106,Kaplice,4
+3108,Písek,4
+3109,Prachatice,4
+3110,Soběslav,4
+3111,Strakonice,4
+3112,Tábor,4
+3113,Trhové Sviny,4
+3114,Třeboň,4
+3116,Vimperk,4
+3117,Vodňany,4
+3103,Český Krumlov,4
+3201,Blovice,4
+3203,Horažďovice,4
+3204,Horšovský Týn,4
+3205,Klatovy,4
+3206,Kralovice,4
+3207,Nepomuk,4
+3208,Nýřany,4
+3209,Plzeň,4
+3210,Přeštice,4
+3211,Rokycany,4
+3212,Stod,4
+3213,Stříbro,4
+3214,Sušice,4
+3202,Domažlice,4
+3215,Tachov,4
+3102,České Budějovice,4
+2126,Votice,4
+1000,Praha,4
+2101,Benešov,4
+2102,Beroun,4
+2103,Brandýs nad Labem-Stará Boleslav,4
+2104,Čáslav,4
+2105,Černošice,4
+2106,Český Brod,4
+2107,Dobříš,4
+2108,Hořovice,4
+2109,Kladno,4
+2110,Kolín,4
+2111,Kralupy nad Vltavou,4
+3101,Blatná,4
+2112,Kutná Hora,4
+2114,Mělník,4
+2115,Mladá Boleslav,4
+2116,Mnichovo Hradiště,4
+2117,Neratovice,4
+2118,Nymburk,4
+2119,Poděbrady,4
+2120,Příbram,4
+2121,Rakovník,4
+2122,Říčany,4
+2123,Sedlčany,4
+2124,Slaný,4
+2125,Vlašim,4
+2113,Lysá nad Labem,4
+4101,Aš,4
+4102,Cheb,4
+4103,Karlovy Vary,4
+1120,Praha 20,4
+1119,Praha 19,4
+1118,Praha 18,4
+1117,Praha 17,4
+1116,Praha 16,4
+1115,Praha 15,4
+1114,Praha 14,4
+1113,Praha 13,4
+1112,Praha 12,4
+1111,Praha 11,4
+1110,Praha 10,4
+1109,Praha 9,4
+1121,Praha 21,4
+1108,Praha 8,4
+1106,Praha 6,4
+1105,Praha 5,4
+1104,Praha 4,4
+1103,Praha 3,4
+1102,Praha 2,4
+1101,Praha 1,4
+8122,Vítkov,4
+8121,Třinec,4
+8120,Rýmařov,4
+4213,Teplice,4
+8118,Orlová,4
+8117,Opava,4
+1107,Praha 7,4
+1122,Praha 22,4
+3018,Hlavní město Praha,4
+3026,Středočeský kraj,4
+4104,Kraslice,4
+4105,Mariánské Lázně,4
+4106,Ostrov,4
+4107,Sokolov,4
+4201,Bílina,4
+4202,Děčín,4
+4203,Chomutov,4
+4204,Kadaň,4
+4205,Litoměřice,4
+4206,Litvínov,4
+4207,Louny,4
+4208,Lovosice,4
+4209,Most,4
+4210,Podbořany,4
+4211,Roudnice nad Labem,4
+3140,Moravskoslezský kraj,4
+3131,Zlínský kraj,4
+3123,Olomoucký kraj,4
+3115,Jihomoravský kraj,4
+3107,Kraj Vysočina,4
+3093,Pardubický kraj,4
+3085,Královéhradecký kraj,4
+3077,Liberecký kraj,4
+3069,Ústecký kraj,4
+3051,Karlovarský kraj,4
+3042,Plzeňský kraj,4
+3034,Jihočeský kraj,4
+8115,Nový Jičín,4
+40924,Praha,5
+40916,Ostrava-město,5
+40177,Beroun,5
+40711,Brno-město,5
+40703,Blansko,5
+40690,Žďár nad Sázavou,5
+40681,Třebíč,5
+40673,Pelhřimov,5
+40665,Jihlava,5
+40657,Havlíčkův Brod,5
+40649,Ústí nad Orlicí,5
+40631,Svitavy,5
+40622,Pardubice,5
+40614,Chrudim,5
+40606,Trutnov,5
+40592,Rychnov nad Kněžnou,5
+40584,Náchod,5
+40576,Jičín,5
+40720,Brno-venkov,5
+40568,Hradec Králové,5
+40738,Břeclav,5
+40754,Vyškov,5
+40169,Benešov,5
+40908,Opava,5
+40894,Nový Jičín,5
+40886,Karviná,5
+40878,Frýdek-Místek,5
+40860,Bruntál,5
+40851,Zlín,5
+40843,Vsetín,5
+40835,Uherské Hradiště,5
+40827,Kroměříž,5
+40819,Šumperk,5
+40801,Přerov,5
+40797,Prostějov,5
+40789,Olomouc,5
+40771,Jeseník,5
+40746,Hodonín,5
+40550,Semily,5
+40762,Znojmo,5
+40533,Jablonec nad Nisou,5
+40321,Prachatice,5
+40312,Písek,5
+40304,Jindřichův Hradec,5
+40291,Český Krumlov,5
+40282,České Budějovice,5
+40274,Rakovník,5
+40258,Praha-západ,5
+40240,Praha-východ,5
+40231,Nymburk,5
+40223,Mladá Boleslav,5
+40215,Mělník,5
+40207,Kutná Hora,5
+40193,Kolín,5
+40541,Liberec,5
+40185,Kladno,5
+40339,Strakonice,5
+40347,Tábor,5
+40266,Příbram,5
+40363,Klatovy,5
+40517,Ústí nad Labem,5
+40355,Domažlice,5
+40509,Teplice,5
+40495,Most,5
+40487,Louny,5
+40461,Chomutov,5
+40452,Děčín,5
+40444,Sokolov,5
+40479,Litoměřice,5
+40436,Karlovy Vary,5
+40371,Plzeň-město,5
+40380,Plzeň-jih,5
+40398,Plzeň-sever,5
+40525,Česká Lípa,5
+40410,Tachov,5
+40428,Cheb,5
+40401,Rokycany,5
+577499,Roztoky u Jilemnice,6
+577596,Tatobity,6
+577600,Troskovice,6
+577626,Turnov,6
+577561,Svojek,6
+577553,Studenec,6
+577545,Stružinec,6
+577529,Slaná,6
+577570,Syřenov,6
+577421,Příkrý,6
+577472,Rovensko pod Troskami,6
+577464,Roprachtice,6
+577456,Rokytnice nad Jizerou,6
+577448,Rakousy,6
+577430,Radostná pod Kozákovem,6
+577413,Přepeře,6
+577405,Poniklá,6
+577642,Veselá,6
+577391,Peřimov,6
+577481,Roztoky u Semil,6
+577651,Víchová nad Jizerou,6
+577944,Čistá,6
+577677,Všeň,6
+577375,Levínská Olešnice,6
+577995,Dolní Újezd,6
+577987,Dlouhá Loučka,6
+577979,Poustka,6
+577961,Dětřichov,6
+577936,Cerekvice nad Loučnou,6
+577928,Bystré,6
+577910,Budislav,6
+577898,Březiny,6
+577669,Vítkovice,6
+577871,Březina,6
+577839,Borová,6
+577821,Bohuňovice,6
+577812,Bohuňov,6
+577774,Benátky,6
+577731,Svitavy,6
+577723,Žernov,6
+577707,Záhoří,6
+577693,Vysoké nad Jizerou,6
+577685,Vyskeř,6
+577863,Brněnec,6
+577367,Olešnice,6
+576891,Voděrady,6
+577341,Nová Ves nad Popelkou,6
+577006,Bozkov,6
+576999,Benešov u Semil,6
+576981,Benecko,6
+576972,Bělá,6
+576964,Semily,6
+576956,Žďár nad Orlicí,6
+576948,Zdobnice,6
+576930,Zdelov,6
+576921,Záměl,6
+578002,Velký Luh,6
+576883,Vamberk,6
+576875,Val,6
+576859,Týniště nad Orlicí,6
+576841,Tutleky,6
+576832,Třebešov,6
+576824,Trnov,6
+576816,Synkov-Slemeno,6
+576808,Solnice,6
+576794,Sněžné,6
+577014,Bradlecká Lhota,6
+577031,Bukovina u Čisté,6
+577049,Bystrá nad Jizerou,6
+577057,Čistá u Horek,6
+577332,Mříčná,6
+577324,Modřišice,6
+577316,Mírová pod Kozákovem,6
+577308,Lomnice nad Popelkou,6
+577294,Libštát,6
+577243,Kruh,6
+577235,Košťálov,6
+577227,Klokočí,6
+577219,Karlovice,6
+577359,Ohrazenice,6
+577201,Kacanovy,6
+577189,Jestřabí v Krkonoších,6
+577171,Jesenný,6
+577162,Jablonec nad Jizerou,6
+577154,Chuchelna,6
+577146,Hrubá Skála,6
+577120,Horní Branná,6
+577111,Holenice,6
+577081,Harrachov,6
+577073,Háje nad Jizerou,6
+577197,Jilemnice,6
+578011,Chodov,6
+578398,Mikuleč,6
+578037,Hartmanice,6
+578703,Rudná,6
+578690,Rozstání,6
+578681,Rozhraní,6
+578673,Rohozná,6
+578665,Dražeň,6
+578657,Radiměř,6
+578649,Pustá Rybná,6
+578631,Pustá Kamenice,6
+578622,Příluka,6
+578614,Tojice,6
+578606,Lhůta,6
+578592,Třebčice,6
+578584,Pomezí,6
+578576,Polička,6
+578568,Čmelíny,6
+578550,Pohledy,6
+578541,Jarov,6
+578533,Nezamyslice,6
+578525,Frymburk,6
+578711,Rychnov na Moravě,6
+578720,Sádek,6
+578738,Sebranice,6
+578746,Sedliště,6
+578941,Vidlatá Seč,6
+578932,Vendolí,6
+578924,Velečín,6
+578916,Újezdec,6
+578908,Třebařov,6
+578894,Trstěnice,6
+578886,Trpín,6
+578878,Telecí,6
+578860,Študlov,6
+578517,Domoraz,6
+578851,Široký Důl,6
+578835,Suchá Lhota,6
+578827,Zahrádka,6
+578819,Strakov,6
+578801,Stašov,6
+578797,Štichovice,6
+578789,Staré Město,6
+578771,Kočín,6
+578762,Slatina,6
+578754,Sklené,6
+578843,Svojanov,6
+578509,Osík,6
+578495,Čímice,6
+578487,Opatov,6
+578231,Koclířov,6
+578223,Nehodiv,6
+578215,Kamenná Horka,6
+578207,Kamenec u Poličky,6
+578193,Jevíčko,6
+578185,Jedlová,6
+578177,Kovčín,6
+578169,Jarošov,6
+578151,Jaroměřice,6
+578240,Hamry,6
+578142,Janůvky,6
+578126,Chrastavec,6
+578118,Chotovice,6
+578100,Chotěnov,6
+578096,Chornice,6
+578088,Biřkov,6
+578070,Lomec,6
+578061,Ostřetice,6
+578053,Horky,6
+578045,Krásný Les,6
+578134,Janov,6
+578029,Vysoká Pec,6
+578258,Korouhev,6
+578274,Křenov,6
+578479,Oldřiš,6
+578461,Mezihoří,6
+578452,Nedvězí,6
+578444,Moravská Třebová,6
+578436,Slatina,6
+578428,Morašice,6
+578410,Maňovice,6
+578401,Mladějov na Moravě,6
+576786,Slatina nad Zdobnicí,6
+578266,Koruna,6
+578380,Městečko Trnávka,6
+578363,Makov,6
+578355,Lubná,6
+578347,Litomyšl,6
+578339,Linhartice,6
+578321,Újezd u Plánice,6
+578312,Zborovy,6
+578304,Lavičné,6
+578291,Květná,6
+578282,Kunčina,6
+578371,Malíkov,6
+576778,Skuhrov nad Bělou,6
+576271,Dobruška,6
+576743,Sedloňov,6
+575089,Chvojenec,6
+575071,Chvaletice,6
+575062,Choteč,6
+575054,Choltice,6
+575046,Hrobice,6
+575011,Horní Ředice,6
+574996,Horní Jelení,6
+574988,Holice,6
+574961,Hlavečník,6
+574953,Dříteč,6
+574929,Dolní Ředice,6
+574911,Dolní Roveň,6
+574902,Dolany,6
+574899,Dašice,6
+574864,Čepí,6
+574856,Čeperka,6
+574848,Býšť,6
+574830,Bukovka,6
+574821,Bukovina u Přelouče,6
+575097,Chýšť,6
+575101,Jankovice,6
+575119,Jaroslav,6
+575127,Jedousov,6
+575518,Přelovice,6
+575500,Přelouč,6
+575470,Poběžovice u Přelouče,6
+575461,Poběžovice u Holic,6
+575445,Ostřetín,6
+575437,Ostřešany,6
+575429,Opatovice nad Labem,6
+575399,Moravany,6
+575381,Mokošín,6
+574813,Bukovina nad Labem,6
+575372,Mikulovice,6
+575313,Lipoltice,6
+575305,Libišany,6
+575259,Labské Chrčice,6
+575232,Kostěnice,6
+575194,Kojice,6
+575178,Kladruby nad Labem,6
+575151,Kasalice,6
+575143,Jezbořice,6
+575135,Jeníkovice,6
+575330,Litošice,6
+574805,Břehy,6
+574791,Brloh,6
+574783,Borek,6
+574449,Kosořín,6
+574431,Slavětín nad Metují,6
+574422,Slatina nad Úpou,6
+574406,Rychnovek,6
+574392,Sázava,6
+574384,Rožnov,6
+574376,Rasošky,6
+574368,Přibyslav,6
+574350,Provodov-Šonov,6
+574457,Slavoňov,6
+574341,Police nad Metují,6
+574325,Gruna,6
+574317,Otovice,6
+574309,Bezděčí u Trnávky,6
+574295,Nový Ples,6
+574287,Nový Hrádek,6
+574279,Nové Město nad Metují,6
+574261,Nahořany,6
+574252,Meziměstí,6
+574244,Mezilesí,6
+574333,Radkov,6
+575526,Přepychy,6
+574465,Stárkov,6
+574490,Suchý Důl,6
+574767,Lázně Bohdaneč,6
+574741,Bezděkov,6
+574724,Barchov,6
+574708,Žernov,6
+574694,Žďárky,6
+574686,Žďár nad Metují,6
+574660,Zaloňov,6
+574651,Zábrodí,6
+574643,Vysokov,6
+574481,Studnice,6
+574635,Vysoká Srbská,6
+574601,Vlkov,6
+574597,Vilantice,6
+574589,Velký Třebešov,6
+574571,Velké Petrovice,6
+574562,Velká Jesenice,6
+574554,Velichovky,6
+574546,Kramolna,6
+574538,Teplice nad Metují,6
+574511,Šonov,6
+574627,Vršovka,6
+576751,Semechnice,6
+575534,Ráby,6
+575551,Rohovládova Bělá,6
+576425,Kvasiny,6
+576409,Králova Lhota,6
+576395,Kounov,6
+576387,Kostelecké Horky,6
+576361,Kostelec nad Orlicí,6
+576352,Jílovice,6
+576336,Javornice,6
+576328,Janov,6
+576310,Chleny,6
+576301,Doudleby nad Orlicí,6
+576280,Dobřany,6
+578959,Víska u Jevíčka,6
+576263,Dobré,6
+576247,Deštné v Orlických horách,6
+576221,Čestice,6
+576212,České Meziříčí,6
+576204,Černíkovice,6
+576191,Čermná nad Orlicí,6
+576182,Častolovice,6
+576433,Ledce,6
+576441,Lhoty u Potštejna,6
+576450,Liberk,6
+576468,Lično,6
+576735,Říčky v Orlických horách,6
+576727,Rybná nad Zdobnicí,6
+576701,Rokytnice v Orlických horách,6
+576689,Přepychy,6
+576671,Potštejn,6
+576662,Pohoří,6
+576654,Podbřezí,6
+576620,Pěčín,6
+576611,Osečnice,6
+576174,Byzhradec,6
+576603,Orlické Záhoří,6
+576581,Olešnice,6
+576573,Olešnice v Orlických horách,6
+576565,Ohnišov,6
+576557,Očelice,6
+576549,Nová Ves,6
+576522,Mokré,6
+576506,Lupenice,6
+576492,Lukavice,6
+576476,Lípa nad Orlicí,6
+576590,Opočno,6
+576166,Bystré,6
+576140,Borovnice,6
+576131,Borohrádek,6
+575828,Trusnov,6
+575810,Tetov,6
+575780,Svojšice,6
+575771,Svinčany,6
+575763,Strašov,6
+575755,Stojice,6
+575739,Starý Mateřov,6
+575721,Staré Ždánice,6
+575712,Staré Jesenčany,6
+575844,Turkovice,6
+575704,Staré Hradiště,6
+575666,Sopřeč,6
+575658,Slepotice,6
+575640,Sezemice,6
+575623,Semín,6
+575615,Selmice,6
+575607,Řečany nad Labem,6
+575593,Rybitví,6
+575577,Rokytno,6
+575569,Rohoznice,6
+575682,Srch,6
+575542,Radhošť,6
+575861,Týnišťko,6
+575887,Úhřetická Lhota,6
+576123,Bolehošť,6
+576115,Bohdašín,6
+576107,Bílý Újezd,6
+576093,Bartošovice v Orlických horách,6
+576085,Bačetín,6
+576077,Albrechtice nad Orlicí,6
+576069,Rychnov nad Kněžnou,6
+576051,Živanice,6
+576042,Žáravice,6
+575879,Uhersko,6
+576026,Zdechovice,6
+576000,Vysoké Chvojno,6
+575992,Voleč,6
+575984,Vlčí Habřina,6
+575968,Veselí,6
+575941,Veliny,6
+575933,Vápno,6
+575925,Valy,6
+575917,Urbanice,6
+575909,Újezd u Přelouče,6
+576018,Vyšehněvice,6
+578967,Vítějeves,6
+579335,Chvaleč,6
+578983,Tatiná,6
+582298,Rudice,6
+582280,Rozsíčka,6
+582271,Rozseč nad Kunštátem,6
+582263,Rohozec,6
+582255,Rašov,6
+582247,Ráječko,6
+582239,Rájec-Jestřebí,6
+582221,Prostřední Poříčí,6
+582212,Petrovice,6
+582204,Petrov,6
+582191,Pamětice,6
+582182,Ostrov u Macochy,6
+582174,Osiky,6
+582166,Olomučany,6
+582158,Olešnice,6
+582131,Okrouhlá,6
+582123,Ochoz u Tišnova,6
+582115,Obora,6
+582107,Nýrov,6
+582310,Sebranice,6
+582328,Senetářov,6
+582336,Skalice nad Svitavou,6
+582344,Skrchov,6
+582603,Vavřinec,6
+582590,Vanovice,6
+582581,Valchov,6
+582573,Úsobrno,6
+582565,Unín,6
+582557,Újezd u Černé Hory,6
+582531,Uhřice,6
+582506,Tasovice,6
+582492,Štěchov,6
+582085,Němčice,6
+582484,Šošůvka,6
+582468,Šebetov,6
+582450,Synalov,6
+582441,Svitávka,6
+582433,Svinošice,6
+582417,Sulíkov,6
+582409,Suchý,6
+582395,Sudice,6
+582379,Strhaře,6
+582352,Sloup,6
+582476,Šebrov-Kateřina,6
+582611,Vážany,6
+582077,Milonice,6
+582042,Malá Roudka,6
+581763,Kotvrdovice,6
+581755,Kořenec,6
+581739,Knínice,6
+581721,Kněževes,6
+581682,Jedovnice,6
+581666,Jabloňany,6
+581631,Horní Poříčí,6
+581615,Holštejn,6
+581593,Hodonín,6
+581577,Hluboké Dvory,6
+581569,Habrůvka,6
+581551,Drnovice,6
+581542,Doubravice nad Svitavou,6
+581534,Chrudichromy,6
+581526,Dlouhá Lhota,6
+581518,Deštná,6
+581500,Černovice,6
+581496,Černá Hora,6
+581470,Cetkovice,6
+581771,Kozárov,6
+581780,Krasová,6
+581798,Krhov,6
+581801,Křetín,6
+582034,Malá Lhota,6
+582026,Makov,6
+582018,Lysice,6
+581992,Lubě,6
+581976,Lomnice,6
+581968,Lipůvka,6
+581950,Lipovec,6
+581941,Lhota u Olešnice,6
+581933,Lhota u Lysic,6
+582069,Míchov,6
+581925,Lhota Rapotina,6
+581909,Lažany,6
+581887,Lazinov,6
+581879,Kunštát,6
+581861,Kuničky,6
+581852,Kunice,6
+581844,Kunčina Ves,6
+581836,Kulířov,6
+581828,Křtiny,6
+581810,Křtěnov,6
+581917,Letovice,6
+582620,Stvolová,6
+582646,Velké Opatovice,6
+582654,Vilémovice,6
+583456,Nebovidy,6
+583448,Moutnice,6
+583430,Moravské Knínice,6
+583421,Moravské Bránice,6
+583413,Moravany,6
+583405,Mokrá-Horákov,6
+583391,Modřice,6
+583383,Měnín,6
+583375,Mělčany,6
+583367,Medlov,6
+583359,Maršov,6
+583341,Malhostovice,6
+583332,Malešovice,6
+583324,Lukovany,6
+583316,Lomnička,6
+583308,Litostrov,6
+583294,Lesní Hluboké,6
+583286,Lelekovice,6
+583278,Ledce,6
+583464,Nelepeč-Žernůvka,6
+583472,Němčičky,6
+583481,Neslovice,6
+583499,Nesvačilka,6
+583731,Přísnotice,6
+583723,Přibyslavice,6
+583715,Příbram na Moravě,6
+583707,Prštice,6
+583693,Pravlov,6
+583685,Prace,6
+583677,Pozořice,6
+583669,Popůvky,6
+583651,Popovice,6
+583260,Lažánky,6
+583634,Podolí,6
+583596,Ostopovice,6
+583588,Oslavany,6
+583561,Ořechov,6
+583553,Opatovice,6
+583545,Omice,6
+583537,Ochoz u Brna,6
+583529,Odrovice,6
+583511,Nové Bránice,6
+583502,Nová Ves,6
+583600,Ostrovačice,6
+583251,Kuřim,6
+583243,Kupařovice,6
+583235,Kratochvilka,6
+582891,Březina,6
+582883,Bratčice,6
+582875,Braníškov,6
+582859,Blučina,6
+582841,Blažovice,6
+582832,Biskoupky,6
+582824,Bílovice nad Svitavou,6
+582808,Babice u Rosic,6
+582794,Babice nad Svitavou,6
+582913,Čebín,6
+582786,Brno,6
+582760,Žernovník,6
+582751,Žďárná,6
+582743,Žďár,6
+582735,Zhoř,6
+582727,Zbraslavec,6
+582701,Vysočany,6
+582689,Vranová,6
+582671,Voděrady,6
+582662,Vísky,6
+582778,Žerůtky,6
+581461,Býkovice,6
+582921,Česká,6
+582948,Deblín,6
+583227,Kovalovice,6
+583219,Kobylnice,6
+583201,Ketkovice,6
+583197,Kanice,6
+583189,Jiříkovice,6
+583171,Jinačovice,6
+583154,Javůrek,6
+583120,Ivančice,6
+583111,Chudčice,6
+582930,Čučice,6
+583090,Hvozdec,6
+583065,Hradčany,6
+583057,Hostěnice,6
+583031,Holasice,6
+583022,Hlína,6
+583014,Heroltice,6
+582999,Hajany,6
+582972,Drásov,6
+582964,Domašov,6
+582956,Dolní Kounice,6
+583081,Hrušovany u Brna,6
+581453,Bukovinka,6
+581445,Bukovina,6
+581437,Bukovice,6
+579734,Svoboda nad Úpou,6
+579726,Suchovršice,6
+579696,Strážné,6
+579661,Staré Buky,6
+579645,Rudník,6
+579637,Rtyně v Podkrkonoší,6
+579629,Radvanice,6
+579602,Prosečné,6
+579599,Pilníkov,6
+579581,Pec pod Sněžkou,6
+579564,Nemojov,6
+579556,Mostek,6
+579548,Mladé Buky,6
+579530,Maršov u Úpice,6
+579513,Malé Svatoňovice,6
+579505,Malá Úpa,6
+579491,Vranov,6
+579483,Libotov,6
+579475,Libňatov,6
+579742,Špindlerův Mlýn,6
+579751,Trotina,6
+579769,Třebihošť,6
+579777,Úpice,6
+580066,České Petrovice,6
+580058,České Libchavy,6
+580040,České Heřmanice,6
+580031,Česká Třebová,6
+580023,Česká Rybná,6
+580015,Červená Voda,6
+579998,Čenkovice,6
+579980,Cotkytle,6
+579971,Bystřec,6
+579467,Skapce,6
+579963,Bučina,6
+579891,Ústí nad Orlicí,6
+579874,Žacléř,6
+579866,Zlatá Olešnice,6
+579858,Vrchlabí,6
+579831,Vlčkovice v Podkrkonoší,6
+579823,Vlčice,6
+579815,Vítězná,6
+579793,Velký Vřešťov,6
+579785,Velké Svatoňovice,6
+579947,Brandýs nad Orlicí,6
+579459,Ctiboř,6
+579441,Lanžov,6
+579432,Lánov,6
+579181,Doubravice,6
+579173,Dolní Olešnice,6
+579165,Dolní Lánov,6
+579157,Dolní Kalná,6
+579149,Dolní Dvůr,6
+579131,Příkosice,6
+579122,Dolní Branná,6
+579114,Černý Důl,6
+579106,Čermná,6
+579190,Dubenec,6
+579092,Borovnice,6
+579076,Bílé Poličany,6
+579068,Bílá Třemešná,6
+579050,Bernartice,6
+579041,Batňovice,6
+579033,Kornatice,6
+579025,Trutnov,6
+579017,Kakejcov,6
+579009,Medový Újezd,6
+578991,Vysoká,6
+579084,Mešno,6
+580074,Damníkov,6
+579203,Dvůr Králové nad Labem,6
+579220,Havlovice,6
+579424,Kunčice nad Labem,6
+579416,Kuks,6
+579408,Kohoutov,6
+579394,Kocbeře,6
+579386,Klášterská Lhota,6
+579378,Jívka,6
+579360,Těšovice,6
+579351,Janské Lázně,6
+579343,Štítov,6
+579211,Hajnice,6
+574236,Mezilečí,6
+579319,Chotěvice,6
+579301,Hřibojedy,6
+579297,Hostinné,6
+579289,Vísky,6
+579271,Horní Olešnice,6
+579262,Horní Maršov,6
+579254,Horní Kalná,6
+579246,Trokavec,6
+579238,Horní Brusnice,6
+579327,Choustníkovo Hradiště,6
+578975,Vranová Lhota,6
+580091,Dobříkov,6
+580121,Dolní Dobrouč,6
+581119,Verměřovice,6
+581101,Velká Skrovnice,6
+581089,Újezd u Chocně,6
+581071,Třebovice,6
+581062,Tisová,6
+581054,Těchonín,6
+581046,Tatenice,6
+581038,Šedivec,6
+581011,Sudslava,6
+581003,Sudislav nad Orlicí,6
+580996,Studené,6
+580988,Strážná,6
+580970,Sruby,6
+580961,Sopotnice,6
+580945,Slatina,6
+580929,Skořenice,6
+580902,Seč,6
+580881,Řetůvka,6
+580872,Řetová,6
+581127,Vlčkov,6
+581143,Voděrady,6
+581151,Vraclav,6
+581178,Výprachtice,6
+581429,Březina,6
+581402,Brumov,6
+581381,Brťov-Jeneč,6
+581372,Boskovice,6
+581364,Bořitov,6
+581356,Borotín,6
+581330,Benešov,6
+581321,Běleč,6
+581313,Bedřichov,6
+580848,Rudoltice,6
+581291,Adamov,6
+581275,Žichlínek,6
+581267,Žampach,6
+581259,Žamberk,6
+581232,Zářecká Lhota,6
+581224,Zámrsk,6
+581216,Zálší,6
+581208,Záchlumí,6
+581194,Zádolí,6
+581186,Vysoké Mýto,6
+581283,Blansko,6
+580830,Pustina,6
+580821,Přívrat,6
+580805,Podlesí,6
+580490,Krasíkov,6
+580481,Králíky,6
+580465,Koldín,6
+580431,Klášterec nad Orlicí,6
+580422,Kameničná,6
+580414,Jehnědí,6
+580406,Javorník,6
+580392,Jamné nad Orlicí,6
+580376,Jablonné nad Orlicí,6
+580503,Kunvald,6
+580350,Choceň,6
+580333,Horní Třešňovec,6
+580325,Sloupnice,6
+580295,Horní Heřmanice,6
+580279,Horní Čermná,6
+580261,Hnátnice,6
+580228,Hejnice,6
+580210,Džbánov,6
+580163,Dolní Morava,6
+580147,Libchavy,6
+580341,Hrušová,6
+580112,Dolní Čermná,6
+580511,Lanškroun,6
+580562,Libecina,6
+580783,Plchovice,6
+580775,Písečná,6
+580767,Petrovice,6
+580759,Pastviny,6
+580741,Oucmanice,6
+580732,Ostrov,6
+580724,Orličky,6
+580716,Orlické Podhůří,6
+580708,Svatý Jiří,6
+580538,Letohrad,6
+580694,Němčice,6
+580678,Nasavrky,6
+580660,Mostek,6
+580651,Mladkov,6
+580643,Mistrovice,6
+580635,Luková,6
+580627,Lukavice,6
+580619,Lubník,6
+580589,Líšnice,6
+580571,Lichkov,6
+580686,Nekoř,6
+574228,Martínkovice,6
+573850,Žlunice,6
+574201,Horka u Staré Paky,6
+569038,Lípa,6
+569020,Libice nad Doubravou,6
+569011,Leština u Světlé,6
+569003,Liboš,6
+568996,Leškovice,6
+568988,Ledeč nad Sázavou,6
+568970,Kynice,6
+568961,Vilémov,6
+568953,Květinov,6
+568945,Krucemburk,6
+568937,Krátká Ves,6
+568929,Krásná Hora,6
+568911,Měrotín,6
+568902,Kožlí,6
+568899,Kozlov,6
+568881,Kojetín,6
+568872,Charváty,6
+568864,Doubrava,6
+568856,Klokočov,6
+569046,Lipnice nad Sázavou,6
+569054,Strukov,6
+569062,Lučice,6
+569071,Malčín,6
+569275,Horní Nětčice,6
+569267,Hlinsko,6
+569259,Dolní Nětčice,6
+569241,Pavlov,6
+569232,Ovesná Lhota,6
+569224,Oudoleň,6
+569216,Olešná,6
+569208,Olešenka,6
+569194,Grymov,6
+568848,Kamenná Lhota,6
+569186,Okrouhlice,6
+569160,Nová Ves u Chotěboře,6
+569151,Nová Ves u Leštiny,6
+569143,Křenovice,6
+569135,Císařov,6
+569127,Modlíkov,6
+569119,Čavisov,6
+569101,Třebom,6
+569097,Moravice,6
+569089,Maleč,6
+569178,Bohuslávky,6
+568830,Řepiště,6
+568821,Kámen,6
+568813,Pražmo,6
+568554,Rybí,6
+568546,Kunín,6
+568538,Dlouhá Ves,6
+568520,Číhošť,6
+568511,Hostašovice,6
+568503,Česká Bělá,6
+568490,Čachotín,6
+568481,Bernartice nad Odrou,6
+568473,Závišice,6
+568562,Heřmanice u Oder,6
+568465,Borek,6
+568449,Zbyslavice,6
+568431,Bordovice,6
+568422,Velké Albrechtice,6
+568414,Havlíčkův Brod,6
+568406,Slatina,6
+568392,Doloplazy,6
+568384,Zubrnice,6
+568376,Rohov,6
+568368,Hlubočec,6
+568457,Bojiště,6
+569283,Kladníky,6
+568571,Heřmánky,6
+568597,Dolní Krupá,6
+568805,Jeřišno,6
+568791,Soběšovice,6
+568783,Jedlá,6
+568775,Pustějov,6
+568767,Chrtníč,6
+568759,Chotěboř,6
+568741,Albrechtičky,6
+568732,Ženklava,6
+568724,Hradec,6
+568589,Mankovice,6
+568716,Skotnice,6
+568694,Hněvkovice,6
+568686,Mošnov,6
+568678,Herálec,6
+568660,Havlíčkova Borová,6
+568651,Habry,6
+568643,Kateřinice,6
+568635,Golčův Jeníkov,6
+568619,Druhanov,6
+568601,Dolní Město,6
+568708,Horní Krupá,6
+568350,Velké Březno,6
+569291,Pohled,6
+569313,Prosíčka,6
+569992,Habřina,6
+569984,Dolní Přím,6
+569976,Dohalice,6
+569968,Dobřenice,6
+569950,Čermná ve Slezsku,6
+569941,Divec,6
+569933,Čistěves,6
+569925,Černožice,6
+569917,Černilov,6
+569909,Chvalíkovice,6
+569895,Dobroslavice,6
+569887,Boharyně,6
+569879,Blešno,6
+569861,Benátky,6
+569852,Běleč nad Orlicí,6
+569844,Lužice,6
+569836,Barchov,6
+569828,Babice,6
+569810,Hradec Králové,6
+570001,Hlušice,6
+570010,Hněvčeves,6
+570028,Holohlavy,6
+570036,Větřkovice,6
+570231,Lhota pod Libčany,6
+570222,Lejšovka,6
+570214,Kunčice,6
+570206,Kratonohy,6
+570192,Králíky,6
+570184,Kosičky,6
+570176,Kosice,6
+570168,Klamoš,6
+570150,Káranice,6
+569801,Žižkovo Pole,6
+570141,Drozdov,6
+570125,Chudeřice,6
+570117,Šléglov,6
+570109,Chlumec nad Cidlinou,6
+570095,Vyšehoří,6
+570087,Humburky,6
+570079,Týn nad Bečvou,6
+570061,Špičky,6
+570052,Hrádek,6
+570044,Hořiněves,6
+570133,Jeníkovice,6
+569798,Horní Loděnice,6
+569780,Ždírec nad Doubravou,6
+569771,Suchonice,6
+569518,Sobíňov,6
+569500,Horní Lhota,6
+569496,Podolí,6
+569488,Slavíkov,6
+569470,Skuhrov,6
+569461,Skryje,6
+569453,Velké Kunětice,6
+569445,Vikýřovice,6
+569437,Bratrušov,6
+569526,Milotice nad Opavou,6
+569429,Sázavka,6
+569402,Rušinov,6
+569399,Rozsochatec,6
+569381,Mírov,6
+569372,Krchleby,6
+569364,Radostín,6
+569356,Česká Ves,6
+569348,Příseka,6
+569330,Ostružná,6
+569321,Přibyslav,6
+569411,Rybníček,6
+569305,Chromeč,6
+569534,Stříbrné Hory,6
+569551,Nové Heřminovy,6
+569755,Trnávka,6
+569747,Vrchy,6
+569739,Vlkanov,6
+569721,Vilémovice,6
+569712,Vilémov,6
+569704,Věžnice,6
+569691,Věž,6
+569682,Veselý Žďár,6
+569674,Vepříkov,6
+569542,Horní Újezd,6
+569666,Hladké Životice,6
+569640,Uhelná Příbram,6
+569631,Sviadnov,6
+569623,Trpišovice,6
+569615,Tis,6
+569607,Býkov-Láryšov,6
+569593,Štoky,6
+569585,Šlapanov,6
+569577,Oborná,6
+569569,Světlá nad Sázavou,6
+569658,Úsobí,6
+570249,Libčany,6
+568341,Uhlířov,6
+568317,Radkov,6
+566641,Hlohovčice,6
+566632,Černíkovice,6
+566624,Postoloprty,6
+566616,Podbořany,6
+566608,Podbořanský Rohozec,6
+566594,Újezd nade Mží,6
+566586,Počedělice,6
+566578,Pnětluky,6
+566560,Petrohrad,6
+566551,Peruc,6
+566543,Myslinka,6
+566535,Panenský Týnec,6
+566527,Očihov,6
+566519,Nové Sedlo,6
+566501,Nepomyšl,6
+566497,Všehrdy,6
+566489,Brodeslavy,6
+566471,Bohy,6
+566462,Lochousice,6
+566659,Raná,6
+566667,Ročov,6
+566675,Vrbice,6
+566683,Dražovice,6
+566896,Veltěže,6
+566888,Olbramov,6
+566870,Velemyšleves,6
+566861,Plískov,6
+566853,Tuchořice,6
+566845,Skomelno,6
+566837,Němčovice,6
+566829,Toužetín,6
+566811,Kamenec,6
+566454,Měcholupy,6
+566802,Terešov,6
+566781,Pastuchovice,6
+566764,Blažim,6
+566756,Bdeněves,6
+566748,Slatina,6
+566730,Holovousy,6
+566721,Smolnice,6
+566713,Slavětín,6
+566705,Borovno,6
+566691,Vlčí,6
+566799,Všenice,6
+566446,Loza,6
+566438,Lubenec,6
+566420,Líté,6
+566152,Domoušice,6
+566144,Kanice,6
+566136,Brnířov,6
+566128,Deštnice,6
+566101,Štichov,6
+566098,Černovice,6
+566080,Čečovice,6
+566071,Všekary,6
+566063,Břvany,6
+566161,Úboč,6
+566055,Vřeskovice,6
+566039,Jizerní Vtelno,6
+566021,Blšany,6
+566012,Blažim,6
+566004,Blatno,6
+565997,Bitozeves,6
+565989,Hlavenec,6
+565971,Louny,6
+565962,Žitenice,6
+565954,Židovice,6
+566047,Košátky,6
+566900,Růžová,6
+566179,Hradiště,6
+566195,Hříškov,6
+566411,Lišany,6
+566403,Lipno,6
+566390,Hlince,6
+566381,Libořice,6
+566373,Pelechy,6
+566365,Poděvousy,6
+566357,Liběšice,6
+566349,Libčeves,6
+566331,Hvožďany,6
+566187,Holedeč,6
+566322,Lenešice,6
+566306,Krásný Dvůr,6
+566292,Mnichov,6
+566284,Koštice,6
+566276,Hora Svatého Václava,6
+566250,Vlkanov,6
+566241,Chožov,6
+566233,Chlumčany,6
+566217,Hřivice,6
+566209,Otov,6
+566314,Kryry,6
+568333,Štáblovice,6
+566918,Vinařice,6
+566934,Vroutek,6
+567884,Žim,6
+567876,Žalany,6
+567868,Zabrušany,6
+567850,Újezdeček,6
+567841,Světec,6
+567833,Srbice,6
+567809,Rtyně nad Bílinou,6
+567787,Proboštov,6
+567779,Osek,6
+567761,Ohníč,6
+567752,Novosedlice,6
+567728,Moldava,6
+567710,Modlany,6
+567701,Mikulov,6
+567698,Měrunice,6
+567655,Ledvice,6
+567647,Lahošť,6
+567639,Krupka,6
+567621,Košťany,6
+567931,Dolní Zálezly,6
+567957,Habrovany,6
+567973,Homole u Panny,6
+568007,Chabařovice,6
+568309,Tisá,6
+568295,Telnice,6
+568287,Tašov,6
+568279,Mikolajice,6
+568261,Budišovice,6
+568244,Vřesina,6
+568236,Děhylov,6
+568228,Darkovice,6
+568210,Hať,6
+567612,Kostomlaty pod Milešovkou,6
+568201,Řehlovice,6
+568180,Kružberk,6
+568163,Žermanice,6
+568155,Povrly,6
+568147,Petrovice,6
+568104,Malečov,6
+568091,Malé Březno,6
+568058,Libouchec,6
+568023,Chuderov,6
+568015,Chlumec,6
+568198,Staré Těchanovice,6
+567604,Kladruby,6
+567582,Jeníkov,6
+567566,Hrobčice,6
+567221,Korozluky,6
+567191,Klíny,6
+567175,Horní Jiřetín,6
+567167,Hora Svaté Kateřiny,6
+567141,Havraň,6
+567108,Český Jiřetín,6
+567086,Příšov,6
+567078,Brandov,6
+567060,Braňany,6
+567248,Lišnice,6
+567051,Bělušice,6
+567027,Most,6
+567019,Žiželice,6
+567001,Lhota pod Radčem,6
+566993,Ostrovec-Lhotka,6
+566985,Žatec,6
+566977,Zbrašín,6
+566969,Výrov,6
+566951,Výškov,6
+566942,Raková,6
+567043,Bečov,6
+566926,Vrbno nad Lesy,6
+567256,Litvínov,6
+567272,Louka u Litvínova,6
+567558,Hrob,6
+567531,Hostomice,6
+567523,Háj u Duchcova,6
+567515,Duchcov,6
+567507,Dubí,6
+567485,Bžany,6
+567477,Bystřany,6
+567469,Bořislav,6
+567451,Bílina,6
+567264,Lom,6
+567442,Teplice,6
+567361,Skršín,6
+567353,Polerady,6
+567345,Patokryje,6
+567337,Obrnice,6
+567329,Nová Ves v Horách,6
+567311,Meziboří,6
+567302,Mariánské Radčice,6
+567299,Malé Březno,6
+567281,Lužice,6
+567426,Želenice,6
+574210,Machov,6
+570257,Libníkovice,6
+570273,Libřice,6
+572993,Jeřice,6
+572985,Třebosice,6
+572977,Dubany,6
+572969,Chomutice,6
+572951,Podůlšany,6
+572942,Plch,6
+572934,Stéblová,6
+572926,Hořice,6
+572918,Holovousy,6
+572900,Holín,6
+572896,Černá u Bohdanče,6
+572888,Újezd u Sezemic,6
+572870,Němčice,6
+572861,Křičeň,6
+572853,Pravy,6
+572845,Lány u Dašic,6
+572837,Dobrá Voda u Hořic,6
+572829,Dětenice,6
+572811,Češov,6
+573001,Jičíněves,6
+573019,Holotín,6
+573027,Sovolusky,6
+573035,Morašice,6
+573230,Nemyčeves,6
+573221,Rohoznice,6
+573213,Mlázovice,6
+573205,Mladějov,6
+573191,Sadová,6
+573183,Zelenecká Lhota,6
+573175,Miletín,6
+573167,Markvartice,6
+573159,Lužany,6
+572802,Malé Výkleky,6
+573141,Lukavec u Hořic,6
+573124,Libuň,6
+573116,Libošovice,6
+573108,Libáň,6
+573094,Lázně Bělohrad,6
+573086,Lískovice,6
+573078,Neratov,6
+573060,Kopidlno,6
+573051,Konecchlumí,6
+573043,Kněžnice,6
+573132,Starý Bydžov,6
+572799,Časy,6
+572781,Cerekvice nad Bystřicí,6
+572772,Bystřice,6
+572527,Vortová,6
+572519,Biskupice,6
+572501,Vojtěchov,6
+572497,Vítanov,6
+572489,Vinary,6
+572471,Vejvanovice,6
+572462,Včelákov,6
+572454,Vápenný Podol,6
+572446,Úhřetice,6
+572535,Vrbatův Kostelec,6
+572438,Nová Ves u Jarošova,6
+572411,Třemošnice,6
+572403,Trojovice,6
+572390,Trhová Kamenice,6
+572381,Tisovec,6
+572373,Poříčí u Litomyšle,6
+572365,Horní Újezd,6
+572357,Desná,6
+572349,Svratouch,6
+572331,Svídnice,6
+572420,Tuněchody,6
+573248,Nová Paka,6
+572543,Všeradov,6
+572560,Banín,6
+572764,Chrtníky,6
+572756,Tetín,6
+572748,Karle,6
+572730,Chmelík,6
+572721,Opatovec,6
+572713,Javorník,6
+572705,Boháňka,6
+572691,Hradec nad Svitavou,6
+572683,Dětřichov u Moravské Třebové,6
+572551,Vysočina,6
+572675,Běchary,6
+572659,Jičín,6
+572641,Žumberk,6
+572632,Borušov,6
+572624,Útěchov,6
+572616,Tržek,6
+572608,Nová Sídla,6
+572594,Kukle,6
+572586,Bělá nad Svitavou,6
+572578,Zaječice,6
+572667,Bašnice,6
+572322,Studnice,6
+573256,Šárovcova Lhota,6
+573272,Ostroměř,6
+573957,Černčice,6
+573949,Biskupice,6
+573931,Brzice,6
+573922,Broumov,6
+573914,Božanov,6
+573906,Borová,6
+573892,Bohuslavice,6
+573884,Bezděkov nad Metují,6
+573876,Zderaz,6
+573868,Náchod,6
+583740,Radostice,6
+573841,Židovice,6
+573833,Žeretice,6
+573825,Železnice,6
+573817,Smrček,6
+573809,Vysoké Veselí,6
+573795,Vršce,6
+573787,Klešice,6
+573779,Máslojedy,6
+573965,Červený Kostelec,6
+573973,Česká Čermná,6
+573981,Česká Metuje,6
+573990,Česká Skalice,6
+574198,Spojil,6
+574180,Lhota pod Hořičkami,6
+574171,Křinice,6
+574163,Hynčice,6
+574155,Jetřichov,6
+574147,Jestřebí,6
+574139,Jasenná,6
+574121,Jaroměř,6
+574112,Chvalkovice,6
+573761,Volanice,6
+574104,Ostrov,6
+574082,Hronov,6
+574074,Hořičky,6
+574066,Horní Radechová,6
+574058,Heřmánkovice,6
+574040,Heřmanice,6
+574031,Hejtmánkovice,6
+574023,Dolní Radechová,6
+574015,Dolany,6
+574007,Kněžice,6
+574091,Žlebské Chvalovice,6
+573752,Vitiněves,6
+573744,Zdechovice,6
+573736,Vidochov,6
+573485,Lesůňky,6
+573477,Sobčice,6
+573469,Slatiny,6
+573451,Sběř,6
+573442,Samšina,6
+573434,Lhota,6
+573426,Anenská Studánka,6
+573418,Martinice v Krkonoších,6
+573400,Loučky,6
+573493,Sobotka,6
+573388,Litoboř,6
+573361,Soběraz,6
+573353,Bukvice,6
+573345,Podůlší,6
+573337,Dřevěnice,6
+573329,Podhradí,6
+573311,Podhorní Újezd a Vojice,6
+573302,Svatojanský Újezd,6
+573299,Pecka,6
+573281,Ostružno,6
+573370,Radim,6
+573264,Osek,6
+573507,Stará Paka,6
+573523,Staré Smrkovice,6
+573728,Veliš,6
+573710,Kobylice,6
+573701,Valdice,6
+573698,Úlibice,6
+573680,Újezd pod Troskami,6
+573671,Úhlejov,6
+573663,Údrnice,6
+573655,Úbislavice,6
+573647,Tuř,6
+573515,Kunětice,6
+573639,Třtěnice,6
+573612,Třebnouševes,6
+573604,Služátky,6
+573591,Pohleď,6
+573582,Víska,6
+573574,Chřenovice,6
+573566,Bělá,6
+573558,Boňkov,6
+573540,Střevač,6
+573531,Puchlovice,6
+573621,Hvozdnice,6
+570265,Librantice,6
+572314,Střemošice,6
+572292,Vrážné,6
+571075,Kluky,6
+571067,Doubravička,6
+571059,Třesovice,6
+571041,Třebechovice pod Orebem,6
+571032,Pěčice,6
+571024,Těchlovice,6
+571016,Šaplava,6
+571008,Syrovátka,6
+570991,Ctiměřice,6
+570982,Tuřice,6
+570974,Kolomuty,6
+570966,Střezetice,6
+570958,Stračov,6
+570940,Dolní Stakory,6
+570931,Stěžery,6
+570923,Přepeře,6
+570915,Stará Voda,6
+570907,Sovětice,6
+570893,Obrubce,6
+571083,Vinary,6
+571091,Všestary,6
+571105,Výrava,6
+571113,Vysoká nad Labem,6
+571318,Roblín,6
+571300,Dědová,6
+571296,České Lhotice,6
+571288,Zahořany,6
+571270,Čankovice,6
+571261,Kytín,6
+571253,Ctětín,6
+571245,Bylany,6
+571237,Bousov,6
+570885,Smržov,6
+571229,Bořice,6
+571202,Bojanov,6
+571199,Bratřínov,6
+571181,Běstvina,6
+571172,Kobylnice,6
+571164,Chrudim,6
+571156,Nemyslovice,6
+571148,Rokytovec,6
+571130,Zachrašťany,6
+571121,Niměřice,6
+571211,Klínec,6
+570877,Smiřice,6
+570869,Smidary,6
+570851,Sloupno,6
+570508,Nový Bydžov,6
+570494,Nové Město,6
+570478,Nepolisy,6
+570451,Nechanice,6
+570443,Neděliště,6
+570435,Mžany,6
+570427,Myštěves,6
+570419,Mokrovousy,6
+570401,Mlékosrby,6
+570516,Ohnišťany,6
+570397,Měník,6
+570362,Lužec nad Cidlinou,6
+570354,Lužany,6
+570346,Janová,6
+570338,Zborov,6
+570320,Lovčice,6
+570311,Lochenice,6
+570303,Lodín,6
+570290,Lišice,6
+570281,Stavenice,6
+570371,Ústí,6
+571326,Lichoceves,6
+570524,Olešnice,6
+570541,Osičky,6
+570842,Vinec,6
+570834,Skřivany,6
+570826,Kosmonosy,6
+570818,Dalovice,6
+570800,Skalice,6
+570796,Sendražice,6
+570788,Bradlec,6
+570770,Loukov,6
+570761,Ujkovice,6
+570532,Osice,6
+570753,Prodašice,6
+570729,Radostov,6
+570711,Radíkovice,6
+570702,Račice nad Trotinou,6
+570681,Převýšov,6
+570672,Předměřice nad Labem,6
+570656,Praskačka,6
+570648,Prasek,6
+570575,Písek,6
+570567,Petrovice,6
+570745,Roudnice,6
+572306,Stradouň,6
+571334,Okoř,6
+571351,Úholičky,6
+572039,Podhořany u Ronova,6
+572021,Vrátno,6
+572012,Kovanec,6
+572004,Perálec,6
+571997,Neveklovice,6
+571989,Dobšín,6
+571971,Kováň,6
+571962,Orel,6
+571954,Sudovo Hlavno,6
+571946,Branžež,6
+571938,Ptýrov,6
+571920,Nové Hrady,6
+571911,Nasavrky,6
+571903,Načešice,6
+571890,Nabočany,6
+571881,Strážiště,6
+571873,Morašice,6
+571865,Mukařov,6
+571857,Mladoňovice,6
+572047,Kyje,6
+572063,Pokřikov,6
+572071,Prachovice,6
+572080,Proseč,6
+572284,Hartinkov,6
+572276,Sobětuchy,6
+572268,Slatiňany,6
+572250,Březinky,6
+572241,Skuteč,6
+572233,Řídký,6
+572225,Seč,6
+572217,Řestoky,6
+572209,Řepníky,6
+571849,Chudíř,6
+572195,Želivsko,6
+572179,Rosice,6
+572161,Ronov nad Doubravou,6
+572152,Raná,6
+572144,Sekeřice,6
+572136,Kozojedy,6
+572128,Vrbice,6
+572110,Přestavlky,6
+572101,Předhradí,6
+572098,Prosetín,6
+572187,Slavhostice,6
+571831,Miřetice,6
+571822,Míčov-Sušice,6
+571814,Zdětín,6
+571563,Jenišovice,6
+571555,Líský,6
+571547,Chroustovice,6
+571539,Chrast,6
+571521,Neprobylice,6
+571512,Kutrovice,6
+571504,Hroubovice,6
+571491,Hrochův Týnec,6
+571482,Hošťalovice,6
+571571,Kameničky,6
+571474,Horní Bradlo,6
+571458,Honbice,6
+571440,Holetín,6
+571431,Vrbičany,6
+571423,Zichovec,6
+571415,Xaverov,6
+571407,Hluboká,6
+571393,Hlinsko,6
+571385,Heřmanův Městec,6
+571377,Hamry,6
+571466,Horka,6
+571342,Svrkyně,6
+571580,Kladno,6
+571601,Libovice,6
+571806,Nová Ves u Bakova,6
+571792,Kozomín,6
+571784,Libiš,6
+571776,Luže,6
+571768,Lukavice,6
+571750,Lozice,6
+571741,Třebonín,6
+571733,Liboměřice,6
+571725,Libkov,6
+571598,Zájezd,6
+571717,Kšely,6
+571695,Leština,6
+571687,Klášterní Skalice,6
+571679,Oplany,6
+571661,Krouna,6
+571652,Krásné,6
+571644,Štíhlice,6
+571636,Němčice,6
+571628,Kostelec u Heřmanova Městce,6
+571610,Kočí,6
+571709,Leštinka,6
+583758,Rajhrad,6
+584151,Vranov,6
+583774,Rebešovice,6
+595608,Heřmanov,6
+595594,Herálec,6
+595586,Hamry nad Sázavou,6
+595578,Fryšava pod Žákovou horou,6
+595560,Drahonín,6
+595551,Doubravník,6
+595535,Dolní Rožínka,6
+595527,Dolní Loučky,6
+595519,Dolní Libochová,6
+595501,Dolní Heřmanice,6
+595489,Dobrá Voda,6
+595471,Dlouhé,6
+595462,Daňkovice,6
+595454,Dalečín,6
+595446,Černvír,6
+595438,Černá,6
+595420,Býšovec,6
+595411,Bystřice nad Pernštejnem,6
+595403,Bukov,6
+595624,Hodíškov,6
+595641,Bory,6
+595659,Horní Libochová,6
+595667,Horní Loučky,6
+595900,Krásněves,6
+595896,Krásné,6
+595888,Kozlov,6
+595870,Kotlasy,6
+595861,Koroužné,6
+595853,Kněževes,6
+595845,Karlov,6
+595837,Kaly,6
+595829,Kadov,6
+595390,Budeč,6
+595811,Kadolec,6
+595772,Jimramov,6
+595756,Jámy,6
+595748,Javorek,6
+595730,Jabloňov,6
+595721,Chlumětín,6
+595713,Chlumek,6
+595705,Chlum-Korouhvice,6
+595683,Horní Rožínka,6
+595675,Horní Radslavice,6
+595802,Jívoví,6
+595918,Křižánky,6
+595381,Březské,6
+595357,Březí,6
+595080,Vítonice,6
+595071,Višňové,6
+595063,Vevčice,6
+595055,Vémyslice,6
+595047,Vedrovice,6
+595039,Valtrovice,6
+595021,Únanov,6
+595012,Újezd,6
+595004,Uherčice,6
+594997,Tvořihráz,6
+594989,Tulešice,6
+594971,Trstěnice,6
+594962,Troskotovice,6
+594954,Trnové Pole,6
+594946,Těšetice,6
+594938,Tavíkovice,6
+594920,Tasovice,6
+594911,Šumná,6
+594903,Šumice,6
+595098,Vranov nad Dyjí,6
+595101,Vranovská Ves,6
+595110,Vratěnín,6
+595128,Vrbovec,6
+595349,Březejc,6
+595331,Borovník,6
+595322,Borovnice,6
+595314,Borač,6
+595306,Bohuňov,6
+595292,Bohdalov,6
+595284,Bohdalec,6
+595276,Bobrůvka,6
+595268,Bobrová,6
+595365,Březí nad Oslavou,6
+595250,Blízkov,6
+595217,Baliny,6
+595209,Žďár nad Sázavou,6
+595195,Žerůtky,6
+595187,Žerotice,6
+595179,Želetice,6
+595161,Zblovice,6
+595152,Zálesí,6
+595144,Vysočany,6
+595136,Výrovice,6
+595241,Blažkov,6
+595926,Křižanov,6
+595934,Křižínkov,6
+595951,Křoví,6
+596710,Sejřek,6
+596701,Sázava,6
+596698,Řikonín,6
+596680,Řečice,6
+596671,Rudolec,6
+596663,Ruda,6
+596655,Rožná,6
+596647,Rozsochy,6
+596639,Rozseč,6
+596612,Rovečné,6
+596604,Rousměrov,6
+596582,Rojetín,6
+596574,Radostín nad Oslavou,6
+596566,Radostín,6
+596558,Radňovice,6
+596540,Radňoves,6
+596531,Radešínská Svratka,6
+596523,Radešín,6
+596515,Radenice,6
+596728,Sirákov,6
+596736,Sklené,6
+596744,Sklené nad Oslavou,6
+596752,Skorotice,6
+596965,Věchnov,6
+596957,Věcov,6
+596949,Vatín,6
+596931,Unčín,6
+596922,Újezd,6
+596914,Ujčov,6
+596906,Uhřínov,6
+596892,Tišnovská Nová Ves,6
+596884,Štěpánov nad Svratkou,6
+596507,Račice,6
+596876,Škrdlovice,6
+596850,Sviny,6
+596841,Světnov,6
+596833,Sulkovec,6
+596825,Strážek,6
+596817,Stránecká Zhoř,6
+596809,Strachujov,6
+596795,Spělkov,6
+596787,Sněžné,6
+596761,Skřinářov,6
+596868,Svratka,6
+596493,Prosetín,6
+596485,Polnička,6
+596477,Pokojov,6
+596191,Níhov,6
+596183,Netín,6
+596175,Nedvědice,6
+596159,Moravecké Pavlovice,6
+596141,Moravec,6
+596132,Mirošov,6
+596116,Měřín,6
+596108,Matějov,6
+596094,Martinice,6
+596205,Nížkov,6
+596086,Malá Losenice,6
+596060,Líšná,6
+596051,Lísek,6
+596035,Lhotka,6
+596019,Lavičky,6
+596001,Kyjov,6
+595993,Kuřimské Jestřabí,6
+595985,Kuřimská Nová Ves,6
+595977,Kundratice,6
+595969,Kuklík,6
+596078,Lubné,6
+594890,Štítary,6
+596213,Nová Ves,6
+596230,Nové Město na Moravě,6
+596469,Podolí,6
+596451,Poděšín,6
+596442,Počítky,6
+596434,Písečné,6
+596418,Petráveč,6
+596400,Pernštejnské Jestřabí,6
+596396,Pavlov,6
+596388,Pavlínov,6
+596370,Otín,6
+596221,Nová Ves u Nového Města na Moravě,6
+596361,Ostrov nad Oslavou,6
+596345,Osová Bítýška,6
+596337,Oslavice,6
+596329,Ořechov,6
+596302,Olší,6
+596281,Obyčtov,6
+596272,Nyklovice,6
+596264,Nový Jimramov,6
+596256,Nové Veselí,6
+596248,Nové Sady,6
+596353,Osové,6
+594881,Šatov,6
+594873,Šanov,6
+594865,Šafov,6
+593532,Rašovice,6
+593524,Radslavice,6
+593516,Račice-Pístovice,6
+593508,Pustiměř,6
+593494,Prusy-Boškůvky,6
+593486,Podivice,6
+593478,Otnice,6
+593460,Orlovice,6
+593443,Nové Sady,6
+593435,Nížkovice,6
+593427,Nevojice,6
+593419,Nesovice,6
+593401,Nemotice,6
+593397,Nemojany,6
+593389,Nemochovice,6
+593371,Němčany,6
+593354,Mouchnice,6
+593346,Moravské Málkovice,6
+593338,Milonice,6
+593559,Rousínov,6
+593567,Ruprechtov,6
+593583,Slavkov u Brna,6
+593591,Snovídky,6
+593800,Borotice,6
+593796,Bojanovice,6
+593788,Bohutice,6
+593770,Blížkovice,6
+593761,Blanné,6
+593753,Bítov,6
+593745,Bezkov,6
+593737,Běhařovice,6
+593729,Bantice,6
+593320,Milešovice,6
+593711,Znojmo,6
+593699,Zbýšov,6
+593681,Velešovice,6
+593664,Vážany nad Litavou,6
+593656,Vážany,6
+593648,Tučapy,6
+593630,Topolany,6
+593621,Švábenice,6
+593613,Šaratice,6
+593605,Studnice,6
+593702,Zelená Hora,6
+593290,Malínky,6
+593281,Lysovice,6
+593273,Luleč,6
+592986,Dobročkovice,6
+592978,Dětkovice,6
+592943,Bučovice,6
+592927,Brankovice,6
+592919,Bošovice,6
+592901,Bohdalice-Pavlovice,6
+592897,Bohaté Málkovice,6
+592889,Vyškov,6
+592871,Žítková,6
+592994,Dražovice,6
+592862,Zlechov,6
+592846,Záhorovice,6
+592838,Vyškovec,6
+592820,Vlčnov,6
+592803,Veletiny,6
+592790,Velehrad,6
+592781,Vážany,6
+592773,Vápenice,6
+592757,Újezdec,6
+592749,Uherský Ostroh,6
+592854,Zlámanec,6
+593818,Boskovštejn,6
+593001,Drnovice,6
+593028,Habrovany,6
+593265,Lovčičky,6
+593257,Letonice,6
+593249,Kučerov,6
+593231,Křižanovice u Vyškova,6
+593222,Křižanovice,6
+593214,Křenovice,6
+593192,Krásensko,6
+593184,Kožušice,6
+593168,Komořany,6
+593010,Drysice,6
+593150,Kojátky,6
+593125,Ježkovice,6
+593117,Ivanovice na Hané,6
+593095,Chvalkovice,6
+593087,Hvězdlice,6
+593079,Hrušky,6
+593061,Hoštice-Heroltice,6
+593052,Hostěrádky-Rešov,6
+593044,Hodějice,6
+593036,Hlubočany,6
+593141,Kobeřice u Brna,6
+596973,Velká Bíteš,6
+593826,Božice,6
+593842,Břežany,6
+594580,Onšov,6
+594571,Oleksovice,6
+594563,Olbramovice,6
+594555,Olbramkostel,6
+594521,Němčičky,6
+594512,Našiměřice,6
+594482,Moravský Krumlov,6
+594474,Morašice,6
+594466,Miroslavské Knínice,6
+594458,Miroslav,6
+594440,Milíčovice,6
+594431,Mikulovice,6
+594423,Medlice,6
+594415,Mašovice,6
+594407,Mackovice,6
+594393,Lukov,6
+594385,Lubnice,6
+594377,Loděnice,6
+594369,Litobratřice,6
+594598,Oslnovice,6
+594601,Pavlice,6
+594610,Petrovice,6
+594628,Plaveč,6
+594849,Suchohrdly u Miroslavi,6
+594831,Střelice,6
+594822,Strachotice,6
+594814,Stošíkovice na Louce,6
+594806,Starý Petřín,6
+594792,Stálky,6
+594784,Slup,6
+594776,Slatina,6
+594768,Skalice,6
+594351,Lesonice,6
+594750,Rybníky,6
+594733,Rozkoš,6
+594725,Rešice,6
+594709,Prosiměřice,6
+594695,Prokopov,6
+594687,Pravice,6
+594679,Práče,6
+594652,Podmyče,6
+594644,Podmolí,6
+594636,Podhradí nad Dyjí,6
+594741,Rudlice,6
+594342,Lesná,6
+594334,Lechovice,6
+594326,Lančov,6
+594067,Hodonice,6
+594059,Hnanice,6
+594041,Hluboké Mašůvky,6
+594032,Hevlín,6
+594024,Havraníky,6
+594016,Grešlové Mýto,6
+594008,Džbánice,6
+593991,Dyje,6
+593982,Dyjákovičky,6
+594075,Horní Břečkov,6
+593974,Dyjákovice,6
+593958,Dolenice,6
+593931,Dobřínsko,6
+593923,Dobelice,6
+593907,Damnice,6
+593893,Černín,6
+593885,Čermákovice,6
+593877,Čejkovice,6
+593869,Ctidružice,6
+593851,Citonice,6
+593966,Dolní Dubňany,6
+593834,Branišovice,6
+594083,Horní Dubňany,6
+594105,Horní Kounice,6
+594318,Kyjovice,6
+594300,Kuchařovice,6
+594296,Kubšice,6
+594288,Křepice,6
+594270,Krhovice,6
+594261,Kravsko,6
+594253,Korolupy,6
+594237,Kadov,6
+594229,Jiřice u Miroslavi,6
+594091,Horní Dunajovice,6
+594211,Jezeřany-Maršovice,6
+594199,Jaroslavice,6
+594181,Jamolice,6
+594172,Chvalovice,6
+594164,Chvalatice,6
+594156,Hrušovany nad Jevišovkou,6
+594148,Hrádek,6
+594130,Hrabětice,6
+594121,Hostim,6
+594113,Hostěradice,6
+594202,Jevišovice,6
+596981,Velká Losenice,6
+596990,Velké Janovice,6
+597007,Velké Meziříčí,6
+538388,Praha-Královice,6
+538361,Praha-Kolovraty,6
+538353,Praha-Koloděje,6
+538302,Praha-Klánovice,6
+538213,Praha 20,6
+538205,Praha-Dubeč,6
+538175,Praha-Dolní Počernice,6
+538124,Praha-Březiněves,6
+538078,Praha-Benice,6
+538060,Praha-Běchovice,6
+502316,Ústí nad Labem-Střekov,6
+502081,Ústí nad Labem-Neštěmice,6
+501298,Ústí nad Labem-Severní Terasa,6
+500224,Praha 10,6
+500216,Praha 9,6
+500208,Praha 8,6
+500186,Praha 7,6
+500178,Praha 6,6
+500143,Praha 5,6
+538400,Praha-Křeslice,6
+538531,Praha-Nedvězí,6
+538736,Praha-Satalice,6
+538931,Praha 22,6
+546208,Plzeň 4,6
+546135,Ostrava-Jih,6
+546046,Slezská Ostrava,6
+546003,Plzeň 3,6
+545988,Plzeň 2-Slovany,6
+545970,Plzeň 1,6
+545911,Moravská Ostrava a Přívoz,6
+539899,Praha-Zličín,6
+539864,Praha-Zbraslav,6
+500119,Praha 4,6
+539791,Praha-Újezd,6
+539694,Praha 13,6
+539678,Praha-Slivenec,6
+539635,Praha-Řeporyje,6
+539601,Praha 16,6
+539589,Praha-Přední Kopanina,6
+539465,Praha-Lochkov,6
+539449,Praha-Lipence,6
+539007,Praha-Vinoř,6
+538949,Praha 21,6
+539724,Praha-Šeberov,6
+500097,Praha 3,6
+500089,Praha 2,6
+500054,Praha 1,6
+599638,Hrubý Jeseník,6
+599620,Chleby,6
+599611,Vrbice,6
+599603,Lichnov,6
+599590,Podmoky,6
+599581,Jiřice,6
+599573,Sezemice,6
+599565,Kopřivnice,6
+599557,Koryta,6
+599646,Luboměř,6
+599549,Klimkovice,6
+599522,Husí Lhota,6
+599514,Březovice,6
+599506,Jistebník,6
+599492,Újezdec,6
+599484,Krychnov,6
+599476,Církvice,6
+599468,Jeseník nad Odrou,6
+599450,Grunta,6
+599441,Stradonice,6
+599531,Horní Slivno,6
+546224,Poruba,6
+599654,Nový Dvůr,6
+599671,Čilec,6
+599999,Trojanovice,6
+599964,Tísek,6
+599956,Tichá,6
+599948,Štramberk,6
+599930,Suchdol nad Odrou,6
+599921,Studénka,6
+599905,Starý Jičín,6
+599867,Spálov,6
+599832,Sedlnice,6
+599662,Oseček,6
+599808,Příbor,6
+599760,Račice,6
+599751,Modřovice,6
+599743,Petřvald,6
+599735,Březová-Oleško,6
+599727,Karlík,6
+599719,Tehovec,6
+599701,Odry,6
+599697,Zbožíčko,6
+599689,Mořkov,6
+599778,Závraty,6
+599433,Svárov,6
+547034,Praha 11,6
+547051,Praha-Libuš,6
+554758,Plzeň 6-Litice,6
+554731,Plzeň 5-Křimice,6
+554723,Plesná,6
+554715,Třebovice,6
+554685,Svinov,6
+554669,Hrabová,6
+554588,Polanka nad Odrou,6
+554570,Martinov,6
+554561,Krásné Pole,6
+554537,Radvanice a Bartovice,6
+554430,Michálkovice,6
+554375,Proskovice,6
+554367,Nová Ves,6
+554332,Hošťálkovice,6
+554324,Lhotka,6
+554308,Petřkovice,6
+554286,Mariánské Hory a Hulváky,6
+554243,Pustkovec,6
+554235,Stará Bělá,6
+554766,Plzeň 7-Radčice,6
+554774,Plzeň 8-Černice,6
+555096,Pardubice IV,6
+555100,Pardubice VI,6
+575020,Pardubice VIII,6
+574716,Pardubice I,6
+567892,Ústí nad Labem-město,6
+559199,Plzeň 9-Malesice,6
+557978,Plzeň 10-Lhota,6
+557072,Pardubice V,6
+557064,Pardubice III,6
+556904,Liberec (nečleněné město),6
+556891,Liberec-Vratislavice nad Nisou,6
+554227,Vítkovice,6
+556700,Vávrovice,6
+555436,Milostovice,6
+555410,Zlatníky,6
+555401,Podvihov,6
+555371,Suché Lazce,6
+555355,Komárov,6
+555339,Malé Hoštice,6
+555321,Opava (nečleněná část města),6
+555126,Pardubice II,6
+555118,Pardubice VII,6
+555461,Vlaštovičky,6
+554219,Nová Bělá,6
+551431,Brno-Útěchov,6
+551422,Brno-Ořešín,6
+551007,Brno-Královo Pole,6
+550990,Brno-Žabovřesky,6
+550973,Brno-střed,6
+547417,Praha 18,6
+547409,Praha-Štěrboholy,6
+547395,Praha-Petrovice,6
+547387,Praha 15,6
+547379,Praha-Dolní Měcholupy,6
+547361,Praha 14,6
+551031,Brno-sever,6
+547344,Praha 19,6
+547310,Praha-Čakovice,6
+547301,Praha-Dolní Chabry,6
+547298,Praha-Ďáblice,6
+547271,Praha-Suchdol,6
+547174,Praha 17,6
+547158,Praha-Nebušice,6
+547140,Praha-Lysolaje,6
+547115,Praha-Velká Chuchle,6
+547107,Praha 12,6
+547328,Praha-Troja,6
+547042,Praha-Kunratice,6
+551058,Brno-Židenice,6
+551074,Brno-jih,6
+551406,Brno-Jehnice,6
+551376,Brno-Ivanovice,6
+551368,Brno-Žebětín,6
+551325,Brno-Bosonohy,6
+551317,Brno-Chrlice,6
+551309,Brno-Tuřany,6
+551295,Brno-Slatina,6
+551287,Brno-Líšeň,6
+551279,Brno-Vinohrady,6
+551066,Brno-Černovice,6
+551252,Brno-Maloměřice a Obřany,6
+551236,Brno-Medlánky,6
+551228,Brno-Komín,6
+551210,Brno-Kníničky,6
+551198,Brno-Bystrc,6
+551171,Brno-Jundrov,6
+551147,Brno-Kohoutovice,6
+551112,Brno-Nový Lískovec,6
+551091,Brno-Starý Lískovec,6
+551082,Brno-Bohunice,6
+551244,Brno-Řečkovice a Mokrá Hora,6
+592731,Uherský Brod,6
+599425,Želenice,6
+599409,Hodslavice,6
+598020,Bílá,6
+598011,Baška,6
+598003,Frýdek-Místek,6
+597996,Zlaté Hory,6
+597988,Zátor,6
+597970,Vysoká,6
+597961,Vrbno pod Pradědem,6
+597945,Václavov u Bruntálu,6
+597937,Úvalno,6
+597911,Třemešná,6
+597899,Široká Niva,6
+597881,Svobodné Heřmanice,6
+597872,Světlá Hora,6
+597821,Sosnová,6
+597813,Slezské Rudoltice,6
+597791,Ryžoviště,6
+597783,Rýmařov,6
+597775,Rusín,6
+597741,Roudno,6
+598038,Brušperk,6
+598046,Bruzovice,6
+598062,Bystřice,6
+598071,Čeladná,6
+598364,Lhotka,6
+598356,Kunčice pod Ondřejníkem,6
+598348,Krmelín,6
+598330,Tušovice,6
+598321,Kozlovice,6
+598313,Trnová,6
+598305,Svémyslice,6
+598291,Čakovičky,6
+598283,Sedlec,6
+597724,Razová,6
+598275,Kaňovice,6
+598259,Jablunkov,6
+598241,Pětikozly,6
+598232,Hrčava,6
+598178,Horní Bludovice,6
+598160,Hnojník,6
+598143,Frýdlant nad Ostravicí,6
+598135,Fryčovice,6
+598101,Dolní Domaslavice,6
+598089,Dobrá,6
+598267,Modletice,6
+597716,Osoblaha,6
+597686,Norberčany,6
+597678,Moravský Beroun,6
+597210,Brantice,6
+597201,Bohušov,6
+597198,Bílčice,6
+597180,Bruntál,6
+597171,Žďárec,6
+597163,Ždánice,6
+597155,Zvole,6
+597147,Zubří,6
+597139,Znětínek,6
+597228,Břidličná,6
+597121,Zadní Zhořec,6
+597104,Vratislávka,6
+597091,Vojnův Městec,6
+597082,Vlkov,6
+597074,Vír,6
+597066,Vidonín,6
+597058,Vídeň,6
+597040,Věžná,6
+597031,Věstín,6
+597015,Vepřová,6
+597112,Záblatí,6
+598372,Ostrov,6
+597252,Dětřichov nad Bystřicí,6
+597317,Dvorce,6
+597635,Město Albrechtice,6
+597601,Malá Morávka,6
+597589,Lomnice,6
+597571,Liptaň,6
+597554,Lichnov,6
+597546,Leskovec nad Moravicí,6
+597538,Křišťanovice,6
+597520,Krnov,6
+597511,Krasov,6
+597287,Dolní Moravice,6
+597481,Karlovice,6
+597457,Jiříkov,6
+597449,Jindřichov,6
+597431,Janov,6
+597414,Huzová,6
+597392,Hošťálkovy,6
+597368,Horní Město,6
+597350,Horní Benešov,6
+597341,Holčovice,6
+597325,Heřmanovice,6
+597473,Karlova Studánka,6
+599417,Železná,6
+598381,Dubenec,6
+598402,Háje,6
+599123,Ústrašice,6
+599115,Řípec,6
+599107,Rychvald,6
+599085,Petřvald,6
+599077,Petrovice u Karviné,6
+599069,Orlová,6
+599051,Bohumín,6
+599042,Slapy,6
+599034,Zhoř u Mladé Vožice,6
+599026,Slapsko,6
+599000,Záhoří,6
+598992,Hodětín,6
+598976,Čenkov u Bechyně,6
+598968,Dolní Lutyně,6
+598950,Lažánky,6
+598941,Dětmarovice,6
+598933,Český Těšín,6
+598925,Albrechtice,6
+598917,Karviná,6
+599131,Nová Ves,6
+599140,Stonava,6
+599158,Těrlicko,6
+599166,Němčice,6
+599395,Ostrov,6
+599387,Soutice,6
+599379,Stranný,6
+599361,Strojetice,6
+599352,Fulnek,6
+599344,Frenštát pod Radhoštěm,6
+599301,Černíky,6
+599298,Drahenice,6
+599280,Komárov,6
+598909,Skály,6
+599271,Zlukov,6
+599255,Mezná,6
+599247,Bílovec,6
+599239,Vokov,6
+599221,Popovičky,6
+599212,Bartošovice,6
+599204,Korkyně,6
+599191,Nový Jičín,6
+599182,Pařezov,6
+599174,Močerady,6
+599263,Sedlečko u Soběslavě,6
+598895,Bezdědovice,6
+598887,Pivkovice,6
+598879,Vratimov,6
+598615,Modrá Hůrka,6
+598607,Hlincová Hora,6
+598593,Heřmaň,6
+598585,Nezabudice,6
+598577,Přerubenice,6
+598569,Paskov,6
+598551,Palkovice,6
+598542,Ostravice,6
+598526,Roztoky,6
+598623,Mojné,6
+598518,Žďár,6
+598496,Šípy,6
+598488,Radíč,6
+598470,Osečany,6
+598461,Kňovice,6
+598453,Mosty u Jablunkova,6
+598445,Morávka,6
+598437,Vševily,6
+598429,Trhové Dušníky,6
+598411,Lhota u Příbramě,6
+598500,Krty,6
+598399,Lučina,6
+598631,Kamenný Malíkov,6
+598658,Horní Meziříčko,6
+598861,Žďár,6
+598852,Vlksice,6
+598844,Vlastec,6
+598836,Václavovice,6
+598828,Osek,6
+598810,Třinec,6
+598801,Květov,6
+598798,Šenov,6
+598780,Borovany,6
+598640,Vlčetínec,6
+598771,Syrov,6
+598755,Putimov,6
+598747,Staré Hamry,6
+598739,Stará Ves nad Ondřejnicí,6
+598721,Libkova Voda,6
+598712,Kojčice,6
+598704,Čížkov,6
+598691,Hukvaldy,6
+598674,Sedliště,6
+598666,Zlátenka,6
+598763,Svépravice,6
+583766,Rajhradice,6
+592722,Tupesy,6
+592706,Traplice,6
+586790,Žarošice,6
+586781,Žádovice,6
+586773,Vřesovice,6
+586765,Vracov,6
+586757,Vnorovy,6
+586749,Vlkoš,6
+586731,Věteřov,6
+586722,Veselí nad Moravou,6
+586714,Velká nad Veličkou,6
+586706,Vacenovice,6
+586692,Uhřice,6
+586684,Tvarožná Lhota,6
+586676,Terezín,6
+586668,Těmice,6
+586650,Tasov,6
+586641,Šardice,6
+586633,Syrovín,6
+586625,Svatobořice-Mistřín,6
+586617,Suchov,6
+586803,Ždánice,6
+586811,Želetice,6
+586820,Žeravice,6
+586838,Žeraviny,6
+587044,Dolní Cerekev,6
+587036,Dobroutov,6
+587028,Dobronín,6
+587010,Dlouhá Brtnice,6
+587001,Černíč,6
+586994,Vlachova Lhota,6
+586986,Cerekvička-Rosice,6
+586978,Cejle,6
+586960,Křekov,6
+586609,Sudoměřice,6
+586951,Brzkov,6
+586927,Boršov,6
+586919,Rudimov,6
+586901,Bohuslavice,6
+586897,Bítovčice,6
+586889,Bílý Kámen,6
+586871,Lipová,6
+586862,Batelov,6
+586854,Arnolec,6
+586846,Jihlava,6
+586943,Brtnice,6
+587052,Karlovice,6
+586595,Strážovice,6
+586579,Stavěšice,6
+586323,Lipov,6
+586315,Labuty,6
+586307,Kyjov,6
+586293,Kuželov,6
+586285,Kozojídky,6
+586277,Kostelec,6
+586269,Kněždub,6
+586251,Kelčany,6
+586242,Karlín,6
+586234,Josefov,6
+586226,Ježov,6
+586218,Javorník,6
+586200,Hýsly,6
+586196,Hrubá Vrbka,6
+586188,Hroznová Lhota,6
+586170,Hovorany,6
+586161,Dubňany,6
+586153,Dražůvky,6
+586145,Domanín,6
+586331,Louka,6
+586340,Lovčice,6
+586358,Lužice,6
+586366,Malá Vrbka,6
+586561,Starý Poddvorov,6
+586552,Sobůlky,6
+586544,Skoronice,6
+586536,Skalka,6
+586528,Rohatec,6
+586510,Ratíškovice,6
+586501,Radějov,6
+586498,Prušánky,6
+586480,Petrov,6
+586587,Strážnice,6
+586471,Ostrovánky,6
+586455,Nová Lhota,6
+586447,Nenkovice,6
+586439,Nechvalín,6
+586421,Násedlovice,6
+586412,Mutěnice,6
+586404,Moravský Písek,6
+586391,Moravany,6
+586382,Milotice,6
+586374,Mikulčice,6
+586463,Nový Poddvorov,6
+587061,Dolní Vilímeč,6
+587079,Doupě,6
+587087,Dudín,6
+587770,Milešín,6
+587761,Radkov,6
+587753,Tři Studně,6
+587745,Puklice,6
+587737,Rodkov,6
+587729,Nový Šaldorf-Sedlešovice,6
+587711,Polná,6
+587702,Plandry,6
+587699,Valdíkov,6
+587681,Pavlov,6
+587672,Panské Dubenky,6
+587664,Dolní Lažany,6
+587656,Panenská Rozsíčka,6
+587648,Otín,6
+587630,Ořechov,6
+587621,Opatov,6
+587613,Olšany,6
+587605,Lomy,6
+587591,Nová Říše,6
+587788,Rantířov,6
+587796,Rohozná,6
+587800,Rozseč,6
+587818,Růžená,6
+588024,Telč,6
+588016,Cikháj,6
+588008,Šimanov,6
+587991,Svojkovice,6
+587982,Suchá,6
+587974,Nové Dvory,6
+587958,Střítež,6
+587940,Strachoňovice,6
+587931,Stonařov,6
+587583,Nevcehle,6
+587923,Stará Říše,6
+587907,Katov,6
+587893,Velké Tresné,6
+587885,Sedlejov,6
+587877,Sedlatice,6
+587869,Vlachovice,6
+587851,Řídelov,6
+587842,Křídla,6
+587834,Řásná,6
+587826,Rybné,6
+587915,Stáj,6
+587575,Nadějov,6
+587567,Mysliboř,6
+587559,Mysletice,6
+587290,Jihlávka,6
+587281,Ježená,6
+587273,Jezdovice,6
+587265,Jersín,6
+587257,Zástřizly,6
+587249,Jamné,6
+587231,Zadní Vydří,6
+587222,Hubenov,6
+587214,Olší,6
+587303,Jindřichovice,6
+587206,Horní Myslová,6
+587184,Borovná,6
+587176,Rančířov,6
+587168,Horní Dubenky,6
+587150,Hojkov,6
+587141,Hodice,6
+587125,Hladov,6
+587117,Čížov,6
+587109,Dyjice,6
+587095,Dušejov,6
+587192,Hostětice,6
+586137,Dolní Bojanovice,6
+587320,Kalhov,6
+587346,Kamenice,6
+587541,Mrákotín,6
+587532,Mirošov,6
+587524,Milíčov,6
+587516,Meziříčko,6
+587508,Měšín,6
+587494,Markvartice,6
+587486,Malý Beranov,6
+587478,Luka nad Jihlavou,6
+587460,Stropešín,6
+587338,Kaliště,6
+587451,Lhotka,6
+587435,Krahulčí,6
+587427,Kozlov,6
+587419,Kostelní Myslová,6
+587401,Kostelec,6
+587397,Prasklice,6
+587389,Knínice,6
+587371,Klatovec,6
+587362,Kamenná,6
+587354,Karolín,6
+587443,Krasonice,6
+586129,Dambořice,6
+586111,Čeložnice,6
+586102,Čejkovice,6
+584525,Jevišovka,6
+584517,Ivaň,6
+584495,Hustopeče,6
+584487,Hrušky,6
+584479,Horní Věstonice,6
+584461,Horní Bojanovice,6
+584452,Hlohovec,6
+584444,Drnholec,6
+584436,Dolní Věstonice,6
+584428,Dolní Dunajovice,6
+584410,Dobré Pole,6
+584401,Diváky,6
+584380,Bulhary,6
+584371,Březí,6
+584363,Brumovice,6
+584355,Brod nad Dyjí,6
+584347,Bořetice,6
+584339,Borkovany,6
+584321,Boleradice,6
+584541,Klentnice,6
+584550,Klobouky u Brna,6
+584568,Kobylí,6
+584576,Kostice,6
+584819,Popice,6
+584801,Pohořelice,6
+584797,Podivín,6
+584789,Perná,6
+584771,Pavlov,6
+584762,Pasohlávky,6
+584754,Nový Přerov,6
+584746,Novosedly,6
+584720,Nosislav,6
+584304,Bavory,6
+584711,Nikolčice,6
+584681,Morkůvky,6
+584673,Moravský Žižkov,6
+584665,Moravská Nová Ves,6
+584657,Milovice,6
+584649,Mikulov,6
+584631,Lednice,6
+584622,Lanžhot,6
+584592,Křepice,6
+584584,Krumvíř,6
+584703,Němčičky,6
+584291,Břeclav,6
+584282,Židlochovice,6
+584274,Železné,6
+583995,Těšany,6
+583987,Tetčice,6
+583979,Telnice,6
+583961,Štěpánovice,6
+583952,Šlapanice,6
+583944,Šerkovice,6
+583936,Syrovice,6
+583928,Svatoslav,6
+583910,Střelice,6
+584002,Tišnov,6
+583901,Stanoviště,6
+583880,Sobotovice,6
+583863,Sivice,6
+583855,Silůvky,6
+583847,Sentice,6
+583839,Říčany,6
+583821,Řícmanice,6
+583804,Rudka,6
+583791,Rozdrojovice,6
+583782,Rosice,6
+583898,Sokolnice,6
+584835,Pouzdřany,6
+584011,Trboušany,6
+584037,Tvarožná,6
+584266,Želešice,6
+584240,Žatčany,6
+584231,Žabčice,6
+584223,Zbýšov,6
+584215,Zbraslav,6
+584207,Zastávka,6
+584193,Zálesná Zhoř,6
+584185,Zakřany,6
+584177,Vysoké Popovice,6
+584029,Troubsko,6
+584169,Všechovice,6
+584134,Vohančice,6
+584126,Viničné Šumice,6
+584118,Veverské Knínice,6
+584100,Veverská Bítýška,6
+584096,Velatice,6
+584070,Úsuší,6
+584061,Unkovice,6
+584053,Újezd u Rosic,6
+584045,Újezd u Brna,6
+584142,Vojkovice,6
+588032,Třešť,6
+584843,Přibice,6
+584860,Rakvice,6
+585815,Šarovy,6
+585807,Šanov,6
+565946,Žalhostice,6
+585777,Slušovice,6
+585769,Slopné,6
+585751,Slavičín,6
+585734,Sehradice,6
+585726,Sazovice,6
+585670,Racková,6
+585661,Provodov,6
+585611,Podkopná Lhota,6
+585599,Otrokovice,6
+585556,Neubuz,6
+585548,Nedašova Lhota,6
+585530,Nedašov,6
+585521,Návojná,6
+585513,Napajedla,6
+585505,Mysločovice,6
+585491,Machová,6
+585831,Štítná nad Vláří-Popov,6
+585858,Tlumačov,6
+585866,Trnava,6
+585874,Ublo,6
+586099,Čejč,6
+586081,Bzenec,6
+586072,Bukovany,6
+586064,Světlá,6
+586056,Blatnička,6
+586048,Blatnice pod Svatým Antonínkem,6
+586030,Archlebov,6
+586021,Hodonín,6
+586013,Žlutava,6
+585483,Lutonina,6
+586005,Závist,6
+585980,Vysoké Pole,6
+585971,Všemina,6
+585963,Vlčková,6
+585955,Vlachovice,6
+585939,Vizovice,6
+585921,Veselá,6
+585912,Velký Ořechov,6
+585891,Valašské Klobouky,6
+585882,Újezd,6
+585998,Zádveřice-Raková,6
+585467,Lukov,6
+585459,Luhačovice,6
+585441,Ludkovice,6
+585076,Biskupice,6
+585068,Zlín,6
+585050,Zaječí,6
+585041,Vrbice,6
+585033,Vranovice,6
+585025,Vlasatice,6
+585017,Velké Pavlovice,6
+585009,Velké Němčice,6
+584991,Velké Hostěrádky,6
+585092,Bohuslavice u Zlína,6
+584983,Velké Bílovice,6
+584967,Uherčice,6
+584959,Týnec,6
+584941,Tvrdonice,6
+584932,Šitbořice,6
+584924,Šakvice,6
+584916,Strachotín,6
+584908,Starovičky,6
+584894,Starovice,6
+584878,Sedlec,6
+584975,Valtice,6
+584851,Přítluky,6
+585106,Bratřejov,6
+585131,Březová,6
+585432,Loučka,6
+585343,Kašava,6
+585327,Kaňovice,6
+585319,Jestřabí,6
+585301,Jasenná,6
+585289,Hvozdná,6
+585271,Hřivínův Újezd,6
+585262,Hrobice,6
+585254,Hostišová,6
+585114,Brumov-Bylnice,6
+585246,Horní Lhota,6
+585220,Halenkovice,6
+585211,Fryšták,6
+585203,Držková,6
+585190,Drnovice,6
+585181,Doubravy,6
+585173,Dolní Lhota,6
+585165,Dobrkovice,6
+585157,Dešná,6
+585149,Březůvky,6
+585238,Haluzice,6
+588041,Třeštice,6
+588059,Račín,6
+588067,Urbanov,6
+591181,Moravské Budějovice,6
+591173,Mohelno,6
+591165,Mladoňovice,6
+591157,Mikulovice,6
+591149,Meziříčko,6
+591122,Mastník,6
+591114,Markvartice,6
+591092,Loukovice,6
+591068,Litovany,6
+591041,Lipník,6
+591025,Lhánice,6
+591009,Lesonice,6
+590991,Lesní Jakubov,6
+590983,Lesná,6
+590975,Krokočín,6
+590967,Krhov,6
+590959,Kramolín,6
+590941,Kralice nad Oslavou,6
+590916,Kozlany,6
+591190,Myslibořice,6
+591211,Náměšť nad Oslavou,6
+591220,Nárameč,6
+591238,Nimpšov,6
+591505,Pyšel,6
+591491,Pucov,6
+591459,Přibyslavice,6
+591441,Přešovice,6
+591432,Předín,6
+591424,Přeckov,6
+591416,Pozďatín,6
+591408,Popůvky,6
+591394,Police,6
+590908,Kouty,6
+591378,Petrůvky,6
+591335,Ostašov,6
+591327,Oponešice,6
+591319,Opatov,6
+591301,Okříšky,6
+591297,Okarec,6
+591289,Odunec,6
+591262,Nový Telečkov,6
+591254,Nové Syrovice,6
+591246,Nová Ves,6
+591360,Petrovice,6
+590894,Kostníky,6
+590886,Koněšín,6
+590878,Komárovice,6
+590584,Hartvíkovice,6
+590576,Dukovany,6
+590568,Domamil,6
+590550,Dolní Vilémovice,6
+590533,Dešov,6
+590525,Dědice,6
+590517,Dalešice,6
+590509,Číměř,6
+590495,Čikov,6
+590592,Heraltice,6
+590487,Číchov,6
+590461,Červená Lhota,6
+590452,Čechtín,6
+590444,Čechočovice,6
+590436,Čáslavice,6
+590428,Cidlina,6
+590410,Budkov,6
+590401,Budišov,6
+590380,Březník,6
+590371,Brtnička,6
+590479,Číhalín,6
+591521,Račice,6
+590614,Hluboké,6
+590631,Horní Heřmanice,6
+590860,Kojetice,6
+590851,Kojatice,6
+590843,Kněžice,6
+590835,Klučov,6
+590827,Kladeruby nad Oslavou,6
+590819,Kdousov,6
+590801,Kamenná,6
+590797,Jinošov,6
+590789,Jemnice,6
+590622,Hodov,6
+590762,Jasenice,6
+590746,Jakubov u Moravských Budějovic,6
+590711,Chlum,6
+590703,Chlístov,6
+590690,Hvězdoňovice,6
+590681,Hrutov,6
+590673,Hrotovice,6
+590665,Hornice,6
+590657,Horní Vilémovice,6
+590649,Horní Újezd,6
+590754,Jaroměřice nad Rokytnou,6
+590363,Bransouze,6
+591548,Radkovice u Hrotovic,6
+591564,Radošov,6
+592421,Nezdenice,6
+592412,Nedakonice,6
+592404,Nedachlebice,6
+592391,Modrá,6
+592382,Mistřice,6
+592366,Medlovice,6
+592340,Lopeník,6
+592323,Kudlovice,6
+592307,Košíky,6
+592293,Kostelany nad Moravou,6
+592285,Korytná,6
+592277,Komňa,6
+592269,Kněžpole,6
+592251,Kelníky,6
+592234,Jankovice,6
+592226,Jalubí,6
+592218,Huštěnovice,6
+592200,Hradčovice,6
+592196,Hostějov,6
+592439,Nivnice,6
+592447,Ořechov,6
+592455,Ostrožská Lhota,6
+592463,Ostrožská Nová Ves,6
+592692,Topolná,6
+592676,Šumice,6
+592668,Svárov,6
+592650,Sušice,6
+592641,Suchá Loz,6
+592633,Stupava,6
+592625,Stříbrnice,6
+592617,Strání,6
+592609,Starý Hrozenkov,6
+592188,Horní Němčí,6
+592587,Staré Hutě,6
+592561,Salaš,6
+592552,Rudice,6
+592536,Prakšice,6
+592528,Popovice,6
+592510,Polešovice,6
+592501,Podolí,6
+592498,Pitín,6
+592480,Pašovice,6
+592471,Osvětimany,6
+592579,Slavkov,6
+592170,Hluk,6
+592153,Drslavice,6
+592145,Dolní Němčí,6
+591840,Trnava,6
+591831,Tasov,6
+591823,Štěpkov,6
+591815,Štěměchy,6
+591807,Šebkovice,6
+591793,Svatoslav,6
+591785,Sudice,6
+591777,Studnice,6
+591769,Studenec,6
+591858,Třebelovice,6
+591742,Stařeč,6
+591700,Slavičky,6
+591688,Slavětice,6
+591661,Senorady,6
+591645,Římov,6
+591637,Rudíkov,6
+591629,Rouchovany,6
+591611,Rokytnice nad Rokytnou,6
+591602,Rohy,6
+591581,Rapotice,6
+591726,Smrk,6
+591556,Radonín,6
+591866,Třebenice,6
+591904,Vladislav,6
+592137,Částkov,6
+592111,Bystřice pod Lopeníkem,6
+592102,Buchlovice,6
+592099,Březová,6
+592081,Březolupy,6
+592072,Břestek,6
+592064,Boršice,6
+592056,Boršice u Blatnice,6
+592048,Bojkovice,6
+591874,Valeč,6
+592030,Bílovice,6
+592013,Babice,6
+592005,Uherské Hradiště,6
+591998,Želetava,6
+591980,Zvěrkovice,6
+591963,Zašovice,6
+591955,Zárubice,6
+591947,Zahrádka,6
+591939,Výčapy,6
+591912,Vlčatín,6
+592021,Bánov,6
+592714,Tučapy,6
+590347,Bochovice,6
+590312,Biskupice-Pulkov,6
+588873,Podhradní Lhota,6
+588865,Počenice-Tetětice,6
+588849,Pačlavice,6
+588831,Pacetluky,6
+588822,Osíčko,6
+588814,Nová Dědina,6
+588806,Nítkovice,6
+588784,Němčice,6
+588768,Morkovice-Slížany,6
+588750,Míškovice,6
+588741,Martinice,6
+588733,Lutopecny,6
+588725,Ludslavice,6
+588717,Lubná,6
+588709,Loukov,6
+588695,Litenčice,6
+588661,Lechotice,6
+588652,Kyselovice,6
+588644,Kvasice,6
+588890,Pravčice,6
+588903,Prusinovice,6
+588920,Rajnochovice,6
+588938,Rataje,6
+589217,Zlobice,6
+589195,Zdounky,6
+589187,Zborovice,6
+589161,Záříčí,6
+589152,Zahnašovice,6
+589136,Vítonice,6
+589128,Věžky,6
+589110,Uhřice,6
+589098,Třebětice,6
+588636,Kurovice,6
+589080,Troubky-Zdislavice,6
+589047,Střížovice,6
+589039,Střílky,6
+589004,Soběsuky,6
+588997,Slavkov pod Hostýnem,6
+588989,Skaštice,6
+588971,Rymice,6
+588962,Rusava,6
+588954,Roštín,6
+588946,Roštění,6
+589055,Sulimov,6
+588628,Kunkovice,6
+588610,Kostelec u Holešova,6
+588601,Koryčany,6
+588261,Zvolenovice,6
+588253,Zhoř,6
+588245,Zdeňkov,6
+588237,Sazomín,6
+588229,Zbinohy,6
+588211,Zbilidy,6
+588202,Záborná,6
+588199,Vystrčenovice,6
+588181,Vysoké Studnice,6
+588270,Žatec,6
+588172,Vyskytná nad Jihlavou,6
+588156,Vílanec,6
+588148,Věžnička,6
+588130,Věžnice,6
+588121,Větrný Jeníkov,6
+588113,Velký Beranov,6
+588105,Vápovice,6
+588091,Vanůvek,6
+588083,Vanov,6
+588075,Ústí,6
+588164,Volevčice,6
+589225,Žalkovice,6
+588288,Ždírec,6
+588300,Bařice-Velké Těšany,6
+588598,Komárno,6
+588563,Jarohněvice,6
+588555,Jankovice,6
+588547,Chvalnov-Lísky,6
+588521,Kostelany,6
+588512,Chropyně,6
+588504,Chomýž,6
+588491,Hulín,6
+588482,Hoštice,6
+588296,Kroměříž,6
+588474,Horní Lapač,6
+588431,Dřínov,6
+588407,Cetechovice,6
+588393,Bystřice pod Hostýnem,6
+588385,Břest,6
+588377,Brusné,6
+588342,Vícenice,6
+588334,Vysoké,6
+588326,Bezměrov,6
+588318,Bělov,6
+588458,Holešov,6
+590321,Blatnice,6
+589233,Žeranovice,6
+589268,Bedihošť,6
+590011,Slatinky,6
+590002,Skřípov,6
+589993,Skalka,6
+589977,Rozstání,6
+589969,Rakůvka,6
+589951,Raková u Konice,6
+589942,Ptení,6
+589934,Přemyslovice,6
+589926,Protivanov,6
+589918,Prostějovičky,6
+589896,Plumlov,6
+589888,Pivín,6
+589870,Pěnčín,6
+589853,Otinoves,6
+589845,Otaslavice,6
+589837,Ondratice,6
+589829,Olšany u Prostějova,6
+589811,Ochoz,6
+589802,Ohrozim,6
+590029,Smržice,6
+590045,Srbce,6
+590053,Stařechovice,6
+590061,Stínava,6
+590304,Benetice,6
+590282,Bačice,6
+590274,Babice,6
+590266,Třebíč,6
+590240,Želeč,6
+590223,Zdětín,6
+590215,Výšovice,6
+590207,Vřesovice,6
+590193,Vrchoslavice,6
+589799,Obědkovice,6
+590185,Vrbátky,6
+590151,Vitčice,6
+590142,Vícov,6
+590134,Víceměřice,6
+590126,Určice,6
+590118,Tvorovice,6
+590100,Tištín,6
+590096,Šubířov,6
+590088,Suchdol,6
+590070,Stražisko,6
+590177,Vranovice-Kelčice,6
+589772,Niva,6
+589764,Nezamyslice,6
+589756,Němčice nad Hanou,6
+589497,Dzbel,6
+589489,Dřevnovice,6
+589462,Drahany,6
+589454,Doloplazy,6
+589446,Dobromilice,6
+589438,Dobrochov,6
+589420,Dětkovice,6
+589403,Čelechovice na Hané,6
+589390,Čelčice,6
+589501,Hluchov,6
+589381,Čechy pod Kosířem,6
+589357,Buková,6
+589349,Budětsko,6
+589331,Březsko,6
+589322,Brodek u Prostějova,6
+589314,Brodek u Konice,6
+589306,Bousín,6
+589292,Bohuslavice,6
+589284,Biskupice,6
+589276,Bílovice-Lutotín,6
+589365,Čehovice,6
+589250,Prostějov,6
+589519,Horní Štěpánov,6
+589535,Hrdibořice,6
+589748,Myslejovice,6
+589730,Mostkovice,6
+589721,Mořice,6
+589713,Malé Hradisko,6
+589705,Ludmírov,6
+589691,Lipová,6
+589683,Lešany,6
+589675,Laškov,6
+589667,Krumsín,6
+589527,Hradčany-Kobeřice,6
+589659,Kralice na Hané,6
+589632,Kostelec na Hané,6
+589624,Konice,6
+589616,Klopotovice,6
+589608,Klenovice na Hané,6
+589594,Kladky,6
+589586,Jesenec,6
+589578,Ivaň,6
+589560,Hvozd,6
+589543,Hrubčice,6
+589641,Koválovice-Osíčany,6
+585793,Spytihněv,6
+500011,Želechovice nad Dřevnicí,6
+565911,Vrutice,6
+537870,Březová,6
+537861,Stratov,6
+537853,Straky,6
+537845,Teplička,6
+537837,Stará Lysá,6
+537829,Proseč,6
+537811,Sokoleč,6
+537802,Sloveč,6
+537799,Senice,6
+537781,Semice,6
+537888,Tatce,6
+537772,Sány,6
+537756,Rožďalovice,6
+537748,Ratenice,6
+537730,Útěchovičky,6
+537721,Přerov nad Labem,6
+537713,Leština,6
+537705,Poříčany,6
+537691,Ondřejov,6
+537683,Poděbrady,6
+537675,Pňov-Předhradí,6
+537667,Písty,6
+537764,Sadská,6
+537659,Písková Lhota,6
+537896,Třebestovice,6
+537918,Dalovice,6
+538167,Dobřejovice,6
+538159,Hájek,6
+538141,Čestlice,6
+538132,Čelákovice,6
+538116,Děpoltovice,6
+538108,Brázdim,6
+538094,Brandýs nad Labem-Stará Boleslav,6
+538086,Bořanovice,6
+538051,Bašť,6
+538043,Babice,6
+537900,Úmyslovice,6
+538035,Žehuň,6
+538019,Černava,6
+538001,Andělská Hora,6
+537993,Vykáň,6
+537985,Všechlapy,6
+537977,Vrbová Lhota,6
+537969,Otovice,6
+537951,Vlkov pod Oškobrhem,6
+537942,Vestec,6
+537934,Mírová,6
+537926,Jenišov,6
+538027,Smolné Pece,6
+537641,Pečky,6
+537632,Pátek,6
+537624,Ostrá,6
+537331,Kostomlaty nad Labem,6
+537322,Lužice,6
+537314,Kostelní Lhota,6
+537306,Kolaje,6
+537292,Kněžice,6
+537284,Lesnice,6
+537276,Kamenné Zboží,6
+537268,Jizbice,6
+537250,Jíkev,6
+537241,Babice,6
+537349,Košík,6
+537233,Chrást,6
+537217,Choťánky,6
+537209,Žernovice,6
+537195,Zábrdí,6
+537187,Drslavice,6
+537179,Hradištko,6
+537161,Hradčany,6
+537152,Hořátev,6
+537144,Dvory,6
+537136,Kratušín,6
+537128,Dymokury,6
+537225,Chotěšice,6
+537357,Kounice,6
+537365,Olšovice,6
+537373,Kovanice,6
+537616,Oskořínek,6
+537608,Ústrašín,6
+537594,Střítež,6
+537586,Opolany,6
+537578,Opočnice,6
+537560,Okřínek,6
+537551,Odřepsy,6
+537543,Pěčnov,6
+537535,Újezdec,6
+537527,Bohunice,6
+537519,Buk,6
+537501,Milovice,6
+537497,Milčice,6
+537489,Městec Králové,6
+537462,Mcely,6
+537454,Lysá nad Labem,6
+537446,Loučeň,6
+537438,Libice nad Cidlinou,6
+537420,Chvalovice,6
+537411,Křinec,6
+537403,Křečkov,6
+537390,Krchleby,6
+537381,Mahouš,6
+538183,Kbelany,6
+537110,Dvory,6
+538191,Dřevčice,6
+538230,Hovorčovice,6
+539082,Zlonín,6
+539074,Vojtanov,6
+539066,Zeleneč,6
+539058,Zdiby,6
+539040,Vyšehořovice,6
+539031,Všestary,6
+539023,Třebeň,6
+539015,Vodochody,6
+538990,Větrušice,6
+538981,Velké Popovice,6
+539091,Zvánovice,6
+538973,Veliká Ves,6
+538957,Úvaly,6
+538922,Okrouhlá,6
+538914,Lázně Toušeň,6
+538906,Milíkov,6
+538892,Tehov,6
+538884,Škvorec,6
+538876,Šestajovice,6
+538868,Pomezí nad Ohří,6
+538850,Svojetice,6
+538841,Světice,6
+538965,Veleň,6
+538833,Sulice,6
+539104,Bojanovice,6
+539121,Černolice,6
+539341,Jíloviště,6
+539333,Jílové u Prahy,6
+539325,Jesenice,6
+539317,Jeneč,6
+539309,Chýně,6
+539295,Chrášťany,6
+539287,Choteč,6
+539279,Velká Hleďsebe,6
+539261,Hvozdnice,6
+539252,Hradištko,6
+539112,Stará Voda,6
+539244,Hostivice,6
+539228,Holubice,6
+539210,Dolní Břežany,6
+539201,Dolany nad Vltavou,6
+539198,Dobřichovice,6
+539180,Dobříč,6
+539171,Dobrovíz,6
+539163,Davle,6
+539155,Čisovice,6
+539147,Číčovice,6
+539139,Černošice,6
+539236,Horoměřice,6
+538825,Struhařov,6
+538817,Podhradí,6
+538809,Strančice,6
+538507,Mochov,6
+538493,Mnichovice,6
+538485,Mirošovice,6
+538477,Měšice,6
+538469,Máslovice,6
+538451,Louňovice,6
+538442,Líbeznice,6
+538434,Svatava,6
+538426,Kunice,6
+538418,Křížkový Újezdec,6
+538515,Mratín,6
+538396,Šabina,6
+538345,Kojetice,6
+538337,Krásno,6
+538329,Klíčany,6
+538311,Klecany,6
+538299,Kamenice,6
+538281,Kaliště,6
+538272,Jirny,6
+538264,Jenštejn,6
+538256,Husinec,6
+538248,Hrusice,6
+538370,Kostelec u Křížků,6
+538523,Mukařov,6
+538540,Nehvizdy,6
+538558,Nová Ves,6
+538795,Krásná,6
+538787,Sluštice,6
+538779,Sluhy,6
+538761,Sibřina,6
+538752,Senohraby,6
+538744,Březnice,6
+538728,Říčany,6
+538710,Řehenice,6
+538701,Radonice,6
+538698,Radějovice,6
+538680,Pyšely,6
+538671,Přezletice,6
+538663,Tatrovice,6
+538655,Předboj,6
+538647,Postřižín,6
+538639,Polerady,6
+538621,Podolanka,6
+538612,Petříkov,6
+538604,Panenské Břežany,6
+538591,Dolní Rychnov,6
+538582,Ondřejov,6
+538574,Odolena Voda,6
+538566,Nový Vestec,6
+538221,Horoušany,6
+539350,Jinočany,6
+537101,Dobšice,6
+537080,Činěves,6
+535745,Domousnice,6
+535737,Vidov,6
+535729,Dolní Slivno,6
+535711,Dolní Krupá,6
+535702,Dolní Bousov,6
+535699,Petříkov,6
+535681,Borovnice,6
+535672,Dobrovice,6
+535664,Doubravice,6
+535656,Dlouhá Lhota,6
+535753,Hůry,6
+535648,Nová Ves,6
+535621,Čachovice,6
+535613,Hvozdec,6
+535605,Bukovno,6
+535591,Zvíkov,6
+535583,Březno,6
+535575,Habří,6
+535567,Březina,6
+535559,Brodce,6
+535541,Čakov,6
+535532,Hanušovice,6
+535630,Čistá,6
+535524,Hosty,6
+535761,Jivno,6
+535788,Dubičné,6
+536008,Katusice,6
+535991,Pištín,6
+535982,Kamenná,6
+535974,Jivina,6
+535966,Jabkenice,6
+535958,Drahotěšice,6
+535940,Mazelov,6
+535931,Chotětov,6
+535923,Chocnějovice,6
+535915,Vlkov,6
+535770,Horní Studénky,6
+535907,Chotýčany,6
+535885,Hoštejn,6
+535877,Komařice,6
+535869,Hrdlořezy,6
+535851,Hlavatce,6
+535842,Mokrý Lom,6
+535834,Horní Bukovina,6
+535826,Adamov,6
+535818,Horky nad Jizerou,6
+535800,Libníč,6
+535796,Vráto,6
+535893,Vitín,6
+535516,Boseň,6
+535508,Boreč,6
+535494,Úsilné,6
+535214,Střemy,6
+535206,Dobrá Voda u Českých Budějovic,6
+535192,Spomyšl,6
+535184,Tichov,6
+535176,Planá,6
+535168,Řepín,6
+535150,Hořešovičky,6
+535141,Ovčáry,6
+535133,Obříství,6
+535125,Bílichov,6
+535222,Tišice,6
+535117,Nová Ves,6
+535095,Loucká,6
+535087,Neratovice,6
+535079,Nelahozeves,6
+535061,Nebužely,6
+535052,Mšeno,6
+535044,Mělnické Vtelno,6
+535036,Malý Újezd,6
+535028,Lužec nad Vltavou,6
+535010,Běleč,6
+535001,Liběchov,6
+535109,Královice,6
+535231,Ostrolovský Újezd,6
+535249,Dasný,6
+535257,Úžice,6
+535486,Bítouchov,6
+535478,Bezno,6
+535460,Hradce,6
+535451,Benátky nad Jizerou,6
+535443,Bělá pod Bezdězem,6
+535435,Neplachov,6
+535427,Bakov nad Jizerou,6
+535419,Mladá Boleslav,6
+535401,Bošilec,6
+535397,Želízy,6
+535389,Zlosyň,6
+535371,Nákří,6
+535362,Záryby,6
+535354,Zálezlice,6
+535346,Plav,6
+535338,Vysoká,6
+535320,Všetaty,6
+535311,Všestudy,6
+535303,Vraňany,6
+535290,Vojkovice,6
+535281,Mydlovary,6
+535273,Veltrusy,6
+535265,Velký Borek,6
+536016,Zahájí,6
+537098,Dlouhopolsko,6
+536024,Klášter Hradiště nad Jizerou,6
+536041,Kněžmost,6
+536806,Krašlovice,6
+536792,Přední Zborovice,6
+536784,Strunkovice nad Volyňkou,6
+536776,Slaník,6
+536768,Sukorady,6
+536750,Kváskovice,6
+536741,Velká Turná,6
+536733,Kolšov,6
+536725,Němětice,6
+536717,Strenice,6
+536814,Kosov,6
+536709,Strašnov,6
+536687,Klopina,6
+536679,Třešovice,6
+536661,Sojovice,6
+536652,Smilovice,6
+536644,Nebřehovice,6
+536636,Skalsko,6
+536628,Hlupín,6
+536610,Semčice,6
+536601,Kocelovice,6
+536598,Tchořovice,6
+536695,Úlehle,6
+536580,Řepov,6
+536822,Lom,6
+536849,Řepice,6
+537071,Lipovice,6
+537063,Bratronice,6
+537055,Budiměřice,6
+537047,Bříství,6
+537039,Bobnice,6
+537021,Běrunice,6
+537004,Nymburk,6
+536997,Židněves,6
+536989,Žerčice,6
+536971,Žďár,6
+536831,Libětice,6
+536962,Nišovice,6
+536946,Kalenice,6
+536938,Všejany,6
+536920,Štěchovice,6
+536911,Pohorovice,6
+536903,Chobot,6
+536890,Uzeničky,6
+536881,Horní Poříčí,6
+536873,Zvotoky,6
+536865,Rovná,6
+536857,Velké Všelisy,6
+536954,Krejnice,6
+536571,Kamenná,6
+536563,Mnichov,6
+536555,Krty-Hradec,6
+536261,Loukovec,6
+536253,Bohdalovice,6
+536245,Srnín,6
+536237,Zvíkov,6
+536229,Chlumec,6
+536211,Lhotky,6
+536202,Ledce,6
+536199,Dobšice,6
+536181,Kropáčova Vrutice,6
+536172,Krnsko,6
+536270,Luštěnice,6
+536164,Krásná Ves,6
+536148,Javorník,6
+536130,Kostelní Hlavno,6
+536121,Kosořice,6
+536113,Hynčina,6
+536105,Horní Kněžeklady,6
+536091,Hrabišín,6
+536083,Velenice,6
+536075,Hartmanice,6
+536067,Kochánky,6
+536059,Břehov,6
+536156,Bečice,6
+536288,Jedlí,6
+536296,Malšín,6
+536300,Věžovatá Pláně,6
+536547,Přechovice,6
+536539,Milejovice,6
+536521,Jindřichov,6
+536512,Truskovice,6
+536504,Vacovice,6
+536491,Předměřice nad Jizerou,6
+536482,Zahorčice,6
+536474,Němčice,6
+536466,Mačkov,6
+536458,Plazy,6
+536440,Písková Lhota,6
+536431,Petkovy,6
+536423,Radějovice,6
+536415,Měkynec,6
+536407,Obruby,6
+536393,Jestřebí,6
+536385,Jeseník,6
+536377,Nová Telib,6
+536369,Hornosín,6
+536351,Nepřevázka,6
+536342,Krajníčko,6
+536334,Němčice,6
+536326,Mnichovo Hradiště,6
+536032,Strýčice,6
+534994,Choťovice,6
+539368,Kamenný Přívoz,6
+539384,Kněževes,6
+542431,Srbeč,6
+542423,Černouček,6
+542415,Slabce,6
+542407,Trnovany,6
+542393,Vrbka,6
+542385,Skryje,6
+542377,Senomaty,6
+542369,Senec,6
+542351,Řevničov,6
+542342,Honětice,6
+542440,Oleško,6
+542334,Rynholec,6
+542318,Blazice,6
+542296,Nezdice,6
+542288,Pustověty,6
+542270,Pšovlky,6
+542253,Příčina,6
+542237,Pochvalov,6
+542229,Petrovice,6
+542211,Panoší Újezd,6
+542202,Oráčov,6
+542199,Olešná,6
+542326,Ruda,6
+542181,Nový Dům,6
+542458,Svojetín,6
+542474,Šanov,6
+542768,Hovězí,6
+542750,Hošťálková,6
+542725,Horní Lideč,6
+542687,Horní Bečva,6
+542679,Halenkov,6
+542644,Francova Lhota,6
+542636,Nová Ves,6
+542628,Černčice,6
+542610,Zbečno,6
+542601,Zavidov,6
+542466,Sýkořice,6
+542598,Všetaty,6
+542571,Cítoliby,6
+542563,Velká Buková,6
+542555,Opočno,6
+542547,Blšany u Loun,6
+542539,Píšťany,6
+542521,Michalovice,6
+542512,Třtice,6
+542504,Třeboc,6
+542491,Malíč,6
+542482,Záluží,6
+542580,Obora,6
+542172,Červené Poříčí,6
+542164,Nové Strašecí,6
+542156,Borovy,6
+541877,Kněževes,6
+541869,Javor,6
+541851,Klenová,6
+541842,Běhařov,6
+541834,Jesenice,6
+541826,Kejnice,6
+541818,Chrášťany,6
+541800,Dolní Bečva,6
+541796,Hejná,6
+541788,Poleň,6
+541885,Týnec,6
+541770,Hředle,6
+541753,Ježovy,6
+541745,Myslovice,6
+541737,Hořovičky,6
+541729,Hořesedly,6
+541711,Bystřička,6
+541702,Lom u Tachova,6
+541699,Čistá,6
+541681,Ošelín,6
+541672,Branov,6
+541664,Záchlumí,6
+541761,Hřebečníky,6
+541893,Kolešovice,6
+541907,Kounov,6
+541915,Obytce,6
+542148,Modrava,6
+542130,Nesuchyně,6
+542121,Mutějovice,6
+542113,Mšecké Žehrovice,6
+542105,Mšec,6
+542091,Horská Kvilda,6
+542083,Hnačov,6
+542075,Milostín,6
+542067,Městečko,6
+542059,Mlýnské Struhadlo,6
+542041,Lužná,6
+542032,Lubná,6
+542024,Číhaň,6
+542016,Lišany,6
+542008,Lašovice,6
+541991,Lány,6
+541982,Křivoklát,6
+541974,Krušovice,6
+541966,Krupá,6
+541958,Olšany,6
+541940,Kroučová,6
+541931,Kvášňovice,6
+541923,Břežany,6
+542784,Huslenky,6
+541656,Rakovník,6
+542814,Hutisko-Solanec,6
+542865,Jablůnka,6
+544892,Olešník,6
+544884,Olešnice,6
+544876,Lhotice,6
+544868,Nové Hrady,6
+544850,Růžďka,6
+544841,Rožnov pod Radhoštěm,6
+544833,Bačkovice,6
+544825,Nedabyle,6
+544817,Mladošovice,6
+544809,Ločenice,6
+544906,Seninka,6
+544795,Litvínovice,6
+544779,Lišov,6
+544761,Lipí,6
+544752,Příštpo,6
+544744,Libín,6
+544736,Ledenice,6
+544728,Pržno,6
+544710,Vincencov,6
+544701,Labská Stráň,6
+544698,Prostřední Bečva,6
+544680,Janov,6
+544787,Ratiboř,6
+544671,Prlov,6
+544914,Střelná,6
+544931,Študlov,6
+545155,Temelín,6
+545147,Velká Lhota,6
+545139,Štěpánovice,6
+545121,Ševětín,6
+545112,Valašské Příkazy,6
+545104,Svatý Jan nad Malší,6
+545091,Střížov,6
+545082,Strážkovice,6
+545074,Staré Hodějovice,6
+545066,Srubec,6
+544922,Střítež nad Bečvou,6
+545058,Valašské Meziříčí,6
+545031,Menhartice,6
+545023,Slavče,6
+545015,Sedlec,6
+545007,Římov,6
+544990,Valašská Polanka,6
+544981,Rudolfov,6
+544973,Roudné,6
+544965,Radošovice,6
+544957,Lovčovice,6
+544949,Valašská Bystřice,6
+545040,Radotice,6
+544663,Kamenný Újezd,6
+544655,Pozděchov,6
+544647,Bynovec,6
+544361,Dívčice,6
+544353,Heřmanice,6
+544345,Proseč pod Ještědem,6
+544337,Hamr na Jezeře,6
+544329,Čejkovice,6
+544302,Lešná,6
+544299,Boršov nad Vltavou,6
+544281,Borovany,6
+544272,Borek,6
+544264,Leskovec,6
+544370,Lidečko,6
+544256,České Budějovice,6
+543543,Hruška,6
+543128,Staňkovice,6
+543098,Lačnov,6
+543021,Kunovice,6
+543012,Žerotín,6
+542997,Kladeruby,6
+542989,Kelč,6
+542946,Kateřinice,6
+542911,Karolinka,6
+542903,Jarcová,6
+544248,Pavlíkov,6
+544388,Dolní Bukovsko,6
+544396,Liptál,6
+544400,Doudleby,6
+544639,Jílovice,6
+544621,Police,6
+544612,Jankov,6
+544604,Žďárek,6
+544591,Chrášťany,6
+544582,Radimovice,6
+544574,Oznice,6
+544566,Nový Hrozenkov,6
+544558,Hrdějovice,6
+544540,Hranice,6
+544531,Čtveřín,6
+544523,Hosín,6
+544515,Horní Stropnice,6
+544507,Mikulůvka,6
+544493,Homole,6
+544485,Hluboká nad Vltavou,6
+544477,Stráž nad Nisou,6
+544469,Malá Bystřice,6
+544451,Dynín,6
+544442,Dubné,6
+544434,Lužná,6
+544426,Dříteň,6
+544418,Loučka,6
+542831,Choryně,6
+539376,Vlkovice,6
+541648,Branky,6
+541621,Tisová,6
+540251,Drahkov,6
+540242,Hluboš,6
+540234,Lukavice,6
+540226,Loučná nad Desnou,6
+540218,Dublovice,6
+540200,Kozlovice,6
+540196,Loštice,6
+540188,Drhovy,6
+540170,Drevníky,6
+540161,Líšnice,6
+540269,Nová Ves,6
+540153,Drásov,6
+540137,Životice,6
+540129,Dolní Hbity,6
+540111,Dobříš,6
+540102,Nezdřev,6
+540099,Daleké Dušníky,6
+540081,Čím,6
+540072,Čenkov,6
+540064,Lisov,6
+540056,Střelice,6
+540048,Buš,6
+540145,Drahlín,6
+540030,Lipová-lázně,6
+540285,Hřiměždice,6
+540307,Chlumy,6
+540536,Kozárovice,6
+540528,Únětice,6
+540510,Olšany,6
+540501,Nový Malín,6
+540498,Kosova Hora,6
+540480,Moravičany,6
+540471,Mohelnice,6
+540463,Bolkov,6
+540447,Klučenice,6
+540439,Kamýk nad Vltavou,6
+540293,Otěšice,6
+540421,Radkovice,6
+540404,Jince,6
+540391,Jesenice,6
+540382,Mikulovice,6
+540374,Jablonná,6
+540366,Maletín,6
+540358,Chraštice,6
+540340,Nebílovy,6
+540331,Malá Morava,6
+540323,Chotilsko,6
+540315,Hvožďany,6
+540412,Předenice,6
+540021,Buková u Příbramě,6
+540013,Březnice,6
+540005,Lipinka,6
+539651,Řitka,6
+539643,Řevnice,6
+539627,Roztoky,6
+539619,Tuřany,6
+539597,Psáry,6
+539571,Průhonice,6
+539562,Pohoří,6
+539554,Odrava,6
+539546,Petrov,6
+539538,Prameny,6
+539660,Slapy,6
+539520,Ořech,6
+539503,Ohrobec,6
+539490,Měchenice,6
+539481,Valy,6
+539473,Ovesné Kladruby,6
+539457,Líšnice,6
+539431,Zádub-Závišín,6
+539422,Libeř,6
+539414,Libčice nad Vltavou,6
+539406,Lety,6
+539392,Kosoř,6
+539511,Okrouhlo,6
+539686,Statenice,6
+539708,Středokluky,6
+539716,Měcholupy,6
+539988,Bratkovice,6
+539970,Borotice,6
+539961,Libina,6
+539953,Bohutín,6
+539945,Dolce,6
+539937,Skašov,6
+539929,Týniště,6
+539911,Příbram,6
+539902,Zvole,6
+539881,Zlatníky-Hodkovice,6
+539872,Zbuzany,6
+539856,Všenory,6
+539848,Vrané nad Vltavou,6
+539830,Vonoklasy,6
+539821,Horní Lukavice,6
+539813,Velké Přílepy,6
+539805,Únětice,6
+539783,Oplot,6
+539775,Tursko,6
+539767,Tuchoměřice,6
+539759,Třebotov,6
+539741,Štěnovický Borek,6
+539732,Štěchovice,6
+540544,Oskava,6
+541630,Vsetín,6
+540552,Krásná Hora nad Vltavou,6
+540579,Křepenice,6
+541354,Zábřeh,6
+541346,Vlčice,6
+541338,Stará Huť,6
+541320,Solenice,6
+541311,Smolotely,6
+541303,Vidnava,6
+541290,Horní Kozolupy,6
+541281,Sedlčany,6
+541273,Sádek,6
+541265,Velké Losiny,6
+541362,Zadní Chodov,6
+541257,Rybníky,6
+541231,Rožmitál pod Třemšínem,6
+541222,Úsov,6
+541214,Uhelná,6
+541206,Rosovice,6
+541192,Nevid,6
+541176,Svojkovice,6
+541168,Štíty,6
+541150,Kamenný Újezd,6
+541141,Chomle,6
+541133,Prosenická Lhota,6
+541249,Vápenná,6
+541125,Svébohov,6
+541371,Suchodol,6
+541397,Svatý Jan,6
+541613,Zalužany,6
+541605,Brod nad Tichou,6
+541591,Vysoký Chlumec,6
+541583,Vysoká u Příbramě,6
+541575,Žulová,6
+541567,Vranovice,6
+541559,Kočov,6
+541541,Voznice,6
+541532,Milíře,6
+541524,Volenice,6
+541389,Svaté Pole,6
+541516,Višňová,6
+541494,Kokašice,6
+541486,Prostiboř,6
+541478,Zvole,6
+541460,Zhoř,6
+541451,Třebsko,6
+541443,Obora,6
+541435,Únehle,6
+541427,Tochovice,6
+541419,Štětkovice,6
+541401,Broumov,6
+541508,Věšín,6
+541117,Supíkovice,6
+541109,Sudkov,6
+541095,Bezděkov,6
+540790,Nalžovice,6
+540781,Mokrovraty,6
+540773,Postřelmov,6
+540765,Mníšek pod Brdy,6
+540757,Milín,6
+540749,Milešov,6
+540731,Police,6
+540722,Smědčice,6
+540714,Malá Hraštice,6
+540706,Vlčtejn,6
+540803,Chlum,6
+540692,Sedliště,6
+540676,Srby,6
+540668,Honezovice,6
+540650,Písařov,6
+540641,Mokrouše,6
+540633,Kotovice,6
+540625,Láz,6
+540617,Líšina,6
+540609,Pavlov,6
+540595,Palonín,6
+540587,Křešín,6
+540684,Písečná,6
+540811,Nečín,6
+540820,Nedrahovice,6
+540846,Nechvalice,6
+541087,Počepice,6
+541079,Staré Město,6
+541061,Zvíkovec,6
+541052,Pičín,6
+541044,Petrovice,6
+541036,Stará Červená Voda,6
+541028,Pečice,6
+541010,Ouběnice,6
+541001,Hradiště,6
+540986,Sobotín,6
+540978,Ruda nad Moravou,6
+540960,Ohrazenice,6
+540951,Obořiště,6
+540943,Obory,6
+540935,Obecnice,6
+540927,Čilá,6
+540919,Rovensko,6
+540901,Nový Knín,6
+540897,Nové Dvory,6
+540889,Nová Ves pod Pleší,6
+540871,Rohle,6
+540862,Rapotín,6
+540854,Rájec,6
+540561,Letkov,6
+534986,Lhota,6
+534978,Ledčice,6
+534960,Křenek,6
+523917,Bělá pod Pradědem,6
+523704,Šumperk,6
+523640,Želatovice,6
+523453,Žákovice,6
+522775,Zámrsky,6
+521531,Všechovice,6
+520420,Veselíčko,6
+520306,Ústí,6
+520047,Tučín,6
+519651,Troubky,6
+524891,Bernartice,6
+519146,Tovačov,6
+518026,Sušice,6
+517909,Střítež nad Ludinou,6
+517887,Stará Ves,6
+517844,Soběchleby,6
+517836,Sobíšky,6
+517747,Skalička,6
+517666,Říkovice,6
+517615,Rouské,6
+517607,Rokytnice,6
+517585,Rakov,6
+519031,Teplice nad Bečvou,6
+517569,Radvanice,6
+525227,Bílá Voda,6
+525804,Bohdíkov,6
+529630,Kostomlátky,6
+529621,Divišov,6
+529613,Josefův Důl,6
+529605,Rokytá,6
+529591,Sedlec,6
+529583,Tupadly,6
+529575,Medonosy,6
+529567,Čtyřkoly,6
+529559,Dobrovítov,6
+529541,Český Šternberk,6
+525588,Bludov,6
+529532,Červený Újezd,6
+529516,Čerčany,6
+529486,Čechtice,6
+529478,Čakov,6
+529451,Bystřice,6
+529303,Benešov,6
+528196,Podveky,6
+526622,Rohozec,6
+526169,Branná,6
+525979,Bohutín,6
+525880,Bohuslavice,6
+529524,Čejkovice,6
+517534,Radslavice,6
+517445,Radotín,6
+517437,Radkovy,6
+514446,Lazníčky,6
+514276,Pertoltice pod Ralskem,6
+514195,Ždírec,6
+514161,Luka,6
+514152,Kokory,6
+514055,Kojetín,6
+514047,Klokočí,6
+513890,Skalka u Doks,6
+513873,Jindřichov,6
+513768,Hustopeče nad Bečvou,6
+514471,Lazníky,6
+513750,Hranice,6
+513717,Urbanice,6
+513709,Roubanina,6
+513695,Horní Smržov,6
+513661,Nová Ves,6
+513644,Zlatá,6
+513636,Hrabůvka,6
+513628,Klokočná,6
+513580,Hudčice,6
+513571,Občov,6
+513555,Kotenčice,6
+513733,Hradčany,6
+514497,Lhota,6
+514527,Lhotka,6
+514705,Lipník nad Bečvou,6
+517321,Radkova Lhota,6
+517275,Radíkov,6
+517224,Přestavlky,6
+517208,Provodovice,6
+517151,Prosenice,6
+517101,Potštát,6
+516911,Polom,6
+516899,Polkovice,6
+516864,Podolí,6
+516694,Pavlovice u Přerova,6
+516686,Partutovice,6
+516635,Paršovice,6
+516619,Osek nad Bečvou,6
+516350,Oprostovice,6
+516201,Opatovice,6
+515825,Oldřichov,6
+515787,Nelešovice,6
+515477,Milotice nad Bečvou,6
+515418,Milenov,6
+515329,Malhotice,6
+515191,Lobodice,6
+514802,Líšná,6
+514772,Lipová,6
+529648,Dolní Kralovice,6
+513547,Příčovy,6
+529656,Pětihosty,6
+529672,Bezděkov pod Třemšínem,6
+530450,Postupice,6
+530441,Poříčí nad Sázavou,6
+530433,Kunratice,6
+530425,Dalešice,6
+530417,Doubice,6
+530409,Petroupim,6
+530395,Janská,6
+530387,Radvanec,6
+530379,Drahoňův Újezd,6
+530361,Kařízek,6
+530468,Dlouhý Most,6
+530352,Ostředek,6
+530336,Pláně,6
+530328,Čerňovice,6
+530310,Neveklov,6
+530301,Neustupov,6
+530298,Netvořice,6
+530280,Vysoká Libyně,6
+530271,Sedlec,6
+530263,Nespeky,6
+530247,Potvorov,6
+530239,Bílov,6
+530344,Olbramovice,6
+530221,Hněvnice,6
+530476,Pravonín,6
+530492,Přestavlky u Čerčan,6
+530719,Studený,6
+530701,Střezimíř,6
+530697,Úherčice,6
+530689,Struhařov,6
+530671,Pšánky,6
+530662,Ždírec,6
+530654,Vysoká,6
+530646,Hurtova Lhota,6
+530638,Soběhrdy,6
+530620,Přestanov,6
+530484,Jeřmanice,6
+530611,Smilkov,6
+530590,Libočany,6
+530581,Čeradice,6
+530573,Sedlec-Prčice,6
+530565,Želkovice,6
+530557,Kozly,6
+530549,Rataje,6
+530531,Radošovice,6
+530522,Rabyně,6
+530514,Psáře,6
+530506,Miřejovice,6
+530603,Zálužice,6
+530212,Načeradec,6
+530204,Mrač,6
+530191,Mnichovice,6
+529907,Keblov,6
+529893,Nicov,6
+529885,Stehlovice,6
+529877,Okrouhlá,6
+529869,Důl,6
+529851,Javorník,6
+529842,Jankov,6
+529834,Mezná,6
+529826,Čelistná,6
+529818,Chotýšany,6
+529915,Vrbice,6
+529796,Chocerady,6
+529770,Chlum,6
+529761,Žďár,6
+529753,Dívčí Kopy,6
+529745,Hvězdonice,6
+529737,Hulice,6
+529729,Kvítkovice,6
+529711,Drahouš,6
+529702,Heřmaničky,6
+529699,Velká Chmelištná,6
+529681,Koupě,6
+529788,Chmelná,6
+529923,Žárovná,6
+529931,Kondrac,6
+529940,Kozmice,6
+530182,Žákava,6
+530174,Miřetice,6
+530166,Miličín,6
+530158,Mezno,6
+530140,Milínov,6
+530131,Přestavlky,6
+530123,Dobršín,6
+530115,Maršovice,6
+530107,Louňovice pod Blaníkem,6
+530093,Loket,6
+530085,Bukovník,6
+530069,Libež,6
+530051,Lešany,6
+530042,Katov,6
+530034,Stožice,6
+530026,Kuňovice,6
+530018,Březí,6
+530000,Křivsoudov,6
+529991,Křečovice,6
+529982,Chlum,6
+529974,Krňany,6
+529966,Buzice,6
+529958,Krhanice,6
+529664,Těchařovice,6
+530727,Brníčko,6
+513539,Velká Lečice,6
+513512,Zduchovice,6
+506494,Nové Hamry,6
+506486,Boží Dar,6
+506460,Budišov nad Budišovkou,6
+506451,Březová,6
+506320,Brumovice,6
+506214,Bolatice,6
+506192,Bohuslavice,6
+505927,Opava,6
+505862,Žerotín,6
+505781,Zápy,6
+506621,Čichalov,6
+505668,Velký Újezd,6
+505609,Velká Bystřice,6
+505587,Uničov,6
+505528,Jenčice,6
+505501,Újezd,6
+505391,Bělá u Jevíčka,6
+505366,Tršice,6
+505293,Troubelice,6
+505269,Těšetice,6
+505218,Šumvald,6
+505188,Šternberk,6
+505650,Velký Týnec,6
+505161,Štěpánov,6
+506664,Skořice,6
+506702,Dolní Benešov,6
+507610,Doňov,6
+507580,Kravaře,6
+507547,Milíkov,6
+507504,Kobeřice,6
+507458,Košařiska,6
+507423,Janovice,6
+507377,Jakartovice,6
+507334,Chuchelná,6
+507270,Hradec nad Moravicí,6
+507261,Hrabyně,6
+506699,Otmarov,6
+507237,Komorní Lhotka,6
+507113,Holasovice,6
+507105,Hněvošice,6
+507091,Nýdek,6
+507016,Hlučín,6
+506770,Seloutky,6
+506761,Alojzov,6
+506753,Háj ve Slezsku,6
+506737,Chvalčov,6
+506729,Dvorce,6
+506711,Dolní Lhota,6
+507181,Pržno,6
+505145,Březová nad Svitavou,6
+505111,Slatinice,6
+505099,Červená Hora,6
+501751,Drahanovice,6
+501646,Dolany,6
+501476,Dlouhá Loučka,6
+500879,Bystročice,6
+500861,Bouzov,6
+500852,Bohuňovice,6
+500801,Blatec,6
+500623,Bílá Lhota,6
+500526,Bělkovice-Lašťany,6
+500496,Olomouc,6
+501794,Dub nad Moravou,6
+500291,Vřesina,6
+500194,Polná na Šumavě,6
+500160,Město Libavá,6
+500151,Luboměř pod Strážnou,6
+500135,Kozlov,6
+500127,Doupovské Hradiště,6
+500101,Bražec,6
+500071,Poličná,6
+500062,Krhová,6
+500046,Libhošť,6
+500020,Petrov nad Desnou,6
+500259,Veřovice,6
+501841,Grygov,6
+502146,Hlubočky,6
+502235,Hněvotín,6
+505081,Senice na Hané,6
+505030,Dolní Bezděkov,6
+505013,Příkazy,6
+505005,Bítovany,6
+504955,Dvakačovice,6
+504921,Třibřichy,6
+504807,Lány,6
+504785,Paseka,6
+504505,Náměšť na Hané,6
+504441,Náklo,6
+504301,Dřenice,6
+504246,Mladeč,6
+503916,Kostelec,6
+503738,Majetín,6
+503657,Lutín,6
+503622,Luká,6
+503444,Litovel,6
+503410,Žitovlice,6
+503304,Kožušany-Tážaly,6
+503142,Jívová,6
+502839,Cholina,6
+502545,Horka nad Moravou,6
+502405,Hnojice,6
+507628,Pleše,6
+513521,Lešetice,6
+507644,Újezdec,6
+507695,Záhoří,6
+513041,Lhota,6
+513032,Kamenný Most,6
+512991,Drnek,6
+512982,Citov,6
+512974,Bělá,6
+512923,Chlebičov,6
+512907,Kyjovice,6
+512893,Nové Lublice,6
+512877,Býškovice,6
+512869,Strahovice,6
+513059,Čelechovice,6
+512826,Buk,6
+512745,Těškovice,6
+512532,Bochoř,6
+512401,Bezuchov,6
+512281,Beňov,6
+512231,Bělotín,6
+512192,Horní Domaslavice,6
+512184,Metylovice,6
+512176,Hrádek,6
+512028,Písek,6
+511986,Horní Lomná,6
+512800,Brodek u Přerova,6
+511951,Dolní Lomná,6
+513067,Černotín,6
+513105,Dobrčice,6
+513504,Dlouhá Lhota,6
+513491,Horní Moštěnice,6
+513482,Vysoký Újezd,6
+513458,Vestec,6
+513431,Chýnice,6
+513423,Pašinka,6
+513415,Kbel,6
+513393,Přistoupim,6
+513369,Přehvozdí,6
+513288,Mrzky,6
+513075,Hobšovice,6
+513270,Lipec,6
+513237,Polní Chrčice,6
+513229,Dřevohostice,6
+513211,Domaželice,6
+513202,Zalešany,6
+513199,Dolní Újezd,6
+513181,Dománovice,6
+513164,Ždánice,6
+513148,Polní Voděrady,6
+513130,Dolany,6
+513113,Malé Přítočno,6
+513261,Žabonosy,6
+511935,Bukovec,6
+511633,Bocanovice,6
+511587,Josefov,6
+509612,Otice,6
+509574,Oldřišov,6
+509418,Bořetín,6
+509388,Arneštovice,6
+509191,Cep,6
+509141,Dvory nad Lužnicí,6
+509116,Červený Hrádek,6
+509108,Kostelní Radouň,6
+509078,Plavsko,6
+508683,Záblatí,6
+509621,Předotice,6
+508501,Lužnice,6
+508357,Kostelní Vydří,6
+508152,Střížovice,6
+508144,Melč,6
+508128,Markvartovice,6
+508004,Roseč,6
+507971,Ludgeřovice,6
+507920,Litultovice,6
+507784,Ratiboř,6
+507733,Březina,6
+507717,Peč,6
+508373,Mokré Lazce,6
+509647,Píšť,6
+509736,Pustá Polom,6
+509752,Křižanov,6
+511412,Oslavička,6
+511382,Přerov,6
+511307,Rácovice,6
+511242,Vícenice u Náměště nad Oslavou,6
+511161,Vršovice,6
+511081,Sedlec,6
+511021,Vítkov,6
+510980,Ocmanice,6
+510939,Velké Hoštice,6
+510891,Velké Heraltice,6
+510882,Velká Polom,6
+510645,Kojatín,6
+510556,Láz,6
+510491,Štítina,6
+510483,Štěpánkovice,6
+510432,Šilheřovice,6
+510378,Sudice,6
+510343,Stěbořice,6
+510297,Služovice,6
+510289,Slavkov,6
+510131,Skřipov,6
+510068,Čečelovice,6
+509841,Raduň,6
+507652,Višňová,6
+530735,Staré Hrady,6
+530743,Bílkovice,6
+530751,Tehov,6
+533645,Radovesnice II,6
+533637,Radovesnice I,6
+533629,Radim,6
+533611,Přišimasy,6
+533602,Nenačovice,6
+533599,Polepy,6
+533581,Plaňany,6
+533572,Ovčáry,6
+533564,Oleška,6
+533556,Ohaře,6
+533653,Ratboř,6
+533548,Nučice,6
+533521,Nebovidy,6
+533513,Malotice,6
+533505,Lošany,6
+533491,Černá Voda,6
+533483,Libodřice,6
+533475,Libenice,6
+533467,Křečhoř,6
+533459,Krupá,6
+533441,Krakovany,6
+533432,Kozojedy,6
+533530,Nová Ves I,6
+533424,Kouřim,6
+533661,Rostoklaty,6
+533688,Dlouhomilov,6
+533904,Vyžlovka,6
+533891,Vrbčany,6
+533882,Volárna,6
+533874,Vlkančice,6
+533866,Vitice,6
+533858,Veltruby,6
+533840,Velký Osek,6
+533831,Velim,6
+533823,Veletov,6
+533815,Uhlířská Lhota,6
+533670,Chrustenice,6
+533807,Týnec nad Labem,6
+533785,Tuklaty,6
+533777,Tuchoraz,6
+533769,Tři Dvory,6
+533751,Třebovle,6
+533742,Toušice,6
+533734,Tismice,6
+533726,Svojšice,6
+533718,Stříbrná Skalice,6
+533700,Starý Kolín,6
+533696,Skvrňov,6
+533793,Korno,6
+533416,Kostelec nad Černými lesy,6
+533408,Kořenice,6
+533394,Konárovice,6
+533106,Trubín,6
+533092,Zákolany,6
+533084,Kladruby,6
+533076,Pavlovice,6
+533068,Vraný,6
+533050,Vinařice,6
+533041,Velvary,6
+533033,Velké Přítočno,6
+533025,Velká Dobrá,6
+533017,Unhošť,6
+533114,Zlonice,6
+533009,Uhy,6
+532983,Tuchlovice,6
+532975,Třebusice,6
+532967,Třebíz,6
+532959,Třebichovice,6
+532941,Řimovice,6
+532932,Hradiště,6
+532924,Bukovany,6
+532916,Šlapanice,6
+532908,Svinařov,6
+532894,Bušín,6
+532991,Úhonice,6
+533122,Zvoleněves,6
+533149,Žilina,6
+533157,Žižice,6
+533386,Klučov,6
+533378,Jevany,6
+533360,Jestřabí Lhota,6
+533351,Chrášťany,6
+533343,Chotutice,6
+533335,Lhotka,6
+533327,Horní Kruty,6
+533319,Malá Víska,6
+533301,Doubravčice,6
+533297,Dolní Chvatliny,6
+533289,Dobřichov,6
+533271,Český Brod,6
+533262,Červené Pečky,6
+533254,Černé Voděrady,6
+533246,Cerhenice,6
+533238,Býchory,6
+533220,Břežany II,6
+533211,Břežany I,6
+533203,Králův Dvůr,6
+533190,Bělušice,6
+533181,Bečváry,6
+533173,Barchovice,6
+533165,Kolín,6
+533912,Mořinka,6
+532886,Chářovice,6
+533921,Zásmuky,6
+533947,Žiželice,6
+534692,Újezd u Boskovic,6
+534684,Borek,6
+534676,Mělník,6
+534668,Žleby,6
+534650,Žehušice,6
+534641,Žáky,6
+534633,Zruč nad Sázavou,6
+534625,Zbýšov,6
+534617,Zbraslavice,6
+534609,Zbizuby,6
+534706,Chroustov,6
+534595,Záboří nad Labem,6
+534579,Vlkaneč,6
+534561,Vlastějovice,6
+534552,Vlačice,6
+534544,Vinaře,6
+534536,Vidice,6
+534528,Vavřinec,6
+534510,Úžice,6
+534501,Úmonín,6
+534498,Uhlířské Janovice,6
+534480,Tupadly,6
+534587,Vrdy,6
+534471,Záhornice,6
+534714,Býkev,6
+534731,Cítov,6
+534951,Kralupy nad Vltavou,6
+534943,Kouty,6
+534935,Kostelec nad Labem,6
+534927,Dubicko,6
+534919,Netřebice,6
+534901,Kokořín,6
+534897,Kly,6
+534889,Starý Vestec,6
+534871,Velenka,6
+534862,Zvěřínek,6
+534722,Byšice,6
+534854,Hořany,6
+534838,Chorušice,6
+534820,Chlumín,6
+534811,Podhradí,6
+534803,Hořín,6
+534790,Horní Počaply,6
+534781,Dřísy,6
+534773,Dřínov,6
+534765,Dolní Beřkovice,6
+534757,Seletice,6
+534749,Čečelice,6
+534846,Chvatěruby,6
+534463,Točník,6
+534455,Chlustina,6
+534447,Chodouň,6
+534161,Křesetice,6
+534153,Krchleby,6
+534145,Bykoš,6
+534137,Kluky,6
+534129,Kácov,6
+534111,Otmíče,6
+534102,Chotusice,6
+534099,Chlístovice,6
+534081,Chabeřice,6
+534072,Kotopeky,6
+534170,Ledečko,6
+534064,Hostovlice,6
+534048,Vižina,6
+534030,Čestín,6
+534021,Červené Janovice,6
+534013,Černíny,6
+534005,Čáslav,6
+533998,Církvice,6
+533980,Bohdaneč,6
+533971,Bílé Podolí,6
+533963,Skřipel,6
+533955,Kutná Hora,6
+534056,Horka II,6
+534188,Malešov,6
+534196,Svatý Mikuláš,6
+534200,Miskovice,6
+534439,Suchdol,6
+534421,Bavoryně,6
+534412,Staňkovice,6
+534404,Lužce,6
+534391,Slavošov,6
+534382,Sázava,6
+534374,Samopše,6
+534366,Řendějov,6
+534358,Rataje nad Sázavou,6
+534340,Rašovice,6
+534331,Potěhy,6
+534323,Petrovice II,6
+534315,Petrovice I,6
+534307,Pertoltice,6
+534293,Soběšín,6
+534285,Podbrdy,6
+534277,Onomyšl,6
+534269,Nesvačily,6
+534251,Okřesaneč,6
+534242,Nové Dvory,6
+534234,Vinařice,6
+534226,Nepoměřice,6
+534218,Málkov,6
+533939,Lážovice,6
+532878,Chleby,6
+532860,Stochov,6
+532851,Stehelčeves,6
+531502,Liblice,6
+531499,Hostín,6
+531481,Horušice,6
+531472,Lochovice,6
+531464,Loděnice,6
+531456,Liteň,6
+531448,Libomyšl,6
+531430,Horka I,6
+531421,Šebestěnice,6
+531413,Hraběšín,6
+531511,Zlončice,6
+531405,Kobylnice,6
+531383,Schořov,6
+531375,Kublov,6
+531367,Adamov,6
+531359,Horky,6
+531341,Drobovice,6
+531332,Koněprusy,6
+531324,Komárov,6
+531316,Karlštejn,6
+531308,Jivina,6
+531294,Chyňava,6
+531391,Sudějov,6
+531286,Bratčice,6
+531529,Měňany,6
+531545,Mořina,6
+531766,Stašov,6
+531758,Srbsko,6
+531740,Skuhrov,6
+531731,Stránka,6
+531723,Rudná,6
+531715,Rpety,6
+531707,Nosálov,6
+531693,Praskolesy,6
+531685,Podluhy,6
+531677,Lobeč,6
+531537,Mezouň,6
+531669,Otročiněves,6
+531642,Osov,6
+531634,Osek,6
+531626,Olešná,6
+531618,Nučice,6
+531600,Nový Jáchymov,6
+531596,Nižbor,6
+531588,Neumětely,6
+531570,Dobřeň,6
+531561,Tuhaň,6
+531553,Konětopy,6
+531651,Kanina,6
+531278,Paběnice,6
+531260,Dolní Pohleď,6
+531251,Chaloupky,6
+530972,Třebětín,6
+530964,Bludov,6
+530956,Opatovice I,6
+530948,Vrchotovy Janovice,6
+530930,Štipoklasy,6
+530921,Vranov,6
+530913,Vracovice,6
+530905,Votice,6
+530891,Vojkov,6
+530883,Vlašim,6
+530981,Třebešice,6
+530875,Starkoč,6
+530859,Semtěš,6
+530841,Týnec nad Sázavou,6
+530832,Brambory,6
+530824,Velenov,6
+530816,Trhový Štěpánov,6
+530808,Královec,6
+530794,Trnávka,6
+530786,Říkov,6
+530778,Tichonice,6
+530760,Teplýšovice,6
+530867,Veliš,6
+530999,Močovice,6
+531006,Ludíkov,6
+531014,Vodranty,6
+531243,Hýskov,6
+531235,Hvozdec,6
+531227,Hudlice,6
+531219,Hředle,6
+531201,Hostomice,6
+531197,Hlízov,6
+531189,Hořovice,6
+531171,Hlásná Třebaň,6
+531162,Felbabka,6
+531154,Drozdov,6
+531146,Drahelčice,6
+531138,Cerhovice,6
+531120,Bzová,6
+531111,Bernardov,6
+531103,Bubovice,6
+531090,Březová,6
+531081,Broumy,6
+531073,Běštín,6
+531065,Souňov,6
+531057,Beroun,6
+531049,Zvěstov,6
+531031,Kamberk,6
+531022,Zdislavice,6
+531774,Kadlín,6
+531782,Suchomasty,6
+531791,Svatá,6
+531804,Svatý Jan pod Skalou,6
+532568,Bernartice,6
+532550,Ratměřice,6
+532541,Tomice,6
+532533,Ledce,6
+532525,Kyšice,6
+532517,Kvílice,6
+532509,Šetějovice,6
+532495,Koleč,6
+532487,Knovíz,6
+532479,Kmetiněves,6
+532576,Libušín,6
+532461,Klobuky,6
+532444,Kačice,6
+532436,Snět,6
+532428,Jemníky,6
+532410,Jedomělice,6
+532401,Jarpice,6
+532398,Chržín,6
+532380,Blažejovice,6
+532371,Hřebeč,6
+532363,Hrdlív,6
+532355,Hradečno,6
+532452,Kamenné Žehrovice,6
+532584,Lidice,6
+532592,Tisem,6
+532606,Choratice,6
+532843,Dunice,6
+532835,Smečno,6
+532827,Slatina,6
+532819,Slaný,6
+532801,Sazená,6
+532797,Řisuty,6
+532789,Ptice,6
+532771,Přelíc,6
+532762,Pozdeň,6
+532754,Podlešín,6
+532746,Děkanovice,6
+532738,Pletený Újezd,6
+532720,Pchery,6
+532711,Pavlov,6
+532690,Ctiboř,6
+532681,Otvovice,6
+532673,Olovnice,6
+532665,Neuměřice,6
+532657,Malíkovice,6
+532649,Popovice,6
+532631,Malé Kyšice,6
+532622,Makotřasy,6
+532614,Vodslivy,6
+532347,Hostouň,6
+565920,Sudoměř,6
+532339,Hospozín,6
+532312,Horní Bezděkov,6
+532029,Žebrák,6
+532011,Zdice,6
+532002,Záluží,6
+531995,Zaječov,6
+531987,Dolní Zimoř,6
+531979,Zadní Třebaň,6
+531961,Vysoký Újezd,6
+531952,Všeradice,6
+531944,Vráž,6
+531936,Vidim,6
+532037,Chrášťany,6
+531928,Hostín u Vojkovic,6
+531901,Újezd,6
+531898,Lhotka,6
+531880,Trubská,6
+531871,Jeviněves,6
+531863,Nedomice,6
+531855,Tmaň,6
+531847,Tlustice,6
+531839,Tetín,6
+531821,Tachlovice,6
+531812,Svinaře,6
+531910,Velký Chlumec,6
+532045,Chlístov,6
+532053,Kladno,6
+532061,Václavice,6
+532304,Třebešice,6
+532291,Dřínov,6
+532282,Dřetovice,6
+532274,Družec,6
+532266,Všechlapy,6
+532258,Litichovice,6
+532231,Slověnice,6
+532223,Doksy,6
+532215,Červený Újezd,6
+532207,Černuc,6
+532193,Lštění,6
+532185,Cvrčovice,6
+532177,Tuřany,6
+532169,Buštěhrad,6
+532151,Drahňovice,6
+532142,Bratronice,6
+532134,Ješetice,6
+532126,Braškov,6
+532118,Brandýsek,6
+532100,Blevice,6
+532096,Borovnice,6
+532088,Beřovice,6
+532070,Běloky,6
+532321,Hořešovice,6
+545171,Trhové Sviny,6
+545163,Velké Karlovice,6
+545198,Vidče,6
+560227,Vejvanov,6
+560219,Drachkov,6
+560201,Nová Ves,6
+560197,Lažany,6
+560189,Těně,6
+560171,Budyně,6
+560162,Strašice,6
+560146,Sebečice,6
+560120,Radnice,6
+560111,Přívětice,6
+560235,Veselá,6
+560081,Podmokly,6
+560014,Mýto,6
+560006,Mlečice,6
+559997,Mirošov,6
+559962,Líšná,6
+559954,Liblín,6
+559946,Lhotka u Radnic,6
+559920,Kladruby,6
+559911,Klabava,6
+559903,Kařez,6
+559857,Cheznovice,6
+560057,Osek,6
+559849,Hůrky,6
+560243,Droužetice,6
+560260,Zbiroh,6
+560481,Hlasivo,6
+560472,Kraslice,6
+560464,Královské Poříčí,6
+560456,Krajková,6
+560448,Běleč,6
+560430,Zhoř u Tábora,6
+560421,Kaceřov,6
+560413,Jindřichovice,6
+560405,Kladruby,6
+560391,Kuřimany,6
+560251,Volduchy,6
+560383,Chodov,6
+560367,Horní Slavkov,6
+560359,Habartov,6
+560341,Dolní Nivy,6
+560332,Dasnice,6
+560324,Citice,6
+560316,Bukovany,6
+560308,Bublava,6
+560294,Březová,6
+560286,Sokolov,6
+560278,Mutěnice,6
+560375,Chlum Svaté Maří,6
+559822,Hrádek,6
+559814,Holoubkov,6
+559806,Hlohovice,6
+559351,Plasy,6
+559334,Pernarec,6
+559326,Ostrov u Bezdružic,6
+559318,Obora,6
+559300,Nýřany,6
+559288,Nevřeň,6
+559270,Nekmíř,6
+559261,Nečtiny,6
+559253,Nadryby,6
+559245,Mrtník,6
+559369,Plešnice,6
+559237,Mladotice,6
+559202,Manětín,6
+559172,Líšťany,6
+559164,Líně,6
+559148,Ledce,6
+559130,Kyšice,6
+559121,Kunějovice,6
+559105,Křelovice,6
+559091,Krsy,6
+559083,Krašovice,6
+559075,Kralovice,6
+559211,Město Touškov,6
+559377,Pňovany,6
+559393,Přehýšov,6
+559423,Rochlov,6
+559792,Ejpovice,6
+559776,Dobřív,6
+559768,Cekov,6
+559750,Bušovice,6
+559741,Bujesily,6
+559733,Březina,6
+559725,Břasy,6
+559717,Rokycany,6
+559709,Žilov,6
+559695,Žihle,6
+559679,Zruč-Senec,6
+559661,Zbůch,6
+559628,Všeruby,6
+559601,Vochov,6
+559580,Vejprnice,6
+559571,Úterý,6
+559563,Úněšov,6
+559555,Úlice,6
+559521,Třemošná,6
+559504,Trnová,6
+559491,Tlučná,6
+559482,Tis u Blatna,6
+559431,Rybnice,6
+560499,Kynšperk nad Ohří,6
+559067,Kožlany,6
+560502,Libavské Údolí,6
+560529,Dolní Hrachovice,6
+561398,Bezděz,6
+561380,Česká Lípa,6
+561371,Krasíkovice,6
+561363,Zhořec,6
+561355,Těchobuz,6
+561347,Martinice u Onšova,6
+561339,Chýstovice,6
+561321,Chyšná,6
+561312,Buřenice,6
+561304,Třemešné,6
+561401,Blatce,6
+561291,Trpísty,6
+561274,Rovná,6
+561266,Litohošť,6
+561258,Svojšín,6
+561240,Bořetice,6
+561231,Sulislav,6
+561223,Studánka,6
+561215,Stříbro,6
+561207,Stráž,6
+561193,Staré Sedlo,6
+561185,Staré Sedliště,6
+561282,Lhota-Vlasenice,6
+561177,Nová Buková,6
+561410,Blíževedly,6
+561436,Polesí,6
+561657,Janovice v Podještědí,6
+561649,Lčovice,6
+561631,Jablonné v Podještědí,6
+561622,Chotovice,6
+561614,Chlum,6
+561606,Horní Police,6
+561592,Horní Libchava,6
+561584,Holany,6
+561576,Budkov,6
+561568,Nové Hutě,6
+561428,Bohatice,6
+561550,Kožlí,6
+561533,Dubá,6
+561525,Horosedly,6
+561517,Přeborov,6
+561509,Probulov,6
+561495,Doksy,6
+561487,Střítež pod Křemešníkem,6
+561479,Cvikov,6
+561461,Jankov,6
+561452,Stojčín,6
+561444,Brniště,6
+561541,Dubnice,6
+561169,Rozvadov,6
+561151,Přimda,6
+561142,Černov,6
+560782,Cebiv,6
+560758,Bor,6
+560740,Bezdružice,6
+560723,Benešovice,6
+560715,Tachov,6
+560707,Vřesová,6
+560685,Vintířov,6
+560677,Šindelová,6
+560669,Skrýchov u Malšic,6
+560651,Stříbrná,6
+560804,Částkov,6
+560642,Staré Sedlo,6
+560626,Rodná,6
+560618,Rovná,6
+560600,Rotava,6
+560596,Přebuz,6
+560588,Oloví,6
+560570,Nové Sedlo,6
+560561,Nová Ves,6
+560553,Pohnánec,6
+560545,Lomnice,6
+560537,Loket,6
+560634,Krátošice,6
+560812,Černošín,6
+560839,Dlouhý Újezd,6
+560855,Erpužice,6
+561134,Planá,6
+561126,Bělá,6
+561118,Bácovice,6
+561100,Lidmaň,6
+561096,Hojovice,6
+561088,Příbraz,6
+561070,Pístina,6
+561061,Horní Skrýchov,6
+561053,Bednáreček,6
+561045,Smržov,6
+561037,Vícemil,6
+561029,Světce,6
+561011,Lestkov,6
+561002,Lesná,6
+560995,Rosička,6
+560987,Drunče,6
+560979,Kšice,6
+560952,Konstantinovy Lázně,6
+560928,Kladruby,6
+560910,Chodský Újezd,6
+560901,Chodová Planá,6
+560898,Hošťka,6
+560863,Halže,6
+560511,Řemíčov,6
+561665,Jestřebí,6
+559059,Kozolupy,6
+559032,Koryta,6
+556467,Kolinec,6
+556432,Kašperské Hory,6
+556394,Janovice nad Úhlavou,6
+556386,Chudenín,6
+556378,Chudenice,6
+556343,Chlistov,6
+556335,Chanovice,6
+556319,Hradešice,6
+556301,Hrádek,6
+556254,Horažďovice,6
+556505,Křenice,6
+556203,Hlavňovice,6
+556106,Dolany,6
+556084,Prášily,6
+556076,Dlouhá Ves,6
+556068,Dlažov,6
+556041,Dešenice,6
+555941,Čachrov,6
+555894,Budětice,6
+555835,Bolešiny,6
+555801,Bezděkov,6
+555797,Běšiny,6
+556181,Hartmanice,6
+555771,Klatovy,6
+556629,Malý Bor,6
+556718,Mochtín,6
+557048,Mouřínov,6
+557030,Skorkov,6
+557021,Rejštejn,6
+557013,Rabí,6
+557005,Předslav,6
+556998,Jezernice,6
+556980,Rokytnice,6
+556971,Ropice,6
+556963,Spešov,6
+556955,Plánice,6
+556637,Měčín,6
+556947,Pila,6
+556912,Pačejov,6
+556882,Rabštejnská Lhota,6
+556874,Petrůvka,6
+556866,Lhota u Vsetína,6
+556858,Bravantice,6
+556831,Nýrsko,6
+556815,Nezdice na Šumavě,6
+556751,Nalžovské Hory,6
+556734,Myslív,6
+556726,Mokrosuky,6
+556921,Petrovice u Sušice,6
+555762,Žlutice,6
+555738,Vojkovice,6
+555711,Verušičky,6
+555240,Semanín,6
+555231,Suchohrdly,6
+555223,Velké Chvojno,6
+555215,Jáchymov,6
+555207,Chyše,6
+555193,Těchlovice,6
+555185,Hroznětín,6
+555169,Horní Blatná,6
+555134,Pardubice,6
+555088,Havířov,6
+555258,Kolová,6
+555045,Božičany,6
+554995,Bečov nad Teplou,6
+554979,Abertamy,6
+554961,Karlovy Vary,6
+554952,Otradov,6
+554944,Mrsklesy,6
+554936,Bítov,6
+554928,Vendryně,6
+554910,Vražné,6
+554901,Křelov-Břuchotín,6
+554898,Rostěnice-Zvonovice,6
+555029,Bochov,6
+555266,Nová Ves u Světlé,6
+555274,Nové Sedlice,6
+555282,Kurdějov,6
+555703,Velichov,6
+555690,Valeč,6
+555681,Útvina,6
+555657,Toužim,6
+555631,Teplá,6
+555622,Štědrá,6
+555614,Šemnice,6
+555592,Stružná,6
+555584,Stráž nad Ohří,6
+555550,Stanovice,6
+555533,Sadov,6
+555525,Pšov,6
+555479,Potůčky,6
+555452,Pernink,6
+555444,Otročín,6
+555428,Ostrov,6
+555398,Nová Role,6
+555380,Nejdek,6
+555363,Merklín,6
+555347,Kyselka,6
+555312,Kujavy,6
+555304,Krásné Údolí,6
+555291,Chotěbuz,6
+557081,Sytno,6
+559041,Kozojedy,6
+557099,Soběšice,6
+557111,Srní,6
+558591,Zemětice,6
+558583,Zdemyslice,6
+558567,Vstiš,6
+558559,Vrčeň,6
+558494,Ves Touškov,6
+558486,Útušice,6
+558460,Tymákov,6
+558443,Ladná,6
+558435,Štěnovice,6
+558427,Šťáhlavy,6
+558605,Ždírec,6
+558419,Držovice,6
+558389,Stod,6
+558371,Starý Plzenec,6
+558362,Spálené Poříčí,6
+558346,Soběkury,6
+558311,Seč,6
+558303,Řenče,6
+558290,Roupov,6
+558265,Ptenín,6
+558257,Příchovice,6
+558249,Přeštice,6
+558401,Střížovice,6
+558231,Prádlo,6
+558630,Žinkovy,6
+558672,Blatnice,6
+559024,Kopidlo,6
+559016,Nasavrky,6
+559008,Kaznějov,6
+558991,Kaceřov,6
+558982,Jarov,6
+558974,Chříč,6
+558966,Chrást,6
+558940,Chotíkov,6
+558931,Hvozd,6
+558915,Hromnice,6
+558656,Bezvěrov,6
+558885,Horní Bříza,6
+558869,Heřmanova Huť,6
+558851,Dýšina,6
+558834,Druztová,6
+558800,Dolní Hradiště,6
+558796,Dolní Bělá,6
+558788,Dolany,6
+558770,Dobříč,6
+558745,Česká Bříza,6
+558711,Čeminy,6
+558699,Bučí,6
+558877,Horní Bělá,6
+558184,Oselce,6
+558176,Nové Mitrovice,6
+558141,Nezvěstice,6
+557650,Čížkov,6
+557641,Čižice,6
+557587,Blovice,6
+557544,Žichovice,6
+557536,Žihobce,6
+557528,Železná Ruda,6
+557463,Zavlekov,6
+557455,Vrhaveč,6
+557382,Velký Bor,6
+557374,Velké Hydčice,6
+557668,Dnešice,6
+557366,Velhartice,6
+557218,Kobylá nad Vidnavkou,6
+557200,Švihov,6
+557196,Pavlovice u Kojetína,6
+557188,Šelešovice,6
+557170,Ostrata,6
+557161,Svéradice,6
+557153,Sušice,6
+557145,Lukoveček,6
+557137,Strážov,6
+557129,Strašín,6
+557226,Písečná,6
+557676,Dobřany,6
+557684,Dolní Lukavice,6
+557722,Horšice,6
+558125,Neurazy,6
+558117,Netunice,6
+558109,Nepomuk,6
+558095,Nekvasovy,6
+558079,Mohelnice,6
+558061,Mladý Smolivec,6
+558052,Mileč,6
+558044,Merklín,6
+558028,Lužany,6
+558010,Louňová,6
+558001,Losiná,6
+557951,Letiny,6
+557943,Kramolín,6
+557897,Klášter,6
+557871,Kbel,6
+557862,Kasejovice,6
+557846,Chválenice,6
+557838,Chotěšov,6
+557803,Chocenice,6
+557781,Chlumčany,6
+557773,Chlum,6
+557749,Hradiště,6
+557731,Hradec,6
+557102,Bohuslavice nad Vláří,6
+554880,Tři Sekery,6
+561673,Křišťanov,6
+561690,Hájek,6
+564583,Starosedlský Hrádek,6
+564575,Bechlín,6
+564567,Litoměřice,6
+564559,Bohostice,6
+564541,Zdislava,6
+564532,Všelibice,6
+564524,Nepomuk,6
+564516,Vlastibořice,6
+564508,Dubno,6
+564494,Višňová,6
+564591,Bohušovice nad Ohří,6
+564486,Podlesí,6
+564460,Šimonovice,6
+564451,Sychrov,6
+564443,Svijany,6
+564435,Svijanský Újezd,6
+564427,Světlá pod Ještědem,6
+564419,Cetyně,6
+564401,Soběslavice,6
+564397,Rynoltice,6
+564389,Radětice,6
+564371,Raspenava,6
+564478,Narysov,6
+564362,Vrančice,6
+564605,Hlubyně,6
+564621,Brozany nad Ohří,6
+564842,Hlinná,6
+564834,Evaň,6
+564826,Vrátkov,6
+564818,Dušníky,6
+564800,Hradešín,6
+564796,Výžerky,6
+564788,Prusice,6
+564770,Drahobuz,6
+564761,Konojedy,6
+564753,Doksany,6
+564613,Brňany,6
+564745,Dobříň,6
+564729,Děčany,6
+564711,Čížkovice,6
+564702,Masojedy,6
+564699,Černiv,6
+564681,Drahobudice,6
+564672,Ctiněves,6
+564664,Bukovany,6
+564656,Budyně nad Ohří,6
+564648,Bříza,6
+564630,Sedlice,6
+564737,Dlažkovice,6
+564354,Příšovice,6
+564346,Lazsko,6
+564338,Županovice,6
+564052,Hlavice,6
+564044,Hejnice,6
+564036,Habartice,6
+564028,Frýdlant,6
+563994,Dolní Řasnice,6
+563986,Klenovice,6
+563978,Kubova Huť,6
+563960,Český Dub,6
+563951,Únice,6
+563943,Cetenov,6
+564061,Hodkovice nad Mohelkou,6
+563935,Bulovka,6
+563919,Bílý Kostel nad Nisou,6
+563901,Bílá,6
+563897,Žíšov,6
+563889,Liberec,6
+563871,Železný Brod,6
+563862,Zlatá Olešnice,6
+563854,Zásada,6
+563846,Vlastiboř,6
+563838,Velké Hamry,6
+563820,Tanvald,6
+563927,Zadní Střítež,6
+564079,Horní Řasnice,6
+564087,Poštovice,6
+564095,Hrádek nad Nisou,6
+564320,Zbenice,6
+564311,Pertoltice,6
+564303,Pěnčín,6
+564290,Osečná,6
+564281,Oldřichov v Hájích,6
+564273,Svojšice,6
+564265,Nové Město pod Smrkem,6
+564257,Horčápsko,6
+564249,Chrást,6
+564231,Mníšek,6
+564222,Nestrašovice,6
+564214,Počaply,6
+564206,Lázně Libverda,6
+564192,Páleč,6
+564184,Křižany,6
+564176,Kryštofovo Údolí,6
+564168,Krásný Les,6
+564150,Libochovičky,6
+564141,Kobyly,6
+564133,Jindřichovice pod Smrkem,6
+564125,Plchov,6
+564117,Chrastava,6
+564109,Chotyně,6
+564851,Horní Beřkovice,6
+563811,Smržovka,6
+564869,Březí,6
+564885,Doubek,6
+565636,Rohatsko,6
+565628,Vinařice,6
+565610,Snědovice,6
+565601,Slatina,6
+565598,Siřejovice,6
+565580,Plužná,6
+565571,Vlkava,6
+565563,Lipník,6
+565555,Roudnice nad Labem,6
+565547,Rochov,6
+565644,Mečeříž,6
+565539,Sovínky,6
+565512,Václavy,6
+565504,Řeřichy,6
+565491,Račiněves,6
+565482,Račice,6
+565474,Přestavlky,6
+565466,Milý,6
+565458,Prackovice nad Labem,6
+565440,Kalivody,6
+565431,Polepy,6
+565423,Bdín,6
+565521,Radovesice,6
+565415,Podsedice,6
+565652,Rabakov,6
+565679,Straškov-Vodochody,6
+565903,Vrbičany,6
+565890,Vrbice,6
+565881,Vražkov,6
+565873,Vlastislav,6
+565865,Vchynice,6
+565857,Velké Žernoseky,6
+565849,Velemín,6
+565831,Vědomice,6
+565822,Mohelnice nad Jizerou,6
+565814,Úštěk,6
+565661,Řitonice,6
+565806,Úpohlavy,6
+565784,Charvatce,6
+565776,Třebívlice,6
+565768,Třebenice,6
+565750,Bílá Hlína,6
+565741,Travčice,6
+565733,Hrušov,6
+565725,Veselice,6
+565717,Terezín,6
+565709,Štětí,6
+565695,Sulejovice,6
+565792,Třebušín,6
+565407,Smilovice,6
+565393,Ploskovice,6
+565385,Kozojedy,6
+565105,Levín,6
+565091,Kyškovice,6
+565083,Křešice,6
+565075,Křesín,6
+565067,Krabčice,6
+565059,Kostomlaty pod Řípem,6
+565041,Břežany,6
+565032,Kleneč,6
+565024,Klapý,6
+565016,Keblice,6
+565113,Lhotka nad Labem,6
+565008,Dobročovice,6
+564982,Květnice,6
+564974,Káraný,6
+564966,Chotiněves,6
+564958,Chotiměř,6
+564940,Chotěšov,6
+564931,Chodovlice,6
+564923,Chodouny,6
+564915,Herink,6
+564907,Nupaky,6
+564893,Hrobce,6
+564991,Křenice,6
+565121,Liběšice,6
+565130,Všesulov,6
+565148,Libkovice pod Řípem,6
+565377,Malinová,6
+565369,Krakovec,6
+565351,Krakov,6
+565342,Nové Dvory,6
+565334,Hvozd,6
+565326,Švihov,6
+565318,Mšené-lázně,6
+565300,Mnetěš,6
+565296,Mlékojedy,6
+565288,Karlova Ves,6
+565270,Janov,6
+565261,Přílepy,6
+565253,Martiněves,6
+565245,Malé Žernoseky,6
+565237,Lukavec,6
+565229,Lovosice,6
+565211,Lovečkovice,6
+565202,Hracholusky,6
+565199,Kolešov,6
+565181,Děkov,6
+565172,Libotenice,6
+565164,Libochovice,6
+565156,Libochovany,6
+564877,Hoštka,6
+561681,Kamenický Šenov,6
+563803,Skuhrov,6
+563781,Rádlo,6
+562441,Dolní Poustevna,6
+562432,Dolní Podluží,6
+562424,Županovice,6
+562416,Dobrohošť,6
+562408,Dobkovice,6
+562394,Česká Kamenice,6
+562386,Hamr,6
+562378,Staňkov,6
+562360,Nová Ves nad Lužnicí,6
+562351,Benešov nad Ploučnicí,6
+562459,Polště,6
+562343,Arnoltice,6
+562327,Třebětice,6
+562319,Horní Slatina,6
+562301,Dolní Novosedly,6
+562297,Žandov,6
+562289,Vojníkov,6
+562271,Temešvár,6
+562262,Zákupy,6
+562254,Paseky,6
+562246,Zahrádky,6
+562238,Vrchovany,6
+562335,Děčín,6
+562220,Volfartice,6
+562467,Dolní Pěna,6
+562483,Heřmanov,6
+562700,Malá Veleň,6
+562696,Hadravova Rosička,6
+562688,Klec,6
+562670,Ponědraž,6
+562661,Lipová,6
+562653,Ponědrážka,6
+562645,Kytlice,6
+562637,Frahelž,6
+562629,Vydří,6
+562611,Krásná Lípa,6
+562475,Okrouhlá Radouň,6
+562602,Dolní Žďár,6
+562581,Jiříkov,6
+562572,Jiřetín pod Jedlovou,6
+562564,Jílové,6
+562556,Jetřichovice,6
+562548,Bednárec,6
+562530,Chřibská,6
+562521,Huntířov,6
+562513,Hřensko,6
+562505,Horní Podluží,6
+562491,Kačlehy,6
+562599,Velký Ratmírov,6
+562211,Varvažov,6
+562203,Velký Valtinov,6
+562190,Olešná,6
+561916,Pavlov,6
+561908,Žirov,6
+561894,Okrouhlá,6
+561886,Okna,6
+561878,Nový Oldřichov,6
+561860,Nový Bor,6
+561851,Noviny pod Ralskem,6
+561843,Staré Bříště,6
+561835,Mimoň,6
+561827,Mařenice,6
+561924,Dehtáře,6
+561819,Mysletín,6
+561797,Vystrkov,6
+561789,Rodinov,6
+561771,Vysoká Lhota,6
+561762,Dobrá Voda u Pacova,6
+561754,Eš,6
+561746,Kunratice u Cvikova,6
+561738,Krompach,6
+561720,Kravaře,6
+561711,Blažejov,6
+561703,Člunek,6
+561801,Bystrá,6
+561932,Dobrá Voda,6
+561941,Proseč pod Křemešníkem,6
+561959,Polevsko,6
+562181,Křenovice,6
+562173,Velenice,6
+562165,Zvíkovské Podhradí,6
+562157,Nerestce,6
+562149,Minice,6
+562131,Svor,6
+562122,Boudy,6
+562114,Stvolínky,6
+562106,Stružnice,6
+562092,Stráž pod Ralskem,6
+562084,Jickovice,6
+562076,Sosnová,6
+562068,Rakovice,6
+562050,Sloup v Čechách,6
+562041,Lesná,6
+562033,Útěchovice pod Stražištěm,6
+562025,Skalice u České Lípy,6
+562017,Ralsko,6
+562009,Rynárec,6
+561991,Prysk,6
+561983,Provodín,6
+561975,Zajíčkov,6
+561967,Olešná,6
+562718,Malšovice,6
+563790,Rychnov u Jablonce nad Nisou,6
+562726,Báňovice,6
+562742,Bořetín,6
+563510,Jablonec nad Nisou,6
+563501,Vysoká Pec,6
+563498,Výsluní,6
+563480,Všestudy,6
+563471,Všehrdy,6
+563463,Vrskmaň,6
+563455,Nová Ves u Mladé Vožice,6
+563447,Vlčeves,6
+563439,Vilémov,6
+563412,Veliká Ves,6
+563528,Albrechtice v Jizerských horách,6
+563404,Vejprty,6
+563374,Psárov,6
+563366,Bečice,6
+563358,Strupčice,6
+563340,Spořice,6
+563331,Rokle,6
+563323,Radonice,6
+563315,Kryštofovy Hamry,6
+563307,Drhovice,6
+563293,Pětipsy,6
+563285,Perštejn,6
+563382,Údlice,6
+563277,Otvice,6
+563536,Bedřichov,6
+563552,Desná,6
+563773,Radčice,6
+563765,Drahov,6
+563757,Plavy,6
+563749,Pěnčín,6
+563731,Nová Ves nad Nisou,6
+563722,Černýšovice,6
+563714,Maršovice,6
+563706,Malá Skála,6
+563692,Lučany nad Nisou,6
+563684,Loužnice,6
+563544,Libějice,6
+563676,Líšný,6
+563650,Dlouhá Lhota,6
+563641,Koberovy,6
+563633,Josefův Důl,6
+563625,Haškovcova Lhota,6
+563617,Jílové u Držkova,6
+563609,Jenišovice,6
+563595,Janov nad Nisou,6
+563587,Lom,6
+563579,Frýdštejn,6
+563561,Držkov,6
+563668,Kořenov,6
+563269,Okounov,6
+563251,Balkova Lhota,6
+563242,Místo,6
+562963,Jedlany,6
+562955,Košín,6
+562947,Vilémov,6
+562939,Veselé,6
+562921,Verneřice,6
+562912,Velký Šenov,6
+562904,Hodonice,6
+562891,Velká Bukovina,6
+562882,Varnsdorf,6
+562874,Valkeřice,6
+562971,Chomutov,6
+562866,Mažice,6
+562840,Domanín,6
+562831,Hrachoviště,6
+562823,Staré Křečany,6
+562815,Dunajovice,6
+562807,Halámky,6
+562793,Rybniště,6
+562785,Horní Němčice,6
+562777,Rumburk,6
+562769,Jilem,6
+562751,Mikulášovice,6
+562858,Šluknov,6
+562980,Bílence,6
+562998,Blatno,6
+563005,Boleboř,6
+563234,Meziříčí,6
+563226,Měděnec,6
+563218,Mašťov,6
+563200,Málkov,6
+563196,Radimovice u Tábora,6
+563188,Libědice,6
+563170,Svrabov,6
+563161,Křimov,6
+563153,Třebějice,6
+563145,Chrbonín,6
+563137,Kovářská,6
+563129,Klášterec nad Ohří,6
+563111,Kalek,6
+563102,Kadaň,6
+563099,Jirkov,6
+563081,Chbany,6
+563072,Hrušovany,6
+563064,Hora Svatého Šebestiána,6
+563056,Droužkovice,6
+563048,Domašín,6
+563030,Krtov,6
+563021,Černovice,6
+563013,Březno,6
+562734,Nová Olešná,6
+545180,Slavíkovice,6
+554871,Střítež,6
+554855,Trstěnice,6
+548685,Krchleby,6
+548677,Vysoký Újezd,6
+548669,Rohenice,6
+548651,Libel,6
+548642,Hřibiny-Ledská,6
+548634,Podmoklany,6
+548626,Zvěstovice,6
+548618,Kraborovice,6
+548600,Pošná,6
+548596,Heřmanice,6
+548693,Svídnice,6
+548588,Okrouhlička,6
+548561,Počátky,6
+548553,Slavětín,6
+548545,Píšť,6
+548537,Úhořilka,6
+548529,Kochánov,6
+548511,Pacov,6
+548502,Onšov,6
+548499,Sloupno,6
+548481,Lány,6
+548472,Obrataň,6
+548570,Kunemil,6
+548464,Nový Rychnov,6
+548707,Vrbice,6
+548723,Polom,6
+548944,Kovač,6
+548936,Těmice,6
+548928,Kostelec,6
+548910,Ohaveč,6
+548901,Bílsko u Hořic,6
+548898,Rokytňany,6
+548880,Sukorady,6
+548871,Petrovičky,6
+548863,Milovice u Hořic,6
+548855,Bříšťany,6
+548715,Řečice,6
+548847,Zdobín,6
+548821,Borovnička,6
+548812,Stanovice,6
+548804,Lampertice,6
+548791,Chlístov,6
+548782,Jahodov,6
+548774,Senožaty,6
+548766,Sedlice,6
+548758,Proruby,6
+548740,Samšín,6
+548731,Salačova Lhota,6
+548839,Zábřezí-Řečice,6
+548456,Nová Cerekev,6
+548448,Dolní Sokolovec,6
+548430,Bezděkov,6
+548146,Koberovice,6
+548120,Kejžlice,6
+548111,Kamenice nad Lipou,6
+548103,Kámen,6
+548090,Kaliště,6
+548081,Jiřice,6
+548073,Ježov,6
+548065,Obědovice,6
+548057,Vrchovnice,6
+548049,Helvíkovice,6
+548154,Světí,6
+548031,Dlouhoňovice,6
+548014,Dlouhá Třebová,6
+548006,Bošín,6
+547999,Humpolec,6
+547981,Albrechtice,6
+547972,Hrádek,6
+547964,Sobkovice,6
+547956,Hořice,6
+547948,Hořepník,6
+547930,Horní Ves,6
+547921,Trpík,6
+548022,Vračovice-Orlov,6
+548162,Komorovice,6
+548171,Košetice,6
+548189,Kouty,6
+548421,Sedletín,6
+548413,Jilem,6
+548405,Moraveč,6
+548391,Mnich,6
+548383,Mladé Bříště,6
+548375,Čečkovice,6
+548367,Mezilesí,6
+548359,Ostrov,6
+548341,Slavníč,6
+548332,Lukavec,6
+548324,Skorkov,6
+548316,Michalovice,6
+548308,Kyjov,6
+548286,Knyk,6
+548278,Břevnice,6
+548260,Bartoušov,6
+548251,Podmoky,6
+548243,Horní Paseka,6
+548235,Leskovice,6
+548227,Křešín,6
+548219,Křelovice,6
+548201,Křeč,6
+548197,Nejepín,6
+548952,Budčeves,6
+547913,Horní Cerekev,6
+548961,Sedliště,6
+548987,Útěchovice,6
+549738,Ponětovice,6
+549720,Přílepy,6
+549711,Ostrovec,6
+549703,Oslov,6
+549690,Bořenovice,6
+549681,Orlík nad Vltavou,6
+549673,Krásná,6
+549665,Raškovice,6
+549657,Nevězice,6
+549649,Tečovice,6
+549746,Předklášteří,6
+549631,Nadějkov,6
+549614,Myslín,6
+549606,Mišovice,6
+549592,Mirovice,6
+549584,Mirotice,6
+549576,Milevsko,6
+549568,Lety,6
+549550,Lhotsko,6
+549541,Kučeř,6
+549533,Poteč,6
+549525,Králova Lhota,6
+549622,Lípa,6
+549517,Kovářov,6
+549754,Podolí I,6
+549789,Říčky,6
+550019,Vracovice,6
+550001,Vrcovice,6
+549991,Vráž,6
+549983,Polomí,6
+549975,Veselíčko,6
+549967,Hačky,6
+549959,Ubušínek,6
+549941,Rosička,6
+549932,Tálín,6
+549924,Radkov,6
+549771,Protivín,6
+549916,Pikárec,6
+549894,Skryje,6
+549886,Střítež,6
+549878,Smetanova Lhota,6
+549860,Slabčice,6
+549851,Skály,6
+549843,Sepekov,6
+549835,Milasín,6
+549827,Ražice,6
+549801,Putim,6
+549797,Přeštěnice,6
+549908,Újezd u Tišnova,6
+549509,Kostelec nad Vltavou,6
+549495,Kluky,6
+549487,Kestřany,6
+549207,Nevratice,6
+549193,Zámostí-Blata,6
+549185,Ohařice,6
+549177,Zachotín,6
+549169,Kbelnice,6
+549151,Jinolice,6
+549142,Vyskytná,6
+549134,Vyklantice,6
+549126,Vojslavice,6
+549118,Dílce,6
+549215,Želiv,6
+549100,Brada-Rybníček,6
+549088,Dolní Lochov,6
+549070,Březina,6
+549061,Věžná,6
+549053,Veselá,6
+549045,Velký Rybník,6
+549037,Choteč,6
+549029,Vřesník,6
+549011,Velká Chyška,6
+549002,Včelnička,6
+548995,Červená Třemešná,6
+549096,Staré Místo,6
+549223,Chyjice,6
+549231,Žirovnice,6
+549240,Písek,6
+549479,Jetětice,6
+549461,Pohořelice,6
+549452,Chyšky,6
+549444,Oldřichovice,6
+549436,Komárov,6
+549428,Hrejkovice,6
+549410,Hrazany,6
+549401,Pozlovice,6
+549398,Heřmaň,6
+549380,Drhovle,6
+549371,Dražíč,6
+549363,Dobev,6
+549355,Cholenice,6
+549347,Čížová,6
+549339,Čimelice,6
+549321,Cerhonice,6
+549312,Kacákova Lhota,6
+549304,Branice,6
+549291,Božetice,6
+549282,Butoves,6
+549274,Rašín,6
+549266,Bernartice,6
+549258,Albrechtice nad Vltavou,6
+548979,Borek,6
+550027,Záhoří,6
+547905,Rybník,6
+547883,Hojanovice,6
+546101,Číměř,6
+546097,Český Rudolec,6
+546089,České Velenice,6
+546071,Račetice,6
+546062,Pesvice,6
+546054,Cizkrajov,6
+546038,Budíškovice,6
+546020,Budeč,6
+546011,Jimlín,6
+545996,Černousy,6
+546127,Dačice,6
+545953,Paceřice,6
+545929,Horní Habartice,6
+545902,Borová Lada,6
+545899,Františkov nad Ploučnicí,6
+545881,Jindřichův Hradec,6
+545872,Zubčice,6
+545864,Zlatá Koruna,6
+545856,Dolní Habartice,6
+545848,Vyšší Brod,6
+545830,Větřní,6
+545821,Velešín,6
+545937,Lažany,6
+545813,Světlík,6
+546143,Dešná,6
+546160,Nezabylice,6
+546445,Hříšice,6
+546437,Volevčice,6
+546429,Chraberce,6
+546411,Úherce,6
+546402,Hospříz,6
+546399,Míšov,6
+546381,Horní Radouň,6
+546372,Buková,6
+546364,Horní Pěna,6
+546348,Srbská Kamenice,6
+546151,Deštná,6
+546330,Kunratice,6
+546291,Hatín,6
+546283,Svojkov,6
+546275,Slunečná,6
+546267,Tuhaň,6
+546259,Kvítkov,6
+546232,Kozly,6
+546216,Jitkov,6
+546194,Bačkov,6
+546186,Ryjice,6
+546178,Úherce,6
+546305,Heřmaneč,6
+545805,Soběnov,6
+545791,Merboltice,6
+545783,Dobrná,6
+545449,Bujanov,6
+545431,Brloh,6
+545414,Besednice,6
+545406,Benešov nad Černou,6
+545392,Český Krumlov,6
+545384,Žimutice,6
+545376,Žár,6
+545368,Žabovřesky,6
+545341,Zliv,6
+545325,Velký Karlov,6
+545457,Černá v Pošumaví,6
+545317,Záboří,6
+545295,Skalička,6
+545287,Všemyslice,6
+545279,Domašov nad Bystřicí,6
+545261,Vrábče,6
+545252,Zubří,6
+545244,Zděchov,6
+545236,Zašová,6
+545228,Včelná,6
+545210,Vigantice,6
+545201,Týn nad Vltavou,6
+545309,Kožichovice,6
+545465,Dolní Dvořiště,6
+545473,Dolní Třebonín,6
+545481,Frymburk,6
+545775,Rožmitál na Šumavě,6
+545767,Rožmberk nad Vltavou,6
+545732,Přísečná,6
+545724,Přídolí,6
+545716,Přední Výtoň,6
+545708,Lobendava,6
+545694,Pohorská Ves,6
+545678,Markvartice,6
+545660,Omlenice,6
+545643,Netřebice,6
+545627,Mirkovice,6
+545619,Malonty,6
+545601,Loučovice,6
+545597,Lipno nad Vltavou,6
+545571,Křemže,6
+545562,Kaplice,6
+545554,Kájov,6
+545546,Chvalšiny,6
+545538,Starý Šachov,6
+545520,Hořice na Šumavě,6
+545511,Horní Planá,6
+545503,Horní Dvořiště,6
+545490,Holubov,6
+546453,Kámen,6
+547891,Stolany,6
+546461,Chlum u Třeboně,6
+546488,Sirá,6
+547549,Bohdalín,6
+547531,Hořenice,6
+547514,Zábeštní Lhota,6
+547492,Pelhřimov,6
+547484,Ktová,6
+547476,Paseky nad Jizerou,6
+547468,Zahrádky,6
+547450,Výkleky,6
+547441,Volfířov,6
+547433,Vlkoš,6
+547565,Vestec,6
+547336,Třeboň,6
+547263,Studená,6
+547255,Švábov,6
+547247,Stříbřec,6
+547239,Strmilov,6
+547221,Stráž nad Nežárkou,6
+547212,Staré Město pod Landštejnem,6
+547204,Staré Hobzí,6
+547191,Jezdkovice,6
+547182,Kozmice,6
+547166,Slavonice,6
+547280,Suchdol nad Lužnicí,6
+547131,Svatoňovice,6
+547581,Božejov,6
+547638,Budíkov,6
+547875,Lipovec,6
+547867,Bor u Skutče,6
+547859,Zájezdec,6
+547841,Vyžice,6
+547832,Licibořice,6
+547824,Křižanovice,6
+547816,Jeníkov,6
+547808,Rozhovice,6
+547794,Hodonín,6
+547786,Adršpach,6
+547603,Bratřice,6
+547778,Červená Řečice,6
+547751,Bukovice,6
+547743,Vernéřovice,6
+547735,Čejov,6
+547727,Sendraž,6
+547719,Častrov,6
+547701,Libchyně,6
+547689,Čáslavsko,6
+547662,Cetoraz,6
+547654,Šestajovice,6
+547646,Velké Poříčí,6
+547760,Černovice,6
+547123,Komárov,6
+547093,Mutkov,6
+547085,Rodvínov,6
+546763,Horní Řepčice,6
+546755,Brzánky,6
+546721,Sedlec,6
+546712,Majdalena,6
+546691,Lkáň,6
+546674,Lomnice nad Lužnicí,6
+546666,Lodhéřov,6
+546658,Janův Důl,6
+546631,Bílý Potok,6
+546623,Lásenice,6
+546771,Kamýk,6
+546615,Kunžak,6
+546593,Nová Ves,6
+546585,Jiřetín pod Bukovou,6
+546577,Pulečný,6
+546551,Újezd u Svatého Kříže,6
+546542,Kardašova Řečice,6
+546534,Týček,6
+546526,Těškov,6
+546518,Loučná pod Klínovcem,6
+546500,Jarošov nad Nežárkou,6
+546496,Ludvíkovice,6
+546607,Dětřichov,6
+546780,Býčkovice,6
+546798,Nová Bystřice,6
+546801,Nová Včelnice,6
+547077,Samotišky,6
+547069,Rapšach,6
+547026,Bystrovany,6
+547018,Střeň,6
+547000,Životice u Nového Jičína,6
+546992,Popelín,6
+546984,Bílov,6
+546976,Hraničné Petrovice,6
+546968,Pluhův Žďár,6
+546950,Nová Pláň,6
+546941,Dobšice,6
+546933,Okřešice,6
+546925,Stebno,6
+546917,Písečné,6
+546909,Lukov,6
+546895,Brodec,6
+546887,Vršovice,6
+546879,Líšťany,6
+546861,Dobroměřice,6
+546852,Černěves,6
+546844,Novosedly nad Nežárkou,6
+546828,Staňkovice,6
+546810,Chudoslavice,6
+546470,Litíč,6
+554863,Dolní Brusnice,6
+550035,Zbelítov,6
+550051,Plenkovice,6
+553271,Veselí nad Lužnicí,6
+553263,Vesce,6
+553255,Val,6
+553247,Kopřivná,6
+553239,Tučapy,6
+553221,Hrabová,6
+553212,Janoušov,6
+553204,Šebířov,6
+553191,Vikantice,6
+553182,Sviny,6
+553280,Vilice,6
+553174,Sudoměřice u Tábora,6
+553158,Neplachovice,6
+553140,Stádlec,6
+553131,Soběslav,6
+553123,Smilovy Hory,6
+553115,Lhotka u Litultovic,6
+553107,Bratříkovice,6
+553093,Hlavnice,6
+553085,Skopytce,6
+553077,Skalice,6
+553069,Sezimovo Ústí,6
+553166,Sudoměřice u Bechyně,6
+553051,Dolní Životice,6
+553298,Vlastiboř,6
+553310,Vlkov,6
+553531,Černíkov,6
+553522,Tužice,6
+553514,Čermná,6
+553506,Bukovec,6
+553492,Závada,6
+553484,Skorošice,6
+553476,Nemile,6
+553468,Velká Kraš,6
+553450,Blížejov,6
+553441,Bělá nad Radbuzou,6
+553301,Hradec-Nová Ves,6
+553433,Babylon,6
+553417,Želeč,6
+553409,Zvěrotice,6
+553395,Rejchartice,6
+553387,Hraběšice,6
+553379,Dolní Studénky,6
+553361,Zálší,6
+553352,Postřelmůvek,6
+553344,Jakubovice,6
+553336,Třeština,6
+553328,Vodice,6
+553425,Domažlice,6
+553042,Mladecko,6
+553034,Řepeč,6
+553026,Valašská Senice,6
+552747,Nemyšl,6
+552739,Horní Suchá,6
+552721,Myslkovice,6
+552712,Mlýny,6
+552704,Mladá Vožice,6
+552691,Žabeň,6
+552682,Vyšní Lhoty,6
+552674,Střítež,6
+552666,Malšice,6
+552658,Smilovice,6
+552755,Věžky,6
+552640,Řeka,6
+552623,Třanovice,6
+552615,Vělopolí,6
+552607,Dolní Tošanovice,6
+552593,Malenovice,6
+552585,Košice,6
+552577,Pstruží,6
+552569,Staříč,6
+552551,Staré Město,6
+552542,Dobratice,6
+552534,Jistebnice,6
+552631,Horní Tošanovice,6
+552763,Nová Ves u Chýnova,6
+552771,Čechy,6
+552780,Křtomil,6
+553018,Roudná,6
+553000,Oplocany,6
+552992,Ratibořské Hory,6
+552984,Dolní Těšice,6
+552976,Rataje,6
+552968,Horní Těšice,6
+552950,Šišma,6
+552941,Radkov,6
+552933,Radimovice u Želče,6
+552925,Radětice,6
+552917,Radenín,6
+552909,Měrovice nad Hanou,6
+552895,Přehořov,6
+552887,Stříbrnice,6
+552879,Uhřičice,6
+552861,Pojbuky,6
+552852,Pohnání,6
+552844,Olšovec,6
+552836,Turovice,6
+552828,Planá nad Lužnicí,6
+552810,Nahošovice,6
+552801,Opařany,6
+552798,Oldřichov,6
+553549,Česká Kubice,6
+553557,Díly,6
+553565,Polánka,6
+553573,Drahotín,6
+554448,Všepadly,6
+554421,Vidice,6
+554413,Velký Malahov,6
+554405,Úsilov,6
+554391,Únějovice,6
+554383,Újezd,6
+554359,Trhanov,6
+554341,Tlumačov,6
+554316,Stráž,6
+554294,Staňkov,6
+554456,Všeruby,6
+554278,Srby,6
+554251,Spáňov,6
+554201,Semněvice,6
+554197,Branka u Opavy,6
+554189,Rybník,6
+554171,Šenov u Nového Jičína,6
+554162,Crhov,6
+554154,Puclice,6
+554146,Vernířovice,6
+554138,Postřekov,6
+554120,Pocinovice,6
+554260,Srbice,6
+554464,Zahořany,6
+554472,Ždánov,6
+554481,Cheb,6
+554847,Mrákotín,6
+554821,Ostrava,6
+554812,Skalná,6
+554804,Ústí nad Labem,6
+554791,Plzeň,6
+554782,Praha,6
+554740,Plesná,6
+554707,Nový Kostel,6
+554693,Nebanice,6
+554677,Mnichov,6
+554651,Milhostov,6
+554642,Mariánské Lázně,6
+554634,Luby,6
+554626,Lipová,6
+554618,Libá,6
+554600,Lázně Kynžvart,6
+554596,Křižovatka,6
+554553,Hranice,6
+554545,Hazlov,6
+554529,Františkovy Lázně,6
+554511,Drmoul,6
+554502,Dolní Žandov,6
+554499,Aš,6
+554111,Poběžovice,6
+552526,Nižní Lhoty,6
+554103,Řídeč,6
+554081,Pasečnice,6
+553794,Klenčí pod Čerchovem,6
+553786,Kdyně,6
+553778,Kaničky,6
+553760,Běstovice,6
+553751,Chrastavice,6
+553743,Chodská Lhota,6
+553735,Chodov,6
+553727,Chocomyšl,6
+553719,Srnojedy,6
+553701,Bačalky,6
+553816,Koloveč,6
+553697,Trmice,6
+553671,Horšovský Týn,6
+553662,Horní Kamenice,6
+553654,Holýšov,6
+553646,Dolánky nad Ohří,6
+553638,Tachov,6
+553620,Hlohová,6
+553611,Litohlavy,6
+553603,Studená,6
+553590,Nezbavětice,6
+553581,Draženov,6
+553689,Hostouň,6
+553824,Kout na Šumavě,6
+553832,Křenovy,6
+553841,Kvíčovice,6
+554073,Osvračín,6
+554065,Jakubčovice nad Odrou,6
+554057,Nový Kramolín,6
+554049,Olbramice,6
+554031,Nevolice,6
+554022,Neuměř,6
+554014,Návsí,6
+554006,Nemanice,6
+553999,Mutěnín,6
+553981,Mrákov,6
+553972,Rybníček,6
+553964,Častohostice,6
+553956,Mířkov,6
+553948,Milavče,6
+553930,Mezholezy,6
+553921,Mezholezy,6
+553913,Meclov,6
+553905,Mrlínek,6
+553891,Luženičky,6
+553883,Ústup,6
+553875,Louka,6
+553867,Loučim,6
+553859,Libkov,6
+554090,Pec,6
+552518,Nošovice,6
+552500,Pazderna,6
+552496,Chýnov,6
+550809,Bavorov,6
+550795,Podbřežice,6
+550787,Strakonice,6
+550779,Naloučany,6
+550761,Želnava,6
+550752,Staré Město,6
+550744,Kunovice,6
+550736,Hostětín,6
+550728,Zdíkov,6
+550710,Krahulov,6
+550817,Bělčice,6
+550701,Zbytiny,6
+550680,Záblatí,6
+550671,Volary,6
+550663,Vlachovo Březí,6
+550655,Vitějovice,6
+550647,Vimperk,6
+550639,Hroznatín,6
+550621,Vacov,6
+550612,Horní Smrčné,6
+550604,Tvrzice,6
+550591,Jiratice,6
+550698,Zálezly,6
+550825,Holubice,6
+550833,Bílsko,6
+550841,Jiřice u Moravských Budějovic,6
+551392,Mečichov,6
+551384,Malenice,6
+551350,Lnáře,6
+551341,Litochovice,6
+551333,Libějovice,6
+551261,Kraselov,6
+551201,Katovice,6
+551180,Kadov,6
+551163,Jinín,6
+551155,Chrášťovice,6
+551139,Chelčice,6
+551121,Hoštice,6
+551104,Hoslovice,6
+551040,Dřešín,6
+551023,Drážov,6
+551015,Drahonice,6
+550981,Doubravice,6
+550965,Číčenice,6
+550957,Čestice,6
+550949,Čepřovice,6
+550922,Čejetice,6
+550906,Cehnice,6
+550850,Blatná,6
+550582,Těšovice,6
+551414,Miloňovice,6
+550574,Šumavské Hoštice,6
+550558,Svatá Maří,6
+550272,Cvrčovice,6
+550264,Chroboly,6
+550256,Kašnice,6
+550248,Chlumany,6
+550230,Husinec,6
+550221,Hracholusky,6
+550213,Heršpice,6
+550205,Horní Vltavice,6
+550191,Uhřice,6
+550183,Dub,6
+550281,Hybrálec,6
+550175,Podomí,6
+550159,Bušanovice,6
+550141,Medlovice,6
+550132,Olšany,6
+550124,Bošice,6
+550116,Bohumilice,6
+550108,Kozlany,6
+550094,Prachatice,6
+550086,Křídlůvky,6
+550078,Přeskače,6
+550060,Zhoř,6
+550167,Čkyně,6
+550299,Smrčná,6
+550302,Kuroslepy,6
+550311,Třesov,6
+550540,Strunkovice nad Blanicí,6
+550531,Strážný,6
+550523,Stožec,6
+550515,Stachy,6
+550507,Litohoř,6
+550493,Radkovice u Budče,6
+550485,Radhostice,6
+550477,Chotěbudice,6
+550469,Pálovice,6
+550451,Nová Pec,6
+550442,Netolice,6
+550434,Nebahovy,6
+550426,Mičovice,6
+550418,Malovice,6
+550400,Bohušice,6
+550396,Němčice,6
+550388,Martínkov,6
+550370,Pokojovice,6
+550361,Lhenice,6
+550353,Lenora,6
+550345,Lažiště,6
+550337,Kvilda,6
+550329,Ktiš,6
+550566,Lukov,6
+550043,Zběšičky,6
+551457,Studeněves,6
+551473,Myštice,6
+552216,Luběnice,6
+552208,Dírná,6
+552194,Slavětín,6
+552186,Červenka,6
+552178,Haňovice,6
+552160,Pňovice,6
+552151,Skrbeň,6
+552143,Budislav,6
+552135,Březnice,6
+552127,Bradáčov,6
+552224,Dobronice u Bechyně,6
+552119,Věrovany,6
+552097,Borkovice,6
+552089,Tovéř,6
+552071,Dubčany,6
+552062,Bílsko,6
+552054,Bechyně,6
+552046,Tábor,6
+552038,Loučka,6
+552020,Hlušovice,6
+552011,Štarnov,6
+552003,Čaková,6
+552101,Borotín,6
+552232,Loučany,6
+552241,Dolní Hořice,6
+552259,Olbramice,6
+552488,Vojkovice,6
+552470,Choustník,6
+552461,Chotoviny,6
+552453,Chotěmice,6
+552445,Daskabát,6
+552437,Krčmaň,6
+552429,Svésedlice,6
+552411,Přáslavice,6
+552402,Bukovany,6
+552399,Želechovice,6
+552381,Nová Hradečná,6
+552372,Medlov,6
+552364,Ústín,6
+552356,Babice,6
+552348,Mladějovice,6
+552330,Hlásnice,6
+552321,Hlavatce,6
+552313,Domašov u Šternberka,6
+552305,Lipina,6
+552291,Dražičky,6
+552283,Dražice,6
+552275,Dráchov,6
+552267,Senička,6
+551996,Ludvíkov,6
+551465,Košice,6
+551988,Záboří,6
+551961,Volenice,6
+551708,Dlouhá Stráň,6
+551694,Velká Štáhle,6
+551686,Podmokly,6
+551678,Radošovice,6
+551660,Radomyšl,6
+551651,Hory,6
+551643,Přešťovice,6
+551635,Předslavice,6
+551627,Předmíř,6
+551619,Pracejovice,6
+551716,Sedlice,6
+551601,Turovec,6
+551589,Horní Rápotice,6
+551571,Paračov,6
+551562,Osek,6
+551554,Novosedly,6
+551546,Dubovice,6
+551538,Střítež,6
+551520,Nihošovice,6
+551503,Čížkrajice,6
+551490,Branišov,6
+551481,Kněžičky,6
+551597,Hajany,6
+551970,Volyně,6
+551724,Mezina,6
+551741,Skočice,6
+551953,Vodňany,6
+551945,Rudná pod Pradědem,6
+551937,Uzenice,6
+551929,Andělská Hora,6
+551911,Stará Ves,6
+551902,Malá Štáhle,6
+551899,Třebohostice,6
+551881,Slezské Pavlovice,6
+551872,Hlinka,6
+551864,Dívčí Hrad,6
+551856,Štěkeň,6
+551848,Petrovice,6
+551830,Škvořetice,6
+551821,Tvrdkov,6
+551813,Staré Heřminovy,6
+551805,Horní Životice,6
+551791,Střelské Hoštice,6
+551783,Valšov,6
+551775,Strašice,6
+551767,Staré Město,6
+551759,Sousedovice,6
+551732,Moravskoslezský Kočov,6
+565938,Žabovřesky nad Ohří,6
+1113107,Milevsko,7
+1113115,Týn nad Vltavou,7
