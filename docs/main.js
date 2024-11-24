@@ -137,6 +137,16 @@ async function updateMap(filterOnly = false) {
             }, {});
 
         // Process municipalities with the new checkedChurches
+        viraRows.sort((a, b) => {
+            const totalA = Object.keys(a)
+                .filter(k => !isNaN(k) && k !== "0")
+                .reduce((sum, k) => sum + (a[k] || 0), 0);
+            const totalB = Object.keys(b)
+                .filter(k => !isNaN(k) && k !== "0")
+                .reduce((sum, k) => sum + (b[k] || 0), 0);
+            return totalB - totalA;
+        });
+
         viraRows.forEach(row => {
             const municipality = municipalityMap[row.uzemi_kod];
             if (!municipality || !municipality.lat || !municipality.lon) return;
@@ -227,6 +237,8 @@ async function init() {
             }, {});
 
         // Initialize the religionMap
+        // First prepare all circle markers
+        const circleMarkers = [];
         viraRows.forEach(row => {
             if (String(row.uzemi_kod).length < 6) return;
             const municipality = municipalityMap[row.uzemi_kod];
@@ -240,7 +252,6 @@ async function init() {
                 return;
             }
 
-            // Calculate selected percentage
             let selectedCount = 0;
             for (let id of checkedChurches) {
                 selectedCount += row[id] || 0;
@@ -277,13 +288,22 @@ async function init() {
                         `${c.name}: ${c.count.toLocaleString()} (${c.percentage.toFixed(2)}%)`
                     ).join('<br>')}
                 `;
-            })
-            .addTo(map);
-
-            circles.push({
-                circle,
-                baseRadius: Math.sqrt(total * SCALE_FACTOR)
             });
+
+            circleMarkers.push({
+                circle,
+                baseRadius: Math.sqrt(total * SCALE_FACTOR),
+                total
+            });
+        });
+
+        // Sort by total population (which determines radius)
+        circleMarkers.sort((a, b) => b.total - a.total);
+
+        // Add markers to map in order from largest to smallest
+        circleMarkers.forEach(({circle, baseRadius}) => {
+            circle.addTo(map);
+            circles.push({circle, baseRadius});
         });
 
         // Update circles on zoom
