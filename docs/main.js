@@ -1,85 +1,85 @@
-let checkedChurches = [10,42,5,21,2,3,25,12,14,15,47,48,53,57];
+let checkedChurches = [10,42,5,21,2,3,25,12,14,15,47,48,33,53,56,57];
 let circles = []; // Store circle references
 let percentageFilter = 0; // Store current filter value
 let religionMap = {
-    1: "Bez náboženské víry",
-    2: "AC",
-    3: "BJB",
-    4: "CASD",
-    5: "CB",
-    6: "CČH",
-    7: "Církev Ježíše Krista Svatých posledních dnů v České republice",
-    8: "Církev řeckokatolická",
-    9: "Církev římskokatolická",
-    10: "ČCE",
-    11: "ECAV",
-    12: "ECM",
-    13: "Federace židovských obcí v České republice",
-    14: "JB",
-    15: "KřSb",
-    16: "Luterská evangelická církev a. v. v České republice",
-    17: "Náboženská společnost českých unitářů",
-    18: "Náboženská společnost Svědkové Jehovovi",
-    19: "Novoapoštolská církev v ČR",
-    20: "Pravoslavná církev v českých zemích",
-    21: "SCEAV",
-    22: "Starokatolická církev v ČR",
-    23: "Církev sjednocení (moonisté)",
-    24: "Scientologická církev",
-    25: "KS",
-    26: "Anglikánská církev",
-    27: "islám",
-    28: "buddhismus",
-    29: "hinduismus",
-    30: "Mezinárodní společnost pro vědomí Krišny, Hnutí Hare Krišna",
-    31: "Jiné",
-    32: "Buddhismus Diamantové cesty linie Karma Kagjü",
-    33: "Církev živého Boha",
-    34: "Česká hinduistická náboženská společnost",
-    35: "Obec křesťanů v České republice",
-    36: "Ruská pravoslavná církev, podvorje patriarchy moskevského a celé Rusi v České republice",
-    37: "Ústředí muslimských obcí",
-    38: "Višva Nirmala Dharma",
-    39: "Hnutí Grálu",
-    40: "Hnutí Nového věku (New Age)",
-    41: "katolická víra (katolík)",
-    42: "protestant/evangelík",
-    43: "křesťanství",
-    44: "judaismus",
-    45: "esoterismus",
-    46: "věřící - nehlásící se k žádné církvi ani náboženské společnosti",
-    47: "CNN",
-    48: "Církev Slovo života",
-    49: "Jedi",
-    50: "ateismus",
-    51: "pohanství",
-    52: "Sith",
-    53: "Církev víry",
-    54: "Církev Svatého Řehoře Osvětitele",
-    55: "Armáda spásy - církev",
-    56: "Církev Nový Život",
-    57: "Církev Oáza",
-    58: "Společenství Josefa Zezulky",
-    59: "Kněžské bratrstvo svatého Pia X.",
-    60: "Théravádový buddhismus",
-    61: "Společenství baptistických sborů",
-    62: "Společenství buddhismu v České republice",
-    63: "Křesťanská církev essejská",
-    64: "pastafariánství",
-    66: "satanismus",
-    67: "agnosticismus",
-    68: "animismus",
-    69: "baháismus",
-    70: "deismus",
-    71: "konfucianismus",
-    72: "sikhismus",
-    73: "šintoismus",
-    74: "taoismus",
-    75: "zoroastrismus",
-    76: "druidismus",
-    77: "rastafariánství",
-    78: "věřící - hlásící se k církvi - název neuveden",
-    99: "Neuvedeno"
+    1: { name: "Bez náboženské víry", count: 5027141 },
+    99: { name: "Neuvedeno", count: 3162540 },
+    46: { name: "věřící - nehlásící se k žádné církvi ani náboženské společnosti", count: 960201 },
+    9: { name: "Církev římskokatolická", count: 741019 },
+    41: { name: "katolická víra (katolík)", count: 235834 },
+    43: { name: "křesťanství", count: 71089 },
+    78: { name: "věřící - hlásící se k církvi - název neuveden", count: 65567 },
+    20: { name: "Pravoslavná církev v českých zemích", count: 40681 },
+    10: { name: "ČCE", count: 32577 },
+    42: { name: "protestant/evangelík", count: 27149 },
+    6: { name: "Církev československá husitská", count: 23610 },
+    31: { name: "Jiné", count: 21308 },
+    49: { name: "Jedi", count: 21023 },
+    18: { name: "Náboženská společnost Svědkové Jehovovi", count: 13298 },
+    5: { name: "CB", count: 10762 },
+    8: { name: "Církev řeckokatolická", count: 8309 },
+    4: { name: "CASD", count: 7162 },
+    21: { name: "SCEAV", count: 7081 },
+    27: { name: "islám", count: 5132 },
+    28: { name: "buddhismus", count: 5049 },
+    2: { name: "AC", count: 4958 },
+    3: { name: "BJB", count: 3112 },
+    51: { name: "pohanství", count: 2764 },
+    64: { name: "pastafariánství", count: 2696 },
+    25: { name: "KS", count: 2306 },
+    11: { name: "ECAV", count: 2048 },
+    16: { name: "Luterská evangelická církev a. v. v České republice", count: 1918 },
+    44: { name: "judaismus", count: 1427 },
+    14: { name: "JB", count: 1257 },
+    29: { name: "hinduismus", count: 1226 },
+    15: { name: "KřSb", count: 1224 },
+    58: { name: "Společenství Josefa Zezulky", count: 1053 },
+    66: { name: "satanismus", count: 998 },
+    12: { name: "ECM", count: 896 },
+    7: { name: "Církev Ježíše Krista Svatých posledních dnů v České republice", count: 713 },
+    22: { name: "Starokatolická církev v ČR", count: 672 },
+    32: { name: "Buddhismus Diamantové cesty linie Karma Kagjü", count: 653 },
+    53: { name: "Církev víry", count: 608 },
+    50: { name: "ateismus", count: 555 },
+    52: { name: "Sith", count: 516 },
+    36: { name: "Ruská pravoslavná církev, podvorje patriarchy moskevského a celé Rusi v České republice", count: 497 },
+    13: { name: "Federace židovských obcí v České republice", count: 474 },
+    30: { name: "Mezinárodní společnost pro vědomí Krišny, Hnutí Hare Krišna", count: 455 },
+    35: { name: "Obec křesťanů v České republice", count: 409 },
+    24: { name: "Scientologická církev", count: 397 },
+    48: { name: "Církev Slovo života", count: 366 },
+    33: { name: "Církev živého Boha", count: 299 },
+    26: { name: "Anglikánská církev", count: 254 },
+    38: { name: "Višva Nirmala Dharma", count: 250 },
+    47: { name: "Církev Nová naděje", count: 232 },
+    57: { name: "Církev Oáza", count: 206 },
+    39: { name: "Hnutí Grálu", count: 196 },
+    77: { name: "rastafariánství", count: 190 },
+    76: { name: "druidismus", count: 189 },
+    17: { name: "Náboženská společnost českých unitářů", count: 186 },
+    59: { name: "Kněžské bratrstvo svatého Pia X.", count: 156 },
+    69: { name: "baháismus", count: 118 },
+    74: { name: "taoismus", count: 113 },
+    37: { name: "Ústředí muslimských obcí", count: 112 },
+    73: { name: "šintoismus", count: 111 },
+    67: { name: "agnosticismus", count: 98 },
+    55: { name: "Armáda spásy - církev", count: 96 },
+    34: { name: "Česká hinduistická náboženská společnost", count: 93 },
+    72: { name: "sikhismus", count: 86 },
+    75: { name: "zoroastrismus", count: 76 },
+    61: { name: "Společenství baptistických sborů", count: 60 },
+    60: { name: "Théravádový buddhismus", count: 54 },
+    19: { name: "Novoapoštolská církev v ČR", count: 53 },
+    23: { name: "Církev sjednocení (moonisté)", count: 51 },
+    56: { name: "Církev Nový Život", count: 49 },
+    68: { name: "animismus", count: 42 },
+    40: { name: "Hnutí Nového věku (New Age)", count: 20 },
+    71: { name: "konfucianismus", count: 13 },
+    63: { name: "Křesťanská církev essejská", count: 11 },
+    45: { name: "esoterismus", count: 11 },
+    70: { name: "deismus", count: 8 },
+    54: { name: "Církev Svatého Řehoře Osvětitele", count: 3 },
+    62: { name: "Společenství buddhismu v České republice", count: 1 },
 };
 
 const colorScale = [
@@ -171,7 +171,7 @@ async function updateMap(filterOnly = false) {
             .bindPopup(() => {
                 const churchCounts = checkedChurches
                     .map(id => ({
-                        name: religionMap[id],
+                        name: religionMap[id].name,
                         count: row[id] || 0,
                         percentage: ((row[id] || 0) / total * 100)
                     }))
@@ -272,7 +272,7 @@ async function init() {
             .bindPopup(() => {
                 const churchCounts = checkedChurches
                     .map(id => ({
-                        name: religionMap[id],
+                        name: religionMap[id].name,
                         count: row[id] || 0,
                         percentage: ((row[id] || 0) / total * 100)
                     }))
@@ -336,6 +336,15 @@ async function init() {
     }
 }
 
+function formatCount(count) {
+    if (count >= 1000000) {
+        return (count / 1000000).toPrecision(3) + 'M';
+    } else if (count >= 1000) {
+        return (count / 1000).toPrecision(3) + 'k';
+    }
+    return count;
+}
+
 // Modal functionality
 document.getElementById('settingsBtn').addEventListener('click', () => {
     const modal = document.getElementById('settingsModal');
@@ -345,14 +354,15 @@ document.getElementById('settingsBtn').addEventListener('click', () => {
     container.innerHTML = '';
 
     // Create checkboxes for each religion
-    Object.entries(religionMap).forEach(([id, name]) => {
+    const religionMapSorted = Object.entries(religionMap).sort((a, b) => b[1].count - a[1].count);
+    religionMapSorted.forEach(([id, value]) => {
         const div = document.createElement('div');
         div.className = 'flex items-center';
         div.innerHTML = `
             <input type="checkbox" id="religion${id}" value="${id}"
                    class="w-4 h-4 text-blue-600 rounded border-gray-300 focus:ring-blue-500"
                    ${checkedChurches.includes(Number(id)) ? 'checked' : ''}>
-            <label for="religion${id}" class="ml-2 text-sm text-gray-700">${name}</label>
+            <label for="religion${id}" class="ml-2 text-sm text-gray-700">${value.name} (${formatCount(value.count)})</label>
         `;
         container.appendChild(div);
     });
