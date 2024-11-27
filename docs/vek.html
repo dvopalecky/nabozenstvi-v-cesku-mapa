@@ -4,10 +4,360 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Náboženská víra dle věku (2021)</title>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+    <style>
+        .axis-label {
+            font-size: 12px;
+        }
+        .bar-label {
+            font-size: 10px;
+        }
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            margin: 20px 0;
+        }
+        .legend {
+            font-size: 12px;
+        }
+    </style>
 </head>
-<body>
-    <h1>Náboženství dle věku</h1>
+<body class="bg-gray-50">
+    <div class="relative">
+        <div class="container mx-auto px-4">
+            <h1 class="title">Náboženská víra dle věku (2021)</h1>
+            <div id="pyramid"></div>
+        </div>
+
+        <!-- Settings Button -->
+        <button id="settingsBtn" class="fixed top-4 right-4 bg-white px-4 py-2 rounded-lg shadow-lg z-[1000] hover:bg-gray-100">
+            ⚙️ Nastavení
+        </button>
+
+        <!-- Modal -->
+        <div id="settingsModal" class="hidden fixed inset-0 bg-black bg-opacity-50 z-[2000] flex items-center justify-center">
+            <div class="bg-white rounded-lg p-6 max-w-2xl w-full mx-4 max-h-[80vh] overflow-y-auto">
+                <div class="flex justify-between items-center mb-4">
+                    <h2 class="text-xl font-bold">Vyber příslušnost k náboženské víře</h2>
+                    <button id="closeModal" class="text-gray-500 hover:text-gray-700">✕</button>
+                </div>
+                <p class="text-sm text-gray-500">Data jsou ze sčítání lidu z roku 2021.</p>
+
+                <div class="flex gap-2 my-4">
+                    <button id="selectAll" class="bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600">Vybrat vše</button>
+                    <button id="selectNone" class="bg-gray-500 text-white px-3 py-1 rounded hover:bg-gray-600">Zrušit vše</button>
+                    <button id="resetButton" class="bg-orange-500 text-white px-3 py-1 rounded hover:bg-orange-600">Reset</button>
+                    <button id="applySettings" class="bg-green-500 text-white px-3 py-1 rounded hover:bg-green-600 ml-auto">
+                        Aplikovat změny
+                    </button>
+                </div>
+
+                <div id="checkboxContainer" class="grid grid-cols-1 md:grid-cols-2 gap-2">
+                    <!-- Checkboxes will be inserted here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Religion mapping from main.js
+        const religionMap = {
+            1: { name: "Bez náboženské víry", count: 5027141 },
+            99: { name: "Neuvedeno", count: 3162540 },
+            46: { name: "věřící - nehlásící se k žádné církvi ani náboženské společnosti", count: 960201 },
+            9: { name: "Církev římskokatolická", count: 741019 },
+            41: { name: "katolická víra (katolík)", count: 235834 },
+            43: { name: "křesťanství", count: 71089 },
+            78: { name: "věřící - hlásící se k církvi - název neuveden", count: 65567 },
+            20: { name: "Pravoslavná církev v českých zemích", count: 40681 },
+            10: { name: "ČCE", count: 32577 },
+            42: { name: "protestant/evangelík", count: 27149 },
+            6: { name: "Církev československá husitská", count: 23610 },
+            31: { name: "Jiné", count: 21308 },
+            49: { name: "Jedi", count: 21023 },
+            18: { name: "Náboženská společnost Svědkové Jehovovi", count: 13298 },
+            5: { name: "CB", count: 10762 },
+            8: { name: "Církev řeckokatolická", count: 8309 },
+            4: { name: "CASD", count: 7162 },
+            21: { name: "SCEAV", count: 7081 },
+            27: { name: "islám", count: 5132 },
+            28: { name: "buddhismus", count: 5049 },
+            2: { name: "AC", count: 4958 },
+            3: { name: "BJB", count: 3112 },
+            51: { name: "pohanství", count: 2764 },
+            64: { name: "pastafariánství", count: 2696 },
+            25: { name: "KS", count: 2306 },
+            11: { name: "ECAV", count: 2048 },
+            16: { name: "Luterská evangelická církev a. v. v České republice", count: 1918 },
+            44: { name: "judaismus", count: 1427 },
+            14: { name: "JB", count: 1257 },
+            29: { name: "hinduismus", count: 1226 },
+            15: { name: "KřSb", count: 1224 },
+            58: { name: "Společenství Josefa Zezulky", count: 1053 },
+            66: { name: "satanismus", count: 998 },
+            12: { name: "ECM", count: 896 },
+            7: { name: "Církev Ježíše Krista Svatých posledních dnů v České republice", count: 713 },
+            22: { name: "Starokatolická církev v ČR", count: 672 },
+            32: { name: "Buddhismus Diamantové cesty linie Karma Kagjü", count: 653 },
+            53: { name: "Církev víry", count: 608 },
+            50: { name: "ateismus", count: 555 },
+            52: { name: "Sith", count: 516 },
+            36: { name: "Ruská pravoslavná církev, podvorje patriarchy moskevského a celé Rusi v České republice", count: 497 },
+            13: { name: "Federace židovských obcí v České republice", count: 474 },
+            30: { name: "Mezinárodní společnost pro vědomí Krišny, Hnutí Hare Krišna", count: 455 },
+            35: { name: "Obec křesťanů v České republice", count: 409 },
+            24: { name: "Scientologická církev", count: 397 },
+            48: { name: "Církev Slovo života", count: 366 },
+            33: { name: "Církev živého Boha", count: 299 },
+            26: { name: "Anglikánská církev", count: 254 },
+            38: { name: "Višva Nirmala Dharma", count: 250 },
+            47: { name: "Církev Nová naděje", count: 232 },
+            57: { name: "Církev Oáza", count: 206 },
+            39: { name: "Hnutí Grálu", count: 196 },
+            77: { name: "rastafariánství", count: 190 },
+            76: { name: "druidismus", count: 189 },
+            17: { name: "Náboženská společnost českých unitářů", count: 186 },
+            59: { name: "Kněžské bratrstvo svatého Pia X.", count: 156 },
+            69: { name: "baháismus", count: 118 },
+            74: { name: "taoismus", count: 113 },
+            37: { name: "Ústředí muslimských obcí", count: 112 },
+            73: { name: "šintoismus", count: 111 },
+            67: { name: "agnosticismus", count: 98 },
+            55: { name: "Armáda spásy - církev", count: 96 },
+            34: { name: "Česká hinduistická náboženská společnost", count: 93 },
+            72: { name: "sikhismus", count: 86 },
+            75: { name: "zoroastrismus", count: 76 },
+            61: { name: "Společenství baptistických sborů", count: 60 },
+            60: { name: "Théravádový buddhismus", count: 54 },
+            19: { name: "Novoapoštolská církev v ČR", count: 53 },
+            23: { name: "Církev sjednocení (moonisté)", count: 51 },
+            56: { name: "Církev Nový Život", count: 49 },
+            68: { name: "animismus", count: 42 },
+            40: { name: "Hnutí Nového věku (New Age)", count: 20 },
+            71: { name: "konfucianismus", count: 13 },
+            63: { name: "Křesťanská církev essejská", count: 11 },
+            45: { name: "esoterismus", count: 11 },
+            70: { name: "deismus", count: 8 },
+            54: { name: "Církev Svatého Řehoře Osvětitele", count: 3 },
+            62: { name: "Společenství buddhismu v České republice", count: 1 },
+        };
+
+        let checkedChurches = [10,42,5,21,2,3,25,12,14,15,47,48,33,53,56,57];
+        let svg = null;
+
+        async function createPyramid() {
+            // Clear existing visualization
+            d3.select('#pyramid').html('');
+
+            // Load and parse the CSV data
+            const rawData = await d3.csv('vira_vek_cr.csv');
+            
+            // Process the data
+            const data = rawData.reduce((acc, row) => {
+                const age = row.vek_txt;
+                if (!acc[age]) {
+                    acc[age] = {
+                        age,
+                        men: { selected: 0 },
+                        women: { selected: 0 }
+                    };
+                }
+                
+                // Sum up selected religions
+                if (row.pohlavi_kod === "1") { // Men
+                    checkedChurches.forEach(id => {
+                        acc[age].men.selected += +(row[id] || 0);
+                    });
+                } else { // Women
+                    checkedChurches.forEach(id => {
+                        acc[age].women.selected += +(row[id] || 0);
+                    });
+                }
+                
+                return acc;
+            }, {});
+
+            // Convert to array and sort by age
+            const processedData = Object.values(data).sort((a, b) => +a.age - +b.age);
+
+            // Set up dimensions
+            const margin = {top: 40, right: 180, bottom: 40, left: 180};
+            const width = 1000 - margin.left - margin.right;
+            const height = 600 - margin.top - margin.bottom;
+            const barHeight = height / processedData.length;
+
+            // Create SVG
+            svg = d3.select('#pyramid')
+                .append('svg')
+                .attr('width', width + margin.left + margin.right)
+                .attr('height', height + margin.top + margin.bottom)
+                .append('g')
+                .attr('transform', `translate(${margin.left},${margin.top})`);
+
+            // Set up scales
+            const xScale = d3.scaleLinear()
+                .domain([0, d3.max(processedData, d => 
+                    Math.max(d.men.selected, d.women.selected))])
+                .range([0, width/2 - 5]);
+
+            // Calculate nice max value for axis
+            const maxValue = d3.max(processedData, d => Math.max(d.men.selected, d.women.selected));
+            const magnitude = Math.pow(10, Math.floor(Math.log10(maxValue)));
+            const niceMax = Math.ceil(maxValue / magnitude) * magnitude;
+            
+            // Bottom axis
+            const xAxisScale = d3.scaleLinear()
+                .domain([0, niceMax])
+                .range([0, width/2 - 5]);
+            
+            const xAxisLeft = d3.axisBottom(xAxisScale)
+                .ticks(5)
+                .tickFormat(d3.format(","));
+            
+            const xAxisRight = d3.axisBottom(xAxisScale)
+                .ticks(5)
+                .tickFormat(d3.format(","));
+            
+            svg.append("g")
+                .attr("transform", `translate(${width/2 - xScale(niceMax)}, ${height})`)
+                .call(xAxisLeft);
+                
+            svg.append("g")
+                .attr("transform", `translate(${width/2 + 5}, ${height})`)
+                .call(xAxisRight);
+
+            // Create bars for each category
+            processedData.forEach((d, i) => {
+                // Men (left side)
+                svg.append('rect')
+                    .attr('x', width/2 - xScale(d.men.selected))
+                    .attr('y', i * barHeight)
+                    .attr('width', xScale(d.men.selected))
+                    .attr('height', barHeight - 1)
+                    .attr('fill', '#4a9eff')
+                    .attr('opacity', 0.7)
+                    .append('title')
+                    .text(d3.format(',')(d.men.selected));
+
+                // Women (right side)
+                svg.append('rect')
+                    .attr('x', width/2 + 5)
+                    .attr('y', i * barHeight)
+                    .attr('width', xScale(d.women.selected))
+                    .attr('height', barHeight - 1)
+                    .attr('fill', '#ff4a4a')
+                    .attr('opacity', 0.7)
+                    .append('title')
+                    .text(d3.format(',')(d.women.selected));
+
+                // Only show decade labels (0, 10, 20, etc)
+                if (d.age % 10 === 0) {
+                    svg.append('text')
+                        .attr('x', width/2)
+                        .attr('y', i * barHeight + barHeight/2)
+                        .attr('dy', '.35em')
+                        .attr('text-anchor', 'middle')
+                        .attr('class', 'axis-label')
+                        .text(d.age);
+                }
+            });
+
+            // Add legend
+            const legend = svg.append('g')
+                .attr('class', 'legend')
+                .attr('transform', `translate(${width/2}, ${-30})`);
+
+            legend.append('rect')
+                .attr('x', -100)
+                .attr('width', 15)
+                .attr('height', 15)
+                .attr('fill', '#4a9eff')
+                .attr('opacity', 0.7);
+
+            legend.append('text')
+                .attr('x', -80)
+                .attr('y', 12)
+                .text('Muži');
+
+            legend.append('rect')
+                .attr('x', 20)
+                .attr('width', 15)
+                .attr('height', 15)
+                .attr('fill', '#ff4a4a')
+                .attr('opacity', 0.7);
+
+            legend.append('text')
+                .attr('x', 40)
+                .attr('y', 12)
+                .text('Ženy');
+        }
+
+        // Modal functionality
+        document.getElementById('settingsBtn').addEventListener('click', () => {
+            const modal = document.getElementById('settingsModal');
+            const container = document.getElementById('checkboxContainer');
+
+            // Clear existing checkboxes
+            container.innerHTML = '';
+
+            // Create checkboxes for each religion
+            const religionMapSorted = Object.entries(religionMap).sort((a, b) => b[1].count - a[1].count);
+            religionMapSorted.forEach(([id, value]) => {
+                const div = document.createElement('div');
+                div.className = 'flex items-center';
+                div.innerHTML = `
+                    <input type="checkbox" id="religion${id}" value="${id}"
+                           class="w-4 h-4 text-blue-600 rounded border-gray-300 focus:ring-blue-500"
+                           ${checkedChurches.includes(Number(id)) ? 'checked' : ''}>
+                    <label for="religion${id}" class="ml-2 text-sm text-gray-700">
+                        ${value.name} (${value.count.toLocaleString()})
+                    </label>
+                `;
+                container.appendChild(div);
+            });
+
+            modal.classList.remove('hidden');
+        });
+
+        document.getElementById('closeModal').addEventListener('click', () => {
+            document.getElementById('settingsModal').classList.add('hidden');
+        });
+
+        document.getElementById('selectAll').addEventListener('click', () => {
+            const checkboxes = document.querySelectorAll('#checkboxContainer input[type="checkbox"]');
+            checkboxes.forEach(checkbox => checkbox.checked = true);
+        });
+
+        document.getElementById('selectNone').addEventListener('click', () => {
+            const checkboxes = document.querySelectorAll('#checkboxContainer input[type="checkbox"]');
+            checkboxes.forEach(checkbox => checkbox.checked = false);
+        });
+
+        document.getElementById('resetButton').addEventListener('click', () => {
+            const defaultChurches = [10,42,5,21,2,3,25,12,14,15,47,48,33,53,56,57];
+            const checkboxes = document.querySelectorAll('#checkboxContainer input[type="checkbox"]');
+            checkboxes.forEach(checkbox => {
+                checkbox.checked = defaultChurches.includes(Number(checkbox.value));
+            });
+        });
+
+        document.getElementById('applySettings').addEventListener('click', async () => {
+            // Update checkedChurches based on selected checkboxes
+            checkedChurches = Array.from(document.querySelectorAll('#checkboxContainer input[type="checkbox"]:checked'))
+                .map(checkbox => Number(checkbox.value));
+
+            // Close modal
+            document.getElementById('settingsModal').classList.add('hidden');
+
+            // Update the visualization
+            await createPyramid();
+        });
+
+        // Initialize the visualization
+        createPyramid();
+    </script>
 </body>
 </html>
