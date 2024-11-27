@@ -163,7 +163,7 @@
 
             // Load and parse the CSV data
             const rawData = await d3.csv('vira_vek_cr.csv');
-            
+
             // Process the data
             const data = rawData.reduce((acc, row) => {
                 const age = row.vek_txt;
@@ -174,12 +174,12 @@
                         women: { selected: 0, total: 0 }
                     };
                 }
-                
+
                 // Sum up all values for the row
                 const rowTotal = Object.keys(row)
                     .filter(k => !isNaN(k) && k !== "0")
                     .reduce((sum, k) => sum + (+row[k] || 0), 0);
-                
+
                 if (row.pohlavi_kod === "1") { // Men
                     acc[age].men.total += rowTotal;
                     checkedChurches.forEach(id => {
@@ -191,12 +191,36 @@
                         acc[age].women.selected += +(row[id] || 0);
                     });
                 }
-                
+
                 return acc;
             }, {});
 
             // Convert to array and sort by age
-            const processedData = Object.values(data).sort((a, b) => +b.age - +a.age);
+            // Process the data and combine 93+ ages
+            const processedData = Object.values(data).reduce((acc, row) => {
+                if (+row.age >= 93) {
+                    // Add to 93+ bucket
+                    if (!acc.find(x => x.age === "93+")) {
+                        acc.push({
+                            age: "93+",
+                            men: { selected: 0, total: 0 },
+                            women: { selected: 0, total: 0 }
+                        });
+                    }
+                    const bucket = acc.find(x => x.age === "93+");
+                    bucket.men.selected += row.men.selected;
+                    bucket.men.total += row.men.total;
+                    bucket.women.selected += row.women.selected;
+                    bucket.women.total += row.women.total;
+                } else {
+                    acc.push(row);
+                }
+                return acc;
+            }, []).sort((a, b) => {
+                if (a.age === "93+") return -1;
+                if (b.age === "93+") return 1;
+                return +b.age - +a.age;
+            });
 
             // Set up dimensions
             const container = document.getElementById('pyramid');
@@ -216,32 +240,40 @@
 
             // Set up scales
             const xScale = d3.scaleLinear()
-                .domain([0, d3.max(processedData, d => 
-                    Math.max(d.men.selected, d.women.selected))])
+                .domain([0, d3.max(processedData, d =>
+                    Math.max(
+                        isRelative ? d.men.selected / d.men.total : d.men.selected,
+                        isRelative ? d.women.selected / d.women.total : d.women.selected
+                    ))])
                 .range([0, width/2 - 5]);
 
             // Calculate nice max value for axis
-            const maxValue = d3.max(processedData, d => Math.max(d.men.selected, d.women.selected));
-            const magnitude = Math.pow(10, Math.floor(Math.log10(maxValue)));
-            const niceMax = Math.ceil(maxValue / magnitude) * magnitude;
-            
+            const maxValue = d3.max(processedData, d =>
+                Math.max(
+                    isRelative ? d.men.selected / d.men.total : d.men.selected,
+                    isRelative ? d.women.selected / d.women.total : d.women.selected
+                ));
+            const niceMax = isRelative ?
+                Math.ceil(maxValue * 100) / 100 : // For percentages
+                Math.ceil(maxValue / Math.pow(10, Math.floor(Math.log10(maxValue)))) * Math.pow(10, Math.floor(Math.log10(maxValue))); // For absolute numbers
+
             // Bottom axis
             const xAxisScale = d3.scaleLinear()
                 .domain([0, niceMax])
                 .range([0, width/2 - 5]);
-            
+
             const xAxisLeft = d3.axisBottom(xAxisScale)
                 .ticks(5)
-                .tickFormat(d3.format(","));
-            
+                .tickFormat(isRelative ? d => d3.format(".1%")(Math.abs(d)) : d3.format(","));
+
             const xAxisRight = d3.axisBottom(xAxisScale)
                 .ticks(5)
                 .tickFormat(d3.format(","));
-            
+
             svg.append("g")
                 .attr("transform", `translate(${width/2 - xScale(niceMax)}, ${height})`)
                 .call(xAxisLeft);
-                
+
             svg.append("g")
                 .attr("transform", `translate(${width/2 + 5}, ${height})`)
                 .call(xAxisRight);
@@ -250,18 +282,16 @@
             processedData.forEach((d, i) => {
                 // Men (left side)
                 const menRect = svg.append('rect')
-                    .attr('x', width/2 - xScale(d.men.selected))
+                    .attr('x', width/2 - xScale(isRelative ? d.men.selected / d.men.total : d.men.selected))
                     .attr('y', i * barHeight)
-                    .attr('width', xScale(d.men.selected))
+                    .attr('width', xScale(isRelative ? d.men.selected / d.men.total : d.men.selected))
                     .attr('height', barHeight - 1)
                     .attr('fill', '#4a9eff')
                     .attr('opacity', 0.7)
                     .node();
 
                 tippy(menRect, {
-                    content: `${d.age} roků: ${isRelative ? 
-                        d3.format('.1%')(d.men.selected / d.men.total) :
-                        d3.format(',')(d.men.selected)}`,
+                    content: `${d.age} roků: ${d3.format(',')(d.men.selected)} (${d3.format('.1%')(d.men.selected / d.men.total)})`,
                     theme: 'light',
                     placement: 'left'
                 });
@@ -270,16 +300,14 @@
                 const womenRect = svg.append('rect')
                     .attr('x', width/2 + 5)
                     .attr('y', i * barHeight)
-                    .attr('width', xScale(d.women.selected))
+                    .attr('width', xScale(isRelative ? d.women.selected / d.women.total : d.women.selected))
                     .attr('height', barHeight - 1)
                     .attr('fill', '#ff4a4a')
                     .attr('opacity', 0.7)
                     .node();
 
                 tippy(womenRect, {
-                    content: `${d.age} roků: ${isRelative ? 
-                        d3.format('.1%')(d.women.selected / d.women.total) :
-                        d3.format(',')(d.women.selected)}`,
+                    content: `${d.age} roků: ${d3.format(',')(d.women.selected)} (${d3.format('.1%')(d.women.selected / d.women.total)})`,
                     theme: 'light',
                     placement: 'right'
                 });
