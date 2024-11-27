@@ -264,7 +264,7 @@
 
             const xAxisLeft = d3.axisBottom(xAxisScale)
                 .ticks(5)
-                .tickFormat(isRelative ? d => d3.format(".1%")(Math.abs(d)) : d3.format(","));
+                .tickFormat(isRelative ? d => d3.format(".2%")(Math.abs(d)) : d3.format(","));
 
             const xAxisRight = d3.axisBottom(xAxisScale)
                 .ticks(5)
@@ -291,7 +291,7 @@
                     .node();
 
                 tippy(menRect, {
-                    content: `${d.age} roků: ${d3.format(',')(d.men.selected)} (${d3.format('.1%')(d.men.selected / d.men.total)})`,
+                    content: `${d.age} roků: ${d3.format(',')(d.men.selected)} (${d3.format('.2%')(d.men.selected / d.men.total)})`,
                     theme: 'light',
                     placement: 'left'
                 });
@@ -307,7 +307,7 @@
                     .node();
 
                 tippy(womenRect, {
-                    content: `${d.age} roků: ${d3.format(',')(d.women.selected)} (${d3.format('.1%')(d.women.selected / d.women.total)})`,
+                    content: `${d.age} roků: ${d3.format(',')(d.women.selected)} (${d3.format('.2%')(d.women.selected / d.women.total)})`,
                     theme: 'light',
                     placement: 'right'
                 });
