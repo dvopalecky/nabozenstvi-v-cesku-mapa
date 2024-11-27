@@ -7,6 +7,9 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
+    <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/themes/light.css"/>
     <style>
         .axis-label {
             font-size: 12px;
@@ -29,7 +32,12 @@
     <div class="relative">
         <div class="container mx-auto px-4">
             <h1 class="title">Náboženská víra dle věku (2021)</h1>
-            <div id="pyramid"></div>
+            <div class="flex justify-center gap-4 mb-4">
+                <button id="toggleView" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+                    Přepnout na %
+                </button>
+            </div>
+            <div id="pyramid" class="w-full"></div>
         </div>
 
         <!-- Settings Button -->
@@ -147,6 +155,7 @@
 
         let checkedChurches = [10,42,5,21,2,3,25,12,14,15,47,48,33,53,56,57];
         let svg = null;
+        let isRelative = false;
 
         async function createPyramid() {
             // Clear existing visualization
@@ -161,17 +170,23 @@
                 if (!acc[age]) {
                     acc[age] = {
                         age,
-                        men: { selected: 0 },
-                        women: { selected: 0 }
+                        men: { selected: 0, total: 0 },
+                        women: { selected: 0, total: 0 }
                     };
                 }
                 
-                // Sum up selected religions
+                // Sum up all values for the row
+                const rowTotal = Object.keys(row)
+                    .filter(k => !isNaN(k) && k !== "0")
+                    .reduce((sum, k) => sum + (+row[k] || 0), 0);
+                
                 if (row.pohlavi_kod === "1") { // Men
+                    acc[age].men.total += rowTotal;
                     checkedChurches.forEach(id => {
                         acc[age].men.selected += +(row[id] || 0);
                     });
                 } else { // Women
+                    acc[age].women.total += rowTotal;
                     checkedChurches.forEach(id => {
                         acc[age].women.selected += +(row[id] || 0);
                     });
@@ -181,19 +196,21 @@
             }, {});
 
             // Convert to array and sort by age
-            const processedData = Object.values(data).sort((a, b) => +a.age - +b.age);
+            const processedData = Object.values(data).sort((a, b) => +b.age - +a.age);
 
             // Set up dimensions
+            const container = document.getElementById('pyramid');
             const margin = {top: 40, right: 180, bottom: 40, left: 180};
-            const width = 1000 - margin.left - margin.right;
-            const height = 600 - margin.top - margin.bottom;
+            const width = Math.min(1000, container.clientWidth) - margin.left - margin.right;
+            const height = Math.min(600, window.innerHeight * 0.8) - margin.top - margin.bottom;
             const barHeight = height / processedData.length;
 
             // Create SVG
             svg = d3.select('#pyramid')
                 .append('svg')
-                .attr('width', width + margin.left + margin.right)
-                .attr('height', height + margin.top + margin.bottom)
+                .attr('viewBox', `0 0 ${width + margin.left + margin.right} ${height + margin.top + margin.bottom}`)
+                .attr('width', '100%')
+                .attr('height', '100%')
                 .append('g')
                 .attr('transform', `translate(${margin.left},${margin.top})`);
 
@@ -232,26 +249,40 @@
             // Create bars for each category
             processedData.forEach((d, i) => {
                 // Men (left side)
-                svg.append('rect')
+                const menRect = svg.append('rect')
                     .attr('x', width/2 - xScale(d.men.selected))
                     .attr('y', i * barHeight)
                     .attr('width', xScale(d.men.selected))
                     .attr('height', barHeight - 1)
                     .attr('fill', '#4a9eff')
                     .attr('opacity', 0.7)
-                    .append('title')
-                    .text(d3.format(',')(d.men.selected));
+                    .node();
+
+                tippy(menRect, {
+                    content: `${d.age} roků: ${isRelative ? 
+                        d3.format('.1%')(d.men.selected / d.men.total) :
+                        d3.format(',')(d.men.selected)}`,
+                    theme: 'light',
+                    placement: 'left'
+                });
 
                 // Women (right side)
-                svg.append('rect')
+                const womenRect = svg.append('rect')
                     .attr('x', width/2 + 5)
                     .attr('y', i * barHeight)
                     .attr('width', xScale(d.women.selected))
                     .attr('height', barHeight - 1)
                     .attr('fill', '#ff4a4a')
                     .attr('opacity', 0.7)
-                    .append('title')
-                    .text(d3.format(',')(d.women.selected));
+                    .node();
+
+                tippy(womenRect, {
+                    content: `${d.age} roků: ${isRelative ? 
+                        d3.format('.1%')(d.women.selected / d.women.total) :
+                        d3.format(',')(d.women.selected)}`,
+                    theme: 'light',
+                    placement: 'right'
+                });
 
                 // Only show decade labels (0, 10, 20, etc)
                 if (d.age % 10 === 0) {
@@ -277,10 +308,11 @@
                 .attr('fill', '#4a9eff')
                 .attr('opacity', 0.7);
 
+            const menTotal = d3.sum(processedData, d => d.men.selected);
             legend.append('text')
                 .attr('x', -80)
                 .attr('y', 12)
-                .text('Muži');
+                .text(`Muži (${d3.format(',')(menTotal)})`);
 
             legend.append('rect')
                 .attr('x', 20)
@@ -289,10 +321,11 @@
                 .attr('fill', '#ff4a4a')
                 .attr('opacity', 0.7);
 
+            const womenTotal = d3.sum(processedData, d => d.women.selected);
             legend.append('text')
                 .attr('x', 40)
                 .attr('y', 12)
-                .text('Ženy');
+                .text(`Ženy (${d3.format(',')(womenTotal)})`);
         }
 
         // Modal functionality
@@ -356,8 +389,24 @@
             await createPyramid();
         });
 
+        // Toggle button handler
+        document.getElementById('toggleView').addEventListener('click', async () => {
+            const btn = document.getElementById('toggleView');
+            isRelative = !isRelative;
+            btn.textContent = isRelative ? 'Přepnout na absolutní' : 'Přepnout na %';
+            await createPyramid();
+        });
+
         // Initialize the visualization
         createPyramid();
+
+        // Make it responsive
+        window.addEventListener('resize', () => {
+            clearTimeout(window.resizeTimer);
+            window.resizeTimer = setTimeout(() => {
+                createPyramid();
+            }, 250);
+        });
     </script>
 </body>
 </html>
