@@ -4,6 +4,12 @@ Interactive visualization of religious demographics in Czechia based on 2021 cen
 
 [View the app](https://dvopalecky.github.io/nabozenstvi-v-cesku-mapa/)
 
+<div style="display: flex; justify-content: space-between; margin: 20px 0;">
+  <img src="screenshots/screenshot-1.jpg" alt="Municipality Map View" width="48%">
+  <img src="screenshots/screenshot-2.jpg" alt="Age Demographics View" width="48%">
+</div>
+
+
 ## Features
 
 Two interactive views:
