@@ -29,6 +29,7 @@ Two interactive views:
 ## Technical Details
 
 - Built with vanilla JavaScript and HTML (no framework)
+- The static app is in `docs` folder
 - Biggest challenge was to clean the data for GPS coordinates of all municipalities (I used municipalities data from https://github.com/cesko-digital/obce)
 - Uses Leaflet.js for map visualization
 - Code largely AI-generated as an experiment, so structure is basic
