@@ -80,4 +80,4 @@ export const religionMap = {
     62: { name: "Společenství buddhismu v České republice", count: 1 },
 };
 
-export const defaultChurches = [10,42,5,21,2,3,25,12,14,15,47,48,33,53,56,57];
+export const defaultChurches = [5,21,2,3,25,12,14,15,47,48,33,53,56,57];
