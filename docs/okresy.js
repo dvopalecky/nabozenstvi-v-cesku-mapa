@@ -20,6 +20,15 @@ function initMap() {
     }).addTo(map);
 }
 
+function getRandomColor() {
+    const letters = '0123456789ABCDEF';
+    let color = '#';
+    for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+}
+
 // Get color based on percentage
 function getColor(percentage) {
     for (let i = colorScale.length - 1; i >= 0; i--) {
@@ -202,28 +211,66 @@ async function updateMap(filterOnly = false) {
     }
 }
 
-async function loadSingleDistrict() {
+async function loadAllDistricts() {
     try {
-        const response = await fetch('okresy/40169.geojson');
-        if (!response.ok) {
-            console.error('Failed to load district GeoJSON');
-            return;
-        }
+        // Load district index
+        const uzemiResponse = await fetch('uzemi_index.csv');
+        const uzemiData = await uzemiResponse.text();
+        const uzemiRows = Papa.parse(uzemiData, { header: true }).data;
 
-        const geojson = await response.json();
+        // Filter for districts (5-digit codes)
+        const districtRows = uzemiRows.filter(row =>
+            row.uzemi_kod && row.uzemi_kod.toString().length === 5
+        );
 
-        L.geoJSON(geojson, {
-            style: {
-                fillColor: 'red',
-                weight: 2,
-                opacity: 1,
-                color: 'white',
-                fillOpacity: 0.7
+        // Load each district
+        for (const district of districtRows) {
+            const code = district.uzemi_kod;
+            try {
+                const response = await fetch(`okresy/${code}.geojson`);
+                if (!response.ok) {
+                    console.warn(`No GeoJSON found for district ${code}`);
+                    continue;
+                }
+
+                const geojson = await response.json();
+                const color = getRandomColor();
+
+                L.geoJSON(geojson, {
+                    style: {
+                        fillColor: color,
+                        weight: 2,
+                        opacity: 1,
+                        color: 'white',
+                        fillOpacity: 0.7
+                    },
+                    onEachFeature: (feature, layer) => {
+                        layer.on({
+                            mouseover: highlightFeature,
+                            mouseout: resetHighlight,
+                            click: (e) => {
+                                const popupContent = `
+                                    <div class="bg-white p-4 rounded-lg shadow-lg">
+                                        <h3 class="font-bold text-lg mb-2">${district.uzemi_txt}</h3>
+                                        <p class="text-gray-700">Color: ${color}</p>
+                                    </div>
+                                `;
+
+                                L.popup()
+                                    .setLatLng(e.latlng)
+                                    .setContent(popupContent)
+                                    .openOn(map);
+                            }
+                        });
+                    }
+                }).addTo(map);
+
+            } catch (error) {
+                console.error(`Error loading district ${code}:`, error);
             }
-        }).addTo(map);
-
+        }
     } catch (error) {
-        console.error('Error loading district:', error);
+        console.error('Error loading districts:', error);
     }
 }
 
@@ -231,7 +278,7 @@ async function loadSingleDistrict() {
 async function init() {
     try {
         initMap();
-        await loadSingleDistrict();
+        await loadAllDistricts();
 
         // Set up modal controls
         const settingsBtn = document.getElementById('settingsBtn');
