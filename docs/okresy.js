@@ -339,4 +339,33 @@ async function init() {
     }
 }
 
+async function loadDistrictData() {
+    try {
+        // Load data
+        const response = await fetch('vira_by_uzemi.csv');
+        const data = await response.text();
+        const rows = Papa.parse(data, { header: true, dynamicTyping: true }).data;
+
+        // Filter for districts with 5-digit codes starting with 4
+        const districtData = rows.filter(row => {
+            const code = String(row.uzemi_kod);
+            return code.length === 5 && code.startsWith('4');
+        });
+
+        // Create object with district codes as keys
+        const districts = {};
+        for (const district of districtData) {
+            districts[district.uzemi_kod] = district;
+        }
+
+        // Log the filtered data
+        console.log('Districts with 5-digit codes starting with 4:', districts);
+    } catch (error) {
+        console.error('Error loading district data:', error);
+    }
+}
+
+// Call the function when the script loads
+loadDistrictData();
+
 init();
