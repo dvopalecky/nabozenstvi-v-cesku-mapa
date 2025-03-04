@@ -9,7 +9,7 @@ async function createPyramid() {
     d3.select('#pyramid').html('');
 
     // Load and parse the CSV data
-    const rawData = await d3.csv('vira_vek_cr.csv');
+    const rawData = await d3.csv('data/vira_vek_cr.csv');
 
     // Process the data
     const data = rawData.reduce((acc, row) => {

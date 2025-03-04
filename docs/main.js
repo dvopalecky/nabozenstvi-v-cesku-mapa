@@ -47,8 +47,8 @@ async function updateMap(filterOnly = false) {
     try {
         // Re-process the data with new checkedChurches
         const [viraData, municipalities] = await Promise.all([
-            fetch('vira_by_uzemi.csv').then(r => r.text()),
-            fetch('municipalities.csv').then(r => r.text())
+            fetch('data/vira_by_uzemi.csv').then(r => r.text()),
+            fetch('data/municipalities.csv').then(r => r.text())
         ]);
 
         const viraRows = Papa.parse(viraData, {header: true, dynamicTyping: true}).data;
@@ -142,10 +142,10 @@ async function init() {
     try {
         // Load all CSV files
         const [viraData, viraIndex, uzemiIndex, municipalities] = await Promise.all([
-            fetch('vira_by_uzemi.csv').then(r => r.text()),
-            fetch('vira_index.csv').then(r => r.text()),
-            fetch('uzemi_index.csv').then(r => r.text()),
-            fetch('municipalities.csv').then(r => r.text())
+            fetch('data/vira_by_uzemi.csv').then(r => r.text()),
+            fetch('data/vira_index.csv').then(r => r.text()),
+            fetch('data/uzemi_index.csv').then(r => r.text()),
+            fetch('data/municipalities.csv').then(r => r.text())
         ]);
 
         // Parse all files

@@ -72,8 +72,8 @@ async function updateMap(filterOnly = false) {
     if (!filterOnly) {
         // Load district data
         const [viraData, uzemiIndex] = await Promise.all([
-            fetch('vira_by_uzemi.csv').then(r => r.text()),
-            fetch('uzemi_index.csv').then(r => r.text())
+            fetch('data/vira_by_uzemi.csv').then(r => r.text()),
+            fetch('data/uzemi_index.csv').then(r => r.text())
         ]);
 
         // Parse data
@@ -214,7 +214,7 @@ async function updateMap(filterOnly = false) {
 async function loadAllDistricts() {
     try {
         // Load district index
-        const uzemiResponse = await fetch('uzemi_index.csv');
+        const uzemiResponse = await fetch('data/uzemi_index.csv');
         const uzemiData = await uzemiResponse.text();
         const uzemiRows = Papa.parse(uzemiData, { header: true }).data;
 
@@ -343,7 +343,7 @@ async function init() {
 async function loadDistrictData() {
     try {
         // Load data
-        const response = await fetch('vira_by_uzemi.csv');
+        const response = await fetch('data/vira_by_uzemi.csv');
         const data = await response.text();
         const rows = Papa.parse(data, { header: true, dynamicTyping: true }).data;
 
