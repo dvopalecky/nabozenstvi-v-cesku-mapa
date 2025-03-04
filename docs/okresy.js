@@ -319,11 +319,12 @@ async function init() {
                 .forEach(cb => cb.checked = false);
         });
         resetButton.addEventListener('click', () => {
-            checkedChurches = [...defaultChurches];
-            document.querySelectorAll('#checkboxContainer input[type="checkbox"]')
-                .forEach(cb => cb.checked = defaultChurches.includes(cb.value));
+            console.log('Resetting to default churches');
+            const checkboxes = document.querySelectorAll('#checkboxContainer input[type="checkbox"]');
+            checkboxes.forEach(checkbox => {
+                checkbox.checked = defaultChurches.includes(Number(checkbox.value));
+            });
             updateMap(true);
-            settingsModal.classList.add('hidden');
         });
         applySettings.addEventListener('click', () => {
             checkedChurches = Array.from(
