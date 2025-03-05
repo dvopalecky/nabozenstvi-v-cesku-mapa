@@ -76,48 +76,52 @@ async function loadAllDistricts() {
             row => row.uzemi_kod && row.uzemi_kod.toString().length === 5,
         );
 
-        // Load each district
-        for (const district of districtRows) {
+        // Store district labels for later use
+        districtRows.forEach(district => {
             districtLabels[district.uzemi_kod] = district.uzemi_txt;
-            const code = district.uzemi_kod;
-            try {
-                const response = await fetch(`okresy/${code}.geojson`);
-                if (!response.ok) {
-                    console.warn(`No GeoJSON found for district ${code}`);
-                    continue;
-                }
+        });
 
-                const geojson = await response.json();
-                const color = 'black';
-
-                // Store the layer reference for later use
-                districtLayers[code] = L.geoJSON(geojson, {
-                    style: {
-                        fillColor: '#999',
-                        weight: 2,
-                        opacity: 1,
-                        color: 'black',
-                        fillOpacity: 0.7,
-                    },
-                    onEachFeature: (feature, layer) => {
-                        const tooltipContent = `
-                            <div class="bg-white p-4 rounded-lg shadow-lg">
-                                <h3 class="font-bold text-lg mb-2">${district.uzemi_txt}</h3>
-                                <p class="text-gray-700">Color: ${color}</p>
-                            </div>
-                        `;
-                        layer.bindTooltip(tooltipContent, {
-                            direction: 'center',
-                            permanent: false,
-                            sticky: true,
-                            opacity: 0.9
-                        });
-                    },
-                }).addTo(map);
-            } catch (error) {
-                console.error(`Error loading district ${code}:`, error);
-            }
+        // Load the combined GeoJSON file
+        const response = await fetch('combined-okresy.geojson');
+        if (!response.ok) {
+            console.error('Failed to load combined GeoJSON file');
+            return;
         }
+
+        const geojsonData = await response.json();
+
+        // Process each feature in the combined GeoJSON
+        geojsonData.features.forEach(feature => {
+            const code = feature.properties.id;
+            const districtName = districtLabels[code] || 'Unknown District';
+
+            // Create a layer for this district
+            const layer = L.geoJSON(feature, {
+                style: {
+                    fillColor: '#999',
+                    weight: 2,
+                    opacity: 1,
+                    color: 'black',
+                    fillOpacity: 0.7,
+                },
+                onEachFeature: (feature, layer) => {
+                    const tooltipContent = `
+                        <div class="bg-white p-4 rounded-lg shadow-lg">
+                            <h3 class="font-bold text-lg mb-2">${districtName}</h3>
+                        </div>
+                    `;
+                    layer.bindTooltip(tooltipContent, {
+                        direction: 'center',
+                        permanent: false,
+                        sticky: true,
+                        opacity: 0.9
+                    });
+                },
+            }).addTo(map);
+
+            // Store the layer for later use
+            districtLayers[code] = layer;
+        });
     } catch (error) {
         console.error('Error loading districts:', error);
     }
@@ -251,8 +255,6 @@ async function loadDistrictData() {
                             )
                             .join('<br>')}
                     `;
-
-                    // Update the tooltip content
                     layer.unbindTooltip();
                     layer.bindTooltip(tooltipContent, {
                         direction: 'center',
@@ -261,44 +263,19 @@ async function loadDistrictData() {
                         opacity: 0.9
                     });
                 });
-            } else {
-                console.warn(`No layer found for district ${districtCode}`);
             }
         });
-
-        // Add legend to the map
-        // Remove existing legend if it exists
-        if (map.legend) {
-            map.legend.remove();
-        }
-
-        // Create new legend
-        const legend = L.control({ position: 'bottomright' });
-        legend.onAdd = () => {
-            const div = L.DomUtil.create('div', 'legend');
-            div.innerHTML = '<h4>Vybrané %</h4>';
-
-            colorScale.forEach(([value, color]) => {
-                div.innerHTML += `
-                    <div>
-                        <span class="legend-circle" style="background:${color}"></span>
-                        ${(value * 100).toFixed(2)}%
-                    </div>`;
-            });
-            return div;
-        };
-        legend.addTo(map);
-        map.legend = legend;
-
     } catch (error) {
         console.error('Error loading district data:', error);
     }
 }
 
-// Call the function when the script loads
 async function main() {
     await init();
     await loadDistrictData();
 }
 
-main();
+main().catch(error => {
+    console.error('Main error:', error);
+    alert('Failed to initialize application. Check console for details.');
+});
