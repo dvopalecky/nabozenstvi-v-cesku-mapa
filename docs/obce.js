@@ -1,26 +1,26 @@
-import { religionMap, defaultChurches } from './common.js';
+import { defaultChurches, religionMap } from './common.js';
 
 let checkedChurches = [...defaultChurches];
 let circles = []; // Store circle references
-let percentageFilter = 0; // Store current filter value
+const percentageFilter = 0; // Store current filter value
 
 const colorScale = [
-    [0, '#fff'],  // white
-    [0.001, '#fff'],  // white
-    [0.002, '#f7e8b0'],  // light yellow
-    [0.005, '#f4b87d'],  // peach/orange
-    [0.01, '#f18d6c'],   // salmon
-    [0.02, '#e66a82'],   // pink-red
-    [0.05, '#d55099'],   // dark pink
-    [0.1, '#b840ab'],    // magenta
-    [0.2, '#8b2eb8'],    // purple
-    [0.3, '#6b1ec5'],    // deeper purple
-    [0.4, '#3449eb'],    // bright blue
-    [0.5, '#348feb'],    // brighter blue
-    [0.6, '#34dceb'],    // brightest blue
-    [0.7, '#2a9c5b'],    // bright green
-    [0.8, '#405745'],    // medium bright green
-    [0.9, '#000']     // green
+    [0, '#fff'], // white
+    [0.001, '#fff'], // white
+    [0.002, '#f7e8b0'], // light yellow
+    [0.005, '#f4b87d'], // peach/orange
+    [0.01, '#f18d6c'], // salmon
+    [0.02, '#e66a82'], // pink-red
+    [0.05, '#d55099'], // dark pink
+    [0.1, '#b840ab'], // magenta
+    [0.2, '#8b2eb8'], // purple
+    [0.3, '#6b1ec5'], // deeper purple
+    [0.4, '#3449eb'], // bright blue
+    [0.5, '#348feb'], // brighter blue
+    [0.6, '#34dceb'], // brightest blue
+    [0.7, '#2a9c5b'], // bright green
+    [0.8, '#405745'], // medium bright green
+    [0.9, '#000'], // green
 ];
 
 function getColor(percentage) {
@@ -40,7 +40,7 @@ const SCALE_FACTOR = 0.002;
 async function updateMap(filterOnly = false) {
     if (!filterOnly) {
         // Clear existing circles
-        circles.forEach(({circle}) => circle.remove());
+        circles.forEach(({ circle }) => circle.remove());
         circles = [];
     }
 
@@ -48,23 +48,22 @@ async function updateMap(filterOnly = false) {
         // Re-process the data with new checkedChurches
         const [viraData, municipalities] = await Promise.all([
             fetch('data/vira_by_uzemi.csv').then(r => r.text()),
-            fetch('data/municipalities.csv').then(r => r.text())
+            fetch('data/municipalities.csv').then(r => r.text()),
         ]);
 
-        const viraRows = Papa.parse(viraData, {header: true, dynamicTyping: true}).data;
-        const municipalityMap = Papa.parse(municipalities, {header: true}).data
-            .reduce((acc, row) => {
-                acc[row.uzemi_kod] = row;
-                return acc;
-            }, {});
+        const viraRows = Papa.parse(viraData, { header: true, dynamicTyping: true }).data;
+        const municipalityMap = Papa.parse(municipalities, { header: true }).data.reduce((acc, row) => {
+            acc[row.uzemi_kod] = row;
+            return acc;
+        }, {});
 
         // Process municipalities with the new checkedChurches
         viraRows.sort((a, b) => {
             const totalA = Object.keys(a)
-                .filter(k => !isNaN(k) && k !== "0")
+                .filter(k => !isNaN(k) && k !== '0')
                 .reduce((sum, k) => sum + (a[k] || 0), 0);
             const totalB = Object.keys(b)
-                .filter(k => !isNaN(k) && k !== "0")
+                .filter(k => !isNaN(k) && k !== '0')
                 .reduce((sum, k) => sum + (b[k] || 0), 0);
             return totalB - totalA;
         });
@@ -74,11 +73,11 @@ async function updateMap(filterOnly = false) {
             if (!municipality || !municipality.lat || !municipality.lon) return;
 
             let selectedCount = 0;
-            for (let id of checkedChurches) {
+            for (const id of checkedChurches) {
                 selectedCount += row[id] || 0;
             }
             const total = Object.keys(row)
-                .filter(k => !isNaN(k) && k !== "0")
+                .filter(k => !isNaN(k) && k !== '0')
                 .reduce((sum, k) => sum + (row[k] || 0), 0);
             const percentage = selectedCount / total;
 
@@ -88,35 +87,37 @@ async function updateMap(filterOnly = false) {
                 color: '#000',
                 weight: 1,
                 opacity: 1,
-                fillOpacity: 0.8
+                fillOpacity: 0.8,
             })
-            .bindPopup(() => {
-                const churchCounts = checkedChurches
-                    .map(id => ({
-                        name: religionMap[id].name,
-                        count: row[id] || 0,
-                        percentage: ((row[id] || 0) / total * 100)
-                    }))
-                    .filter(c => c.count > 0)
-                    .sort((a, b) => b.count - a.count);
+                .bindPopup(() => {
+                    const churchCounts = checkedChurches
+                        .map(id => ({
+                            name: religionMap[id].name,
+                            count: row[id] || 0,
+                            percentage: ((row[id] || 0) / total) * 100,
+                        }))
+                        .filter(c => c.count > 0)
+                        .sort((a, b) => b.count - a.count);
 
-                return `
+                    return `
                     <b>${municipality.name}</b><br>
                     Obyvatelstvo celkem: ${total.toLocaleString()}<br>
                     Vybraných: ${selectedCount.toLocaleString()} (${(percentage * 100).toFixed(2)}%)<br>
                     <br>
-                    ${churchCounts.map(c =>
-                        `${c.name}: ${c.count.toLocaleString()} (${c.percentage.toFixed(2)}%)`
-                    ).join('<br>')}
+                    ${churchCounts
+                            .map(
+                                c => `${c.name}: ${c.count.toLocaleString()} (${c.percentage.toFixed(2)}%)`,
+                            )
+                            .join('<br>')}
                 `;
-            })
-            .addTo(map);
+                })
+                .addTo(map);
 
             // Store percentage with circle data
             circles.push({
                 circle,
                 baseRadius: Math.sqrt(total * SCALE_FACTOR),
-                percentage: percentage
+                percentage: percentage,
             });
 
             // Apply initial filter
@@ -127,11 +128,10 @@ async function updateMap(filterOnly = false) {
 
         // Update circles on zoom
         map.on('zoomend', () => {
-            circles.forEach(({circle, baseRadius}) => {
+            circles.forEach(({ circle, baseRadius }) => {
                 circle.setRadius(baseRadius * Math.pow(2, map.getZoom() - 8));
             });
         });
-
     } catch (error) {
         console.error('Error:', error);
         alert('Error updating map. Check console.');
@@ -145,18 +145,17 @@ async function init() {
             fetch('data/vira_by_uzemi.csv').then(r => r.text()),
             fetch('data/vira_index.csv').then(r => r.text()),
             fetch('data/uzemi_index.csv').then(r => r.text()),
-            fetch('data/municipalities.csv').then(r => r.text())
+            fetch('data/municipalities.csv').then(r => r.text()),
         ]);
 
         // Parse all files
-        const viraRows = Papa.parse(viraData, {header: true, dynamicTyping: true}).data;
-        const viraMap = Papa.parse(viraIndex, {header: true}).data;
-        const uzemiMap = Papa.parse(uzemiIndex, {header: true}).data;
-        const municipalityMap = Papa.parse(municipalities, {header: true}).data
-            .reduce((acc, row) => {
-                acc[row.uzemi_kod] = row;
-                return acc;
-            }, {});
+        const viraRows = Papa.parse(viraData, { header: true, dynamicTyping: true }).data;
+        const viraMap = Papa.parse(viraIndex, { header: true }).data;
+        const uzemiMap = Papa.parse(uzemiIndex, { header: true }).data;
+        const municipalityMap = Papa.parse(municipalities, { header: true }).data.reduce((acc, row) => {
+            acc[row.uzemi_kod] = row;
+            return acc;
+        }, {});
 
         // Initialize the religionMap
         // First prepare all circle markers
@@ -175,11 +174,11 @@ async function init() {
             }
 
             let selectedCount = 0;
-            for (let id of checkedChurches) {
+            for (const id of checkedChurches) {
                 selectedCount += row[id] || 0;
             }
             const total = Object.keys(row)
-                .filter(k => !isNaN(k) && k !== "0")
+                .filter(k => !isNaN(k) && k !== '0')
                 .reduce((sum, k) => sum + (row[k] || 0), 0);
             const percentage = selectedCount / total;
 
@@ -189,14 +188,13 @@ async function init() {
                 color: '#000',
                 weight: 1,
                 opacity: 1,
-                fillOpacity: 0.8
-            })
-            .bindPopup(() => {
+                fillOpacity: 0.8,
+            }).bindPopup(() => {
                 const churchCounts = checkedChurches
                     .map(id => ({
                         name: religionMap[id].name,
                         count: row[id] || 0,
-                        percentage: ((row[id] || 0) / total * 100)
+                        percentage: ((row[id] || 0) / total) * 100,
                     }))
                     .filter(c => c.count > 0)
                     .sort((a, b) => b.count - a.count);
@@ -206,16 +204,18 @@ async function init() {
                     Population: ${total.toLocaleString()}<br>
                     Total Selected: ${selectedCount.toLocaleString()} (${(percentage * 100).toFixed(2)}%)<br>
                     <br>
-                    ${churchCounts.map(c =>
-                        `${c.name}: ${c.count.toLocaleString()} (${c.percentage.toFixed(2)}%)`
-                    ).join('<br>')}
+                    ${churchCounts
+                        .map(
+                            c => `${c.name}: ${c.count.toLocaleString()} (${c.percentage.toFixed(2)}%)`,
+                        )
+                        .join('<br>')}
                 `;
             });
 
             circleMarkers.push({
                 circle,
                 baseRadius: Math.sqrt(total * SCALE_FACTOR),
-                total
+                total,
             });
         });
 
@@ -223,21 +223,21 @@ async function init() {
         circleMarkers.sort((a, b) => b.total - a.total);
 
         // Add markers to map in order from largest to smallest
-        circleMarkers.forEach(({circle, baseRadius}) => {
+        circleMarkers.forEach(({ circle, baseRadius }) => {
             circle.addTo(map);
-            circles.push({circle, baseRadius});
+            circles.push({ circle, baseRadius });
         });
 
         // Update circles on zoom
         map.on('zoomend', () => {
-            circles.forEach(({circle, baseRadius}) => {
+            circles.forEach(({ circle, baseRadius }) => {
                 circle.setRadius(baseRadius * Math.pow(2, map.getZoom() - 8));
             });
         });
 
         // Update legend to show percentages instead of population
         const legend = L.control({ position: 'bottomright' });
-        legend.onAdd = function() {
+        legend.onAdd = () => {
             const div = L.DomUtil.create('div', 'legend');
             div.innerHTML = '<h4>Vybrané %</h4>';
 
@@ -251,7 +251,6 @@ async function init() {
             return div;
         };
         legend.addTo(map);
-
     } catch (error) {
         console.error('Error:', error);
         alert('Error loading data. Check console.');
@@ -307,7 +306,7 @@ document.getElementById('selectAll').addEventListener('click', () => {
 
 document.getElementById('selectNone').addEventListener('click', () => {
     const checkboxes = document.querySelectorAll('#checkboxContainer input[type="checkbox"]');
-    checkboxes.forEach(checkbox => checkbox.checked = false);
+    checkboxes.forEach(checkbox => (checkbox.checked = false));
 });
 
 document.getElementById('resetButton').addEventListener('click', () => {
@@ -323,12 +322,13 @@ document.getElementById('resetButton').addEventListener('click', () => {
 
 document.getElementById('applySettings').addEventListener('click', async () => {
     // Update checkedChurches based on selected checkboxes
-    checkedChurches = Array.from(document.querySelectorAll('#checkboxContainer input[type="checkbox"]:checked'))
-        .map(checkbox => Number(checkbox.value));
+    checkedChurches = Array.from(
+        document.querySelectorAll('#checkboxContainer input[type="checkbox"]:checked'),
+    ).map(checkbox => Number(checkbox.value));
 
     // Update percentage filters
-    const minPercentage = parseFloat(document.getElementById('minPercentage').value);
-    const maxPercentage = parseFloat(document.getElementById('maxPercentage').value);
+    const minPercentage = Number.parseFloat(document.getElementById('minPercentage').value);
+    const maxPercentage = Number.parseFloat(document.getElementById('maxPercentage').value);
 
     // Close modal
     document.getElementById('settingsModal').classList.add('hidden');
@@ -337,7 +337,7 @@ document.getElementById('applySettings').addEventListener('click', async () => {
     await updateMap();
 
     // Apply filter
-    circles.forEach(({circle, percentage}) => {
+    circles.forEach(({ circle, percentage }) => {
         const percentageValue = percentage * 100;
         if (percentageValue >= minPercentage && percentageValue <= maxPercentage) {
             circle.setStyle({ opacity: 1, fillOpacity: 0.8 });
