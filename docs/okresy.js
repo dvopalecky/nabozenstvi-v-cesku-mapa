@@ -4,6 +4,8 @@ let checkedChurches = [...defaultChurches].map(String);
 let map = null;
 const districtLayers = {};
 
+const districtLabels = {};
+
 const colorScale = [
     [0, '#fff'], // white
     [0.001, '#fff'], // white
@@ -76,6 +78,7 @@ async function loadAllDistricts() {
 
         // Load each district
         for (const district of districtRows) {
+            districtLabels[district.uzemi_kod] = district.uzemi_txt;
             const code = district.uzemi_kod;
             try {
                 const response = await fetch(`okresy/${code}.geojson`);
@@ -182,8 +185,6 @@ async function init() {
             checkedChurches = Array.from(
                 document.querySelectorAll('#checkboxContainer input[type="checkbox"]:checked'),
             ).map(cb => cb.value);
-            console.log('applySettings');
-            console.log('Checked churches:', checkedChurches);
             loadDistrictData();
             settingsModal.classList.add('hidden');
         });
@@ -225,7 +226,6 @@ async function loadDistrictData() {
             const districtLayer = districtLayers[districtCode];
 
             if (districtLayer) {
-                console.log(`Setting color for district ${districtCode} with percentage ${percentage}`);
                 // Apply style to the layer directly
                 districtLayer.setStyle(feature => style(feature, percentage));
 
@@ -244,7 +244,7 @@ async function loadDistrictData() {
                             .sort((a, b) => b.count - a.count);
 
                         const popupContent = `
-                            <b>${district.uzemi_txt || 'District'}</b><br>
+                            <b>Okres ${districtLabels[districtCode] || 'District'}</b><br>
                             Population: ${total.toLocaleString()}<br>
                             Total Selected: ${selectedCount.toLocaleString()} (${(percentage * 100).toFixed(2)}%)<br>
                             <br>
@@ -268,7 +268,6 @@ async function loadDistrictData() {
 
 // Call the function when the script loads
 async function main() {
-    console.log('checkedChurches', checkedChurches);
     await init();
     await loadDistrictData();
 }
