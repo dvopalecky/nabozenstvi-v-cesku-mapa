@@ -1,14 +1,14 @@
-import { religionMap, defaultChurches } from './common.js';
+import { defaultChurches, religionMap } from './common.js';
 
-let checkedChurches = [...defaultChurches];
+let checkedChurches = [...defaultChurches].map(String);
 let map = null;
-let districtLayers = {};
-let colorScale = [
+const districtLayers = {};
+const colorScale = [
     [0, '#fee5d9'],
     [0.02, '#fcae91'],
     [0.05, '#fb6a4a'],
-    [0.10, '#de2d26'],
-    [0.15, '#a50f15']
+    [0.1, '#de2d26'],
+    [0.15, '#a50f15'],
 ];
 
 // Initialize the map
@@ -16,7 +16,7 @@ function initMap() {
     map = L.map('map').setView([49.8, 15.5], 8);
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         maxZoom: 19,
-        attribution: '© OpenStreetMap contributors'
+        attribution: '© OpenStreetMap contributors',
     }).addTo(map);
 }
 
@@ -46,7 +46,7 @@ function style(feature, percentage) {
         weight: 2,
         opacity: 1,
         color: 'white',
-        fillOpacity: 0.7
+        fillOpacity: 0.7,
     };
 }
 
@@ -56,7 +56,7 @@ function highlightFeature(e) {
     layer.setStyle({
         weight: 3,
         color: '#666',
-        fillOpacity: 0.7
+        fillOpacity: 0.7,
     });
     layer.bringToFront();
 }
@@ -68,149 +68,6 @@ function resetHighlight(e) {
     layer.setStyle(style(layer.feature, percentage));
 }
 
-async function updateMap(filterOnly = false) {
-    if (!filterOnly) {
-        // Load district data
-        const [viraData, uzemiIndex] = await Promise.all([
-            fetch('data/vira_by_uzemi.csv').then(r => r.text()),
-            fetch('data/uzemi_index.csv').then(r => r.text())
-        ]);
-
-        // Parse data
-        const viraRows = Papa.parse(viraData, { header: true, dynamicTyping: true }).data;
-        const uzemiRows = Papa.parse(uzemiIndex, { header: true }).data;
-
-        // Filter for districts (5-digit codes)
-        const districtRows = uzemiRows.filter(row =>
-            row.uzemi_kod && row.uzemi_kod.toString().length === 5
-        );
-
-        // Process each district
-        for (const district of districtRows) {
-            const code = district.uzemi_kod;
-            try {
-                // Load district GeoJSON with the correct relative path
-                const response = await fetch(`okresy/${code}.geojson`);
-                if (!response.ok) {
-                    console.warn(`No GeoJSON found for district ${code}`);
-                    continue;
-                }
-
-                const geojson = await response.json();
-
-                // Find religious data for this district - convert both to strings for comparison
-                const viraRow = viraRows.find(row => row.uzemi_kod.toString() === code.toString());
-                if (!viraRow) {
-                    console.warn(`No religious data found for district ${code}`);
-                    continue;
-                }
-
-                // Calculate religious percentages
-                let selectedCount = 0;
-                for (let id of checkedChurches) {
-                    selectedCount += viraRow[id] || 0;
-                }
-                const total = Object.keys(viraRow)
-                    .filter(k => !isNaN(k) && k !== "0")
-                    .reduce((sum, k) => sum + (viraRow[k] || 0), 0);
-                const percentage = selectedCount / total;
-
-                // Add properties to GeoJSON
-                geojson.features[0].properties = {
-                    ...geojson.features[0].properties,
-                    name: district.uzemi_txt,
-                    percentage: percentage,
-                    selectedCount: selectedCount,
-                    total: total,
-                    viraData: viraRow
-                };
-
-                // Create and style the layer
-                const layer = L.geoJSON(geojson, {
-                    style: feature => style(feature, percentage),
-                    onEachFeature: (feature, layer) => {
-                        layer.on({
-                            mouseover: highlightFeature,
-                            mouseout: resetHighlight,
-                            click: (e) => {
-                                const props = e.target.feature.properties;
-                                const churchCounts = checkedChurches
-                                    .map(id => ({
-                                        name: religionMap[id].name,
-                                        count: props.viraData[id] || 0,
-                                        percentage: ((props.viraData[id] || 0) / props.total * 100)
-                                    }))
-                                    .filter(c => c.count > 0)
-                                    .sort((a, b) => b.count - a.count);
-
-                                const popupContent = `
-                                    <b>${props.name}</b><br>
-                                    Obyvatelstvo celkem: ${props.total.toLocaleString()}<br>
-                                    Vybraných: ${props.selectedCount.toLocaleString()} (${(props.percentage * 100).toFixed(2)}%)<br>
-                                    <br>
-                                    ${churchCounts.map(c =>
-                                        `${c.name}: ${c.count.toLocaleString()} (${c.percentage.toFixed(2)}%)`
-                                    ).join('<br>')}
-                                `;
-                                L.popup()
-                                    .setLatLng(e.latlng)
-                                    .setContent(popupContent)
-                                    .openOn(map);
-                            }
-                        });
-                    }
-                });
-
-                // Store the layer and add to map
-                if (districtLayers[code]) {
-                    map.removeLayer(districtLayers[code]);
-                }
-                districtLayers[code] = layer;
-                layer.addTo(map);
-            } catch (error) {
-                console.error(`Error loading district ${code}:`, error);
-            }
-        }
-
-        // Add legend
-        const legend = L.control({ position: 'bottomright' });
-        legend.onAdd = function() {
-            const div = L.DomUtil.create('div', 'legend');
-            div.innerHTML = '<h4>Vybrané %</h4>';
-
-            colorScale.forEach(([value, color]) => {
-                div.innerHTML += `
-                    <div>
-                        <span class="legend-circle" style="background:${color}"></span>
-                        ${(value * 100).toFixed(2)}%
-                    </div>`;
-            });
-            return div;
-        };
-        legend.addTo(map);
-    } else {
-        // Update existing layers with new percentages
-        Object.entries(districtLayers).forEach(([code, layer]) => {
-            const feature = layer.feature || layer.toGeoJSON().features[0];
-            const viraData = feature.properties.viraData;
-
-            let selectedCount = 0;
-            for (let id of checkedChurches) {
-                selectedCount += viraData[id] || 0;
-            }
-            const total = Object.keys(viraData)
-                .filter(k => !isNaN(k) && k !== "0")
-                .reduce((sum, k) => sum + (viraData[k] || 0), 0);
-            const percentage = selectedCount / total;
-
-            feature.properties.percentage = percentage;
-            feature.properties.selectedCount = selectedCount;
-
-            layer.setStyle(style(feature, percentage));
-        });
-    }
-}
-
 async function loadAllDistricts() {
     try {
         // Load district index
@@ -219,8 +76,8 @@ async function loadAllDistricts() {
         const uzemiRows = Papa.parse(uzemiData, { header: true }).data;
 
         // Filter for districts (5-digit codes)
-        const districtRows = uzemiRows.filter(row =>
-            row.uzemi_kod && row.uzemi_kod.toString().length === 5
+        const districtRows = uzemiRows.filter(
+            row => row.uzemi_kod && row.uzemi_kod.toString().length === 5,
         );
 
         // Load each district
@@ -242,13 +99,13 @@ async function loadAllDistricts() {
                         weight: 2,
                         opacity: 1,
                         color: 'white',
-                        fillOpacity: 0.7
+                        fillOpacity: 0.7,
                     },
                     onEachFeature: (feature, layer) => {
                         layer.on({
                             mouseover: highlightFeature,
                             mouseout: resetHighlight,
-                            click: (e) => {
+                            click: e => {
                                 const popupContent = `
                                     <div class="bg-white p-4 rounded-lg shadow-lg">
                                         <h3 class="font-bold text-lg mb-2">${district.uzemi_txt}</h3>
@@ -256,15 +113,11 @@ async function loadAllDistricts() {
                                     </div>
                                 `;
 
-                                L.popup()
-                                    .setLatLng(e.latlng)
-                                    .setContent(popupContent)
-                                    .openOn(map);
-                            }
+                                L.popup().setLatLng(e.latlng).setContent(popupContent).openOn(map);
+                            },
                         });
-                    }
+                    },
                 }).addTo(map);
-
             } catch (error) {
                 console.error(`Error loading district ${code}:`, error);
             }
@@ -311,12 +164,14 @@ async function init() {
         settingsBtn.addEventListener('click', () => settingsModal.classList.remove('hidden'));
         closeModal.addEventListener('click', () => settingsModal.classList.add('hidden'));
         selectAll.addEventListener('click', () => {
-            document.querySelectorAll('#checkboxContainer input[type="checkbox"]')
-                .forEach(cb => cb.checked = true);
+            document
+                .querySelectorAll('#checkboxContainer input[type="checkbox"]')
+                .forEach(cb => (cb.checked = true));
         });
         selectNone.addEventListener('click', () => {
-            document.querySelectorAll('#checkboxContainer input[type="checkbox"]')
-                .forEach(cb => cb.checked = false);
+            document
+                .querySelectorAll('#checkboxContainer input[type="checkbox"]')
+                .forEach(cb => (cb.checked = false));
         });
         resetButton.addEventListener('click', () => {
             console.log('Resetting to default churches');
@@ -324,16 +179,16 @@ async function init() {
             checkboxes.forEach(checkbox => {
                 checkbox.checked = defaultChurches.includes(Number(checkbox.value));
             });
-            updateMap(true);
         });
         applySettings.addEventListener('click', () => {
             checkedChurches = Array.from(
-                document.querySelectorAll('#checkboxContainer input[type="checkbox"]:checked')
+                document.querySelectorAll('#checkboxContainer input[type="checkbox"]:checked'),
             ).map(cb => cb.value);
-            updateMap(true);
+            console.log('applySettings');
+            console.log('Checked churches:', checkedChurches);
+            // updateMap(true);
             settingsModal.classList.add('hidden');
         });
-
     } catch (error) {
         console.error('Error:', error);
         alert('Error loading data. Check console.');
@@ -367,6 +222,10 @@ async function loadDistrictData() {
 }
 
 // Call the function when the script loads
-loadDistrictData();
+async function main() {
+    console.log('checkedChurches', checkedChurches);
+    await loadDistrictData();
+    await init();
+}
 
-init();
+main();
