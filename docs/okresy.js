@@ -261,6 +261,31 @@ async function loadDistrictData() {
                 console.warn(`No layer found for district ${districtCode}`);
             }
         });
+
+        // Add legend to the map
+        // Remove existing legend if it exists
+        if (map.legend) {
+            map.legend.remove();
+        }
+
+        // Create new legend
+        const legend = L.control({ position: 'bottomright' });
+        legend.onAdd = () => {
+            const div = L.DomUtil.create('div', 'legend');
+            div.innerHTML = '<h4>Vybrané %</h4>';
+
+            colorScale.forEach(([value, color]) => {
+                div.innerHTML += `
+                    <div>
+                        <span class="legend-circle" style="background:${color}"></span>
+                        ${(value * 100).toFixed(2)}%
+                    </div>`;
+            });
+            return div;
+        };
+        legend.addTo(map);
+        map.legend = legend;
+
     } catch (error) {
         console.error('Error loading district data:', error);
     }
