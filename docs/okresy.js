@@ -57,33 +57,9 @@ function style(feature, percentage) {
         fillColor: getColor(percentage),
         weight: 2,
         opacity: 1,
-        color: 'white',
+        color: 'black',
         fillOpacity: 0.7,
     };
-}
-
-// Highlight district on hover
-function highlightFeature(e) {
-    const layer = e.target;
-    layer.setStyle({
-        weight: 3,
-        color: 'orange',
-        fillColor: 'orange',
-        fillOpacity: 0.7,
-    });
-    layer.bringToFront();
-}
-
-// Reset district highlight
-function resetHighlight(e) {
-    const layer = e.target;
-    layer.setStyle({
-        fillColor: '#ccc',
-        weight: 2,
-        opacity: 1,
-        color: 'white',
-        fillOpacity: 0.7,
-    });
 }
 
 async function loadAllDistricts() {
@@ -109,21 +85,20 @@ async function loadAllDistricts() {
                 }
 
                 const geojson = await response.json();
-                const color = 'white';
+                const color = 'black';
 
                 // Store the layer reference for later use
                 districtLayers[code] = L.geoJSON(geojson, {
                     style: {
-                        fillColor: '#ccc',
+                        fillColor: '#999',
                         weight: 2,
                         opacity: 1,
-                        color: 'white',
+                        color: 'black',
                         fillOpacity: 0.7,
                     },
                     onEachFeature: (feature, layer) => {
+                        // Only keep the click event for popup
                         layer.on({
-                            mouseover: highlightFeature,
-                            mouseout: resetHighlight,
                             click: e => {
                                 const popupContent = `
                                     <div class="bg-white p-4 rounded-lg shadow-lg">
