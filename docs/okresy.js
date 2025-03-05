@@ -233,13 +233,26 @@ async function loadDistrictData() {
                 districtLayer.eachLayer(layer => {
                     layer.unbindPopup();
                     layer.on('click', e => {
+                        // Create detailed church counts similar to obce.js
+                        const churchCounts = checkedChurches
+                            .map(id => ({
+                                name: religionMap[id].name,
+                                count: district[id] || 0,
+                                percentage: ((district[id] || 0) / total) * 100,
+                            }))
+                            .filter(c => c.count > 0)
+                            .sort((a, b) => b.count - a.count);
+
                         const popupContent = `
-                            <div class="bg-white p-4 rounded-lg shadow-lg">
-                                <h3 class="font-bold text-lg mb-2">${district.uzemi_txt || 'District'}</h3>
-                                <p class="text-gray-700">Total population: ${total.toLocaleString()}</p>
-                                <p class="text-gray-700">Selected religions: ${selectedCount.toLocaleString()}</p>
-                                <p class="text-gray-700">Percentage: ${(percentage * 100).toFixed(2)}%</p>
-                            </div>
+                            <b>${district.uzemi_txt || 'District'}</b><br>
+                            Population: ${total.toLocaleString()}<br>
+                            Total Selected: ${selectedCount.toLocaleString()} (${(percentage * 100).toFixed(2)}%)<br>
+                            <br>
+                            ${churchCounts
+                                .map(
+                                    c => `${c.name}: ${c.count.toLocaleString()} (${c.percentage.toFixed(2)}%)`,
+                                )
+                                .join('<br>')}
                         `;
                         L.popup().setLatLng(e.latlng).setContent(popupContent).openOn(map);
                     });
