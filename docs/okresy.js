@@ -3,12 +3,24 @@ import { defaultChurches, religionMap } from './common.js';
 let checkedChurches = [...defaultChurches].map(String);
 let map = null;
 const districtLayers = {};
+
 const colorScale = [
-    [0, '#fee5d9'],
-    [0.02, '#fcae91'],
-    [0.05, '#fb6a4a'],
-    [0.1, '#de2d26'],
-    [0.15, '#a50f15'],
+    [0, '#fff'], // white
+    [0.001, '#fff'], // white
+    [0.002, '#f7e8b0'], // light yellow
+    [0.005, '#f4b87d'], // peach/orange
+    [0.01, '#f18d6c'], // salmon
+    [0.02, '#e66a82'], // pink-red
+    [0.05, '#d55099'], // dark pink
+    [0.1, '#b840ab'], // magenta
+    [0.2, '#8b2eb8'], // purple
+    [0.3, '#6b1ec5'], // deeper purple
+    [0.4, '#3449eb'], // bright blue
+    [0.5, '#348feb'], // brighter blue
+    [0.6, '#34dceb'], // brightest blue
+    [0.7, '#2a9c5b'], // bright green
+    [0.8, '#405745'], // medium bright green
+    [0.9, '#000'], // green
 ];
 
 // Initialize the map
@@ -55,7 +67,8 @@ function highlightFeature(e) {
     const layer = e.target;
     layer.setStyle({
         weight: 3,
-        color: '#666',
+        color: 'orange',
+        fillColor: 'orange',
         fillOpacity: 0.7,
     });
     layer.bringToFront();
@@ -64,8 +77,13 @@ function highlightFeature(e) {
 // Reset district highlight
 function resetHighlight(e) {
     const layer = e.target;
-    const percentage = layer.feature.properties.percentage;
-    layer.setStyle(style(layer.feature, percentage));
+    layer.setStyle({
+        fillColor: '#ccc',
+        weight: 2,
+        opacity: 1,
+        color: 'white',
+        fillOpacity: 0.7
+    });
 }
 
 async function loadAllDistricts() {
@@ -91,11 +109,11 @@ async function loadAllDistricts() {
                 }
 
                 const geojson = await response.json();
-                const color = getRandomColor();
+                const color = 'white';
 
                 L.geoJSON(geojson, {
                     style: {
-                        fillColor: color,
+                        fillColor: '#ccc',
                         weight: 2,
                         opacity: 1,
                         color: 'white',
@@ -224,8 +242,8 @@ async function loadDistrictData() {
 // Call the function when the script loads
 async function main() {
     console.log('checkedChurches', checkedChurches);
-    await loadDistrictData();
     await init();
+    await loadDistrictData();
 }
 
 main();
