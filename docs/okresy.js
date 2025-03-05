@@ -82,7 +82,7 @@ function resetHighlight(e) {
         weight: 2,
         opacity: 1,
         color: 'white',
-        fillOpacity: 0.7
+        fillOpacity: 0.7,
     });
 }
 
@@ -111,7 +111,8 @@ async function loadAllDistricts() {
                 const geojson = await response.json();
                 const color = 'white';
 
-                L.geoJSON(geojson, {
+                // Store the layer reference for later use
+                districtLayers[code] = L.geoJSON(geojson, {
                     style: {
                         fillColor: '#ccc',
                         weight: 2,
@@ -184,12 +185,16 @@ async function init() {
         selectAll.addEventListener('click', () => {
             document
                 .querySelectorAll('#checkboxContainer input[type="checkbox"]')
-                .forEach(cb => (cb.checked = true));
+                .forEach(checkbox => {
+                    checkbox.checked = true;
+                });
         });
         selectNone.addEventListener('click', () => {
             document
                 .querySelectorAll('#checkboxContainer input[type="checkbox"]')
-                .forEach(cb => (cb.checked = false));
+                .forEach(checkbox => {
+                    checkbox.checked = false;
+                });
         });
         resetButton.addEventListener('click', () => {
             console.log('Resetting to default churches');
@@ -204,7 +209,7 @@ async function init() {
             ).map(cb => cb.value);
             console.log('applySettings');
             console.log('Checked churches:', checkedChurches);
-            // updateMap(true);
+            loadDistrictData();
             settingsModal.classList.add('hidden');
         });
     } catch (error) {
@@ -226,14 +231,48 @@ async function loadDistrictData() {
             return code.length === 5 && code.startsWith('4');
         });
 
-        // Create object with district codes as keys
-        const districts = {};
-        for (const district of districtData) {
-            districts[district.uzemi_kod] = district;
-        }
+        // Process each district
+        districtData.forEach(district => {
+            // Calculate total believers (index 0 contains total population)
+            const total = district['0'] || 0;
 
-        // Log the filtered data
-        console.log('Districts with 5-digit codes starting with 4:', districts);
+            // Sum up the checked churches
+            let selectedCount = 0;
+            for (const churchId of checkedChurches) {
+                selectedCount += district[churchId] || 0;
+            }
+
+            // Calculate percentage
+            const percentage = total > 0 ? selectedCount / total : 0;
+
+            // Get the district layer directly from our stored layers
+            const districtCode = String(district.uzemi_kod);
+            const districtLayer = districtLayers[districtCode];
+
+            if (districtLayer) {
+                console.log(`Setting color for district ${districtCode} with percentage ${percentage}`);
+                // Apply style to the layer directly
+                districtLayer.setStyle(feature => style(feature, percentage));
+
+                // Update popup content
+                districtLayer.eachLayer(layer => {
+                    layer.unbindPopup();
+                    layer.on('click', e => {
+                        const popupContent = `
+                            <div class="bg-white p-4 rounded-lg shadow-lg">
+                                <h3 class="font-bold text-lg mb-2">${district.uzemi_txt || 'District'}</h3>
+                                <p class="text-gray-700">Total population: ${total.toLocaleString()}</p>
+                                <p class="text-gray-700">Selected religions: ${selectedCount.toLocaleString()}</p>
+                                <p class="text-gray-700">Percentage: ${(percentage * 100).toFixed(2)}%</p>
+                            </div>
+                        `;
+                        L.popup().setLatLng(e.latlng).setContent(popupContent).openOn(map);
+                    });
+                });
+            } else {
+                console.warn(`No layer found for district ${districtCode}`);
+            }
+        });
     } catch (error) {
         console.error('Error loading district data:', error);
     }
