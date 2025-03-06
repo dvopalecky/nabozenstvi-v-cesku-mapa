@@ -177,6 +177,19 @@ async function init() {
         });
         closeTableModal.addEventListener('click', () => tableModal.classList.add('hidden'));
 
+        // Add event listener for Escape key to close modals
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape') {
+                // Close any open modals
+                if (!settingsModal.classList.contains('hidden')) {
+                    settingsModal.classList.add('hidden');
+                }
+                if (!tableModal.classList.contains('hidden')) {
+                    tableModal.classList.add('hidden');
+                }
+            }
+        });
+
         // Add event listeners for table sorting
         document.querySelectorAll('th[data-sort]').forEach(header => {
             header.addEventListener('click', () => {
