@@ -143,6 +143,12 @@ async function init() {
         const resetButton = document.getElementById('resetButton');
         const applySettings = document.getElementById('applySettings');
 
+        // Table modal controls
+        const tableBtn = document.getElementById('tableBtn');
+        const tableModal = document.getElementById('tableModal');
+        const closeTableModal = document.getElementById('closeTableModal');
+        const districtSearch = document.getElementById('districtSearch');
+
         // Create checkboxes for each religion
         Object.entries(religionMap)
             .sort((a, b) => b[1].count - a[1].count)
@@ -163,6 +169,25 @@ async function init() {
         // Event listeners for modal controls
         settingsBtn.addEventListener('click', () => settingsModal.classList.remove('hidden'));
         closeModal.addEventListener('click', () => settingsModal.classList.add('hidden'));
+
+        // Table modal event listeners
+        tableBtn.addEventListener('click', () => {
+            populateDistrictTable();
+            tableModal.classList.remove('hidden');
+        });
+        closeTableModal.addEventListener('click', () => tableModal.classList.add('hidden'));
+
+        // Add event listeners for table sorting
+        document.querySelectorAll('th[data-sort]').forEach(header => {
+            header.addEventListener('click', () => {
+                const sortKey = header.getAttribute('data-sort');
+                sortDistrictTable(sortKey);
+            });
+        });
+
+        // Add event listener for search filter
+        districtSearch.addEventListener('input', filterDistrictTable);
+
         selectAll.addEventListener('click', () => {
             document
                 .querySelectorAll('#checkboxContainer input[type="checkbox"]')
@@ -197,6 +222,11 @@ async function init() {
     }
 }
 
+// Global variables to store district data for the table
+let districtTableData = [];
+let currentSortKey = 'name';
+let sortDirection = 'asc';
+
 async function loadDistrictData() {
     try {
         // Load data
@@ -209,6 +239,9 @@ async function loadDistrictData() {
             const code = String(row.uzemi_kod);
             return code.length === 5 && code.startsWith('4');
         });
+
+        // Clear the district table data array
+        districtTableData = [];
 
         // Process each district
         districtData.forEach(district => {
@@ -224,8 +257,17 @@ async function loadDistrictData() {
             // Calculate percentage
             const percentage = total > 0 ? selectedCount / total : 0;
 
-            // Get the district layer directly from our stored layers
+            // Store data for the table
             const districtCode = String(district.uzemi_kod);
+            districtTableData.push({
+                code: districtCode,
+                name: districtLabels[districtCode] || 'Unknown District',
+                population: total,
+                absolute: selectedCount,
+                percentage: percentage
+            });
+
+            // Get the district layer directly from our stored layers
             const districtLayer = districtLayers[districtCode];
 
             if (districtLayer) {
@@ -290,9 +332,111 @@ async function loadDistrictData() {
         legend.addTo(map);
         map.legend = legend;
 
+        // Sort the district table data by name initially
+        sortDistrictTable('name', true);
+
     } catch (error) {
         console.error('Error loading district data:', error);
     }
+}
+
+// Function to populate the district table
+function populateDistrictTable() {
+    const tableBody = document.getElementById('districtTableBody');
+    const searchInput = document.getElementById('districtSearch');
+    const searchTerm = searchInput ? searchInput.value.toLowerCase() : '';
+
+    // Clear existing rows
+    tableBody.innerHTML = '';
+
+    // Sort the data based on current sort settings
+    sortDistrictTable(currentSortKey, true);
+
+    // Create table rows
+    districtTableData.forEach(district => {
+        // Skip if doesn't match search filter
+        if (searchTerm && !district.name.toLowerCase().includes(searchTerm)) {
+            return;
+        }
+
+        const row = document.createElement('tr');
+        row.className = 'hover:bg-gray-50';
+
+        row.innerHTML = `
+            <td class="py-2 px-4 border-b border-gray-200">${district.name}</td>
+            <td class="py-2 px-4 border-b border-gray-200">${district.population.toLocaleString()}</td>
+            <td class="py-2 px-4 border-b border-gray-200">${district.absolute.toLocaleString()}</td>
+            <td class="py-2 px-4 border-b border-gray-200">${(district.percentage * 100).toFixed(2)}%</td>
+        `;
+
+        tableBody.appendChild(row);
+    });
+}
+
+// Function to sort the district table
+function sortDistrictTable(sortKey, keepDirection = false) {
+    // Update sort direction
+    if (!keepDirection) {
+        if (currentSortKey === sortKey) {
+            sortDirection = sortDirection === 'asc' ? 'desc' : 'asc';
+        } else {
+            sortDirection = 'asc';
+        }
+    }
+
+    currentSortKey = sortKey;
+
+    // Sort the data
+    districtTableData.sort((a, b) => {
+        let comparison = 0;
+
+        switch (sortKey) {
+            case 'name':
+                comparison = a.name.localeCompare(b.name);
+                break;
+            case 'population':
+                comparison = a.population - b.population;
+                break;
+            case 'absolute':
+                comparison = a.absolute - b.absolute;
+                break;
+            case 'percentage':
+                comparison = a.percentage - b.percentage;
+                break;
+            default:
+                comparison = 0;
+        }
+
+        return sortDirection === 'asc' ? comparison : -comparison;
+    });
+
+    // Update the table
+    const tableBody = document.getElementById('districtTableBody');
+    if (tableBody && !keepDirection) {
+        populateDistrictTable();
+    }
+
+    // Update sort indicators
+    updateSortIndicators();
+}
+
+// Function to update sort indicators in the table headers
+function updateSortIndicators() {
+    document.querySelectorAll('th[data-sort]').forEach(header => {
+        const sortKey = header.getAttribute('data-sort');
+        const iconSpan = header.querySelector('.sort-icon');
+
+        if (sortKey === currentSortKey) {
+            iconSpan.textContent = sortDirection === 'asc' ? '↑' : '↓';
+        } else {
+            iconSpan.textContent = '↕️';
+        }
+    });
+}
+
+// Function to filter the district table based on search input
+function filterDistrictTable() {
+    populateDistrictTable();
 }
 
 async function main() {

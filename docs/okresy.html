@@ -40,6 +40,25 @@
       fill-opacity: 0.7;
       stroke-width: 3;
     }
+
+    /* Table styles */
+    .sort-icon {
+      display: inline-block;
+      margin-left: 5px;
+      font-size: 12px;
+    }
+
+    th[data-sort] {
+      position: relative;
+    }
+
+    th[data-sort]:hover {
+      background-color: #e5e7eb;
+    }
+
+    #districtTableBody tr:hover {
+      background-color: #f3f4f6;
+    }
   </style>
 </head>
 
@@ -51,6 +70,12 @@
     <button id="settingsBtn"
       class="absolute top-4 right-4 bg-white px-4 py-2 rounded-lg shadow-lg z-[1000] hover:bg-gray-100">
       ⚙️ Nastavení
+    </button>
+
+    <!-- Table Button -->
+    <button id="tableBtn"
+      class="absolute top-4 right-36 bg-white px-4 py-2 rounded-lg shadow-lg z-[1000] hover:bg-gray-100">
+      📊 Tabulka
     </button>
 
     <!-- Modal -->
@@ -96,6 +121,55 @@
           <!-- Checkboxes will be inserted here -->
         </div>
 
+      </div>
+    </div>
+
+    <!-- Table Modal -->
+    <div id="tableModal" class="hidden fixed inset-0 bg-black bg-opacity-50 z-[2000] flex items-center justify-center">
+      <div class="bg-white rounded-lg p-6 max-w-6xl w-full mx-4 max-h-[80vh] overflow-y-auto">
+        <div class="flex justify-between items-center mb-4">
+          <h2 class="text-xl font-bold">Tabulka okresů</h2>
+          <button id="closeTableModal" class="text-gray-500 hover:text-gray-700">✕</button>
+        </div>
+        <p class="text-sm text-gray-500 mb-4">Data jsou ze sčítání lidu z roku 2021.</p>
+
+        <!-- Search filter -->
+        <div class="mb-4">
+          <input type="text" id="districtSearch" placeholder="Hledat okres..."
+            class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+        </div>
+
+        <div class="overflow-x-auto">
+          <table class="min-w-full bg-white border border-gray-200">
+            <thead>
+              <tr>
+                <th
+                  class="py-2 px-4 border-b border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider cursor-pointer"
+                  data-sort="name">
+                  Okres <span class="sort-icon">↕️</span>
+                </th>
+                <th
+                  class="py-2 px-4 border-b border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider cursor-pointer"
+                  data-sort="population">
+                  Počet obyvatel <span class="sort-icon">↕️</span>
+                </th>
+                <th
+                  class="py-2 px-4 border-b border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider cursor-pointer"
+                  data-sort="absolute">
+                  Vybrané (absolutně) <span class="sort-icon">↕️</span>
+                </th>
+                <th
+                  class="py-2 px-4 border-b border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider cursor-pointer"
+                  data-sort="percentage">
+                  Vybrané (procenta) <span class="sort-icon">↕️</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody id="districtTableBody">
+              <!-- Table rows will be inserted here dynamically -->
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   </div>
